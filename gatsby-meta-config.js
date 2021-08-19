@@ -1,12 +1,12 @@
 module.exports = {
   title: `Hyem.log`,
-  description: `Hyem's Dev Note`,
+  description: ``,
   author: `[hyem]`,
-  introduction: `create someth!ng new`,
+  introduction: `Hyem's Dev Note`,
   siteUrl: `https://hyemin-jang.github.io`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
-    github: `https://github.com/hyemin-jang`,
+    github: `hyemin-jang`,
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
