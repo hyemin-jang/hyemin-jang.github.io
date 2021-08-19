@@ -1,29 +1,26 @@
-name : gatsby deploy
-
 on:
   push:
-    branches: 
+    branches:
       - gh-pages
-  
+name: build gatsby
 jobs:
-  deploy:
-    name : deploy
-    runs-on : ubuntu-latest  
-    steps:  
-      - name: checkout code
-        uses: actions/checkout@v2
+  build_gatsby:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
 
-      - name: packages install
+      - name: yarn install
         run: yarn install
 
       - name: gatsby build
+        env:
+          GH_API_KEY: ${{ secrets.GITHUB }}
         run: yarn build
-        env:
-          GH_API_KEY : BLOG
-        
+
       - name: deploy
-        uses: maxheld93/ghpages@v0.2.1
+        uses: maxheld83/ghpages@v0.2.1
         env:
-          GITHUB_TOKEN : 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
-          GH_PAT : BLOG
-          BUILD_DIR : 'public/'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GITHUB }}
+          BUILD_DIR: 'public/'
