@@ -7,4 +7,4 @@ draft: false
 ---
 
 왜안올라가
-token 바꿨다고
+token 바꿨다고요
