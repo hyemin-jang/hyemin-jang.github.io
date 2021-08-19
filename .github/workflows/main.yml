@@ -29,6 +29,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
-          TOKEN: ${{secrets.HYEM}}
+          GITHUB_TOKEN: ${{secrets.HYEM}}
           PUBLISH_BRANCH: master
           PUBLISH_DIR: ./public          
