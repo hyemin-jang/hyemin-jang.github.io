@@ -36,7 +36,7 @@ class Car{
     String maker;
     int year;
     double price;
-
+    
     // 기능 : 메서드(method)
     void start() {
         System.out.println("출발");
@@ -44,10 +44,13 @@ class Car{
     void stop() {
         System.out.println("멈춤");
     }
-    
+        
 ```
 
+
+
 ### (1) 멤버변수  
+
 : 클래스 내부에 선언되어 객체의 속성을 나타내는 변수
 ### (2) 메서드
 : 클래스 내부에서 멤버변수를 사용하여 클래스의 기능을 구현한 것
@@ -94,17 +97,17 @@ public class Student {  // 클래스 정의
 	}
     
    	// main함수 : Java Virtual Machine이 프로그램을 시작하기 위해 호출하는 함수.
-    	// 클래스 내부에 만들긴 하지만 클래스의 메서드는 아님
+    // 클래스 내부에 만들긴 하지만 클래스의 메서드는 아님
 	public static void main(String[] args) {
 		
-        	// 객체 생성
-        	Student student1 = new Student();
-		Student student2 = new Student();
+    // 객체 생성
+    Student student1 = new Student();
+	Student student2 = new Student();
 		
-        	// 클래스를 참조하는 참조변수를 통해 멤버변수와 메서드 호출
-		student1.studentName = "김철수";
-		student2.studentName = "홍길동";		
-		System.out.println(student1.getStudentName());  // 김철수 출력
+    // 클래스를 참조하는 참조변수를 통해 멤버변수와 메서드 호출
+    student1.studentName = "김철수";
+    student2.studentName = "홍길동";		
+    System.out.println(student1.getStudentName());  // 김철수 출력
 	}
 
 }
@@ -157,10 +160,10 @@ public class Student {
 	
 	
 	public static void main(String[] args) {
-    		// 클래스 생성 - 기본생성자 사용
+    	// 클래스 생성 - 기본생성자 사용
 		Student student1 = new Student(); 
         
-       		// 클래스 생성 - 직접 구현한 생성자 사용
+       	// 클래스 생성 - 직접 구현한 생성자 사용
 		Student student2 = new Student(123);				
 			
 		System.out.println(student2.studentID);  // 123 호출
@@ -204,7 +207,7 @@ public class Test {
 
 # 3. 참조 자료형
 - 변수의 종류
-  - 기본 자료형 [(이전 포스팅 참고)](https://velog.io/@hmjang28/Java-%EB%B3%80%EC%88%98%EC%99%80-%EC%9E%90%EB%A3%8C%ED%98%95)
+  - 기본 자료형 [(이전 포스팅 참고)](https://hyemin-jang.github.io/Java/[java]-%EB%B3%80%EC%88%98%EC%99%80%20%EC%9E%90%EB%A3%8C%ED%98%95/)
   - 참조 자료형
   : 클래스를 자료형으로 삼음 (해당 클래스를 참조하는 변수)
 
