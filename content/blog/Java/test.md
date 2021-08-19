@@ -6,4 +6,4 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-test!!ff
+왜안올라가
