@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://hyemin-jang.github.io/Java/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Java/[java]-클래스와-객체/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Java/[java]-변수와 자료형/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/12.JPA/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/11.JDBC/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/10.Maven/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/9.Stream API &amp; Lambda/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/8.IO/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/5.배열/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/4.상속과 다형성/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/7.예외처리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/6.자바 자료구조/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/3.접근제한자와 &amp; Static/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/2.클래스와-객체/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/1.변수와 자료형/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
