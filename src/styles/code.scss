@@ -19,6 +19,7 @@
 }
 
 blockquote {
+  background-color: #ece5f1;
   color: $blockquote-text-color;
 }
 
@@ -49,9 +50,9 @@ pre[class*='language-'] {
   overflow: -moz-scrollbars-none; // Firefox
 }
 
-pre[class*='language-']::-webkit-scrollbar {
-  display: none; // Safari and Chrome
-}
+// pre[class*='language-']::-webkit-scrollbar {
+//   display: none; // Safari and Chrome
+// }
 
 /* Code blocks */
 pre[class*='language-'] {
