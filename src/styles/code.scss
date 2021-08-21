@@ -19,8 +19,11 @@
 }
 
 blockquote {
+  padding: 1.2em;
+  margin: 1.5em 0;
   background-color: #ece5f1;
   color: $blockquote-text-color;
+  font-size: 12px;
 }
 
 code[class*='language-'],
@@ -81,7 +84,7 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #616161;
+  color: #acabab;
 }
 
 .token.punctuation {
