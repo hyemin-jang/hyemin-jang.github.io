@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hyem.log]]></title><description><![CDATA[Hyem.log]]></description><link>https://hyemin-jang.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 30 Aug 2021 05:59:51 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><link>https://hyemin-jang.github.io/Java/13.Servlet&amp;JSP/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/13.Servlet&amp;JSP/</guid><content:encoded></content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[1. 재귀함수 메소드 혹은 함수의 내부에서 자기 자신의 메소드 혹은 함수를 다시 호출하는 함수 1) 재귀함수 작동 원리 image-20210829162049519 recur 함수가 호출된다 중간에 recur…]]></description><link>https://hyemin-jang.github.io/Algorithm/재귀함수/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Algorithm/재귀함수/</guid><content:encoded>&lt;h1 id=&quot;1-재귀함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 재귀함수 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 재귀함수&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hyem.log]]></title><description><![CDATA[Hyem.log]]></description><link>https://hyemin-jang.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 30 Aug 2021 17:39:52 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[1. 재귀함수 메소드 혹은 함수의 내부에서 자기 자신의 메소드 혹은 함수를 다시 호출하는 함수 1) 재귀함수 작동 원리 image-20210829162049519 recur 함수가 호출된다 중간에 recur…]]></description><link>https://hyemin-jang.github.io/Algorithm/재귀함수/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Algorithm/재귀함수/</guid><content:encoded>&lt;h1 id=&quot;1-재귀함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 재귀함수 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 재귀함수&lt;/h1&gt;
 &lt;p&gt;메소드 혹은 함수의 내부에서 자기 자신의 메소드 혹은 함수를 다시 호출하는 함수&lt;/p&gt;
 &lt;h2 id=&quot;1-재귀함수-작동-원리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98-%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC&quot; aria-label=&quot;1 재귀함수 작동 원리 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1) 재귀함수 작동 원리&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;C:%5CUsers%5Chmjan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210829162049519.png&quot; alt=&quot;image-20210829162049519&quot;&gt;&lt;/p&gt;
@@ -76,7 +76,132 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;li&gt;파이썬에서는 재귀함수의 깊이가 1000번으로 제한되어 있음&lt;/li&gt;
 &lt;li&gt;그 이상 호출되면 &lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[실행단위 : cpu core…]]></description><link>https://hyemin-jang.github.io/기타/thread_vs_process/</link><guid isPermaLink="false">https://hyemin-jang.github.io/기타/thread_vs_process/</guid><content:encoded>&lt;p&gt;실행단위 : cpu core에서 실행하는 하나의 단위&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[1. Server & Client 개요 1) HTTP Web Server와 Client 통신 프로토콜 💡 프로토콜(protocol) : 네트워크에 연결된 컴퓨터가 서로 통신하기 위한 규약 2) Wep Application Process Client…]]></description><link>https://hyemin-jang.github.io/Java/13.Servlet&amp;JSP/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/13.Servlet&amp;JSP/</guid><content:encoded>&lt;h1 id=&quot;1-server--client-개요&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-server--client-%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;1 server  client 개요 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Server &amp;#x26; Client 개요&lt;/h1&gt;
+&lt;h2 id=&quot;1-http&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-http&quot; aria-label=&quot;1 http permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1) HTTP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Web Server와 Client 통신 프로토콜&lt;/p&gt;
+&lt;p&gt;💡 프로토콜(protocol) : 네트워크에 연결된 컴퓨터가 서로 통신하기 위한 규약&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-wep-application-process&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-wep-application-process&quot; aria-label=&quot;2 wep application process permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2) Wep Application Process&lt;/h2&gt;
+&lt;p&gt;Client(Browser) - Web Server - Wep Application Server(=Web container =Servlet Engine) - Database &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;웹서버 : 정적 컨텐츠 제공&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;웹 어플리케이션 서버 : 동적 컨텐츠 서비스 - Java, Python, …&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;기능 분리하여 서버 부하 방지&lt;/li&gt;
+&lt;li&gt;WAS는 외부와의 간접적인 연결 - 보안을 고려해야 하는 파일 및 리소스를 안전하게 보호&lt;/li&gt;
+&lt;li&gt;다수의 웹서버와 여러대의 WAS 연결하여 수많은 요청을 분산해서 안정적으로 운영&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#&quot; aria-label=&quot; permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;*이클립스에 탐캣 연동&lt;/p&gt;
+&lt;p&gt;new - Server - 탐캣 선택&lt;/p&gt;
+&lt;p&gt;실행시 포트에러 뜨면 server.xml  파일 열어서 포트번호 수정&lt;/p&gt;
+&lt;p&gt;window - web browser - chrome 선택&lt;/p&gt;
+&lt;h2 id=&quot;3-servelet&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-servelet&quot; aria-label=&quot;3 servelet permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3) Servelet&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;확장자 : *.java&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;자바 코드로 개발&lt;/li&gt;
+&lt;li&gt;문자열로 html 태그 생성 가능 = 브라우저에 출력까지 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HttpServlet 클래스 상속 - http 프로토콜을 지원해주는 클래스&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스 상속 및 재정의로만 쉽게 개발 가능&lt;/li&gt;
+&lt;li&gt;서비스 로직에만 집중해서 개발 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;html / css / javascript는 순수 자바 클래스와 소통 불가 - 따라서 웹 요청/응답 처리는 servlet 또는 JSP로 개발해야함&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;메소드 재정의&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;get 방식&lt;/li&gt;
+&lt;li&gt;post 방식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HttpServletRequest&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http 프로토콜 기반으로 요청하는 클라이언트의 정보를 보유 - ip, 브라우저 기본정보, 클라이언트가 서버에 전송하는 입력 데이터 등등..&lt;/li&gt;
+&lt;li&gt;doGet() / doPost() 실행시 파라미터로 쓰임&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HttpServletResponse&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http 프로토콜 기반으로 클라이언트 브라우저에게 응답하는 객체&lt;/li&gt;
+&lt;li&gt;한글 등 속성 지정해서 응답 포맷 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이클립스 개발구조&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;src&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;*.java&lt;/li&gt;
+&lt;li&gt;순수 DAO, DTO 등등.. 일반 모든 자바 소스&lt;/li&gt;
+&lt;li&gt;web상에서 http 기반으로 요청/응답 직접 처리하는 Servlet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WebContent&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;*.html / *.css / *.js / 이미지, 동영상 … / *.jsp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;서블릿 파일 실행&lt;/p&gt;
+&lt;p&gt;생성자는 하나만 만들어지고, 메소드만 계속 실행됨 : 스레드&lt;/p&gt;
+&lt;p&gt;서블릿 객체 수 : 요청한 클라이언트 수 = 1 : N&lt;/p&gt;
+&lt;p&gt;deGet() 메소드 수 : 요청한 클라이언트 수 = 1 : 1&lt;/p&gt;
+&lt;p&gt;HttpServletRequest 객체 수 : HttpServletResponse 객체 수 : 클라이언트 수 = 1 : 1 : 1&lt;/p&gt;
+&lt;p&gt;=&gt; 하나의 프로세스 내에 여러 쓰레드로 개별 실행&lt;/p&gt;
+&lt;p&gt;Web container (web server = servlet engine) 의 기능&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;클라이언트 요청시 클라이언트에 1:1 매핑되는 HttpServletRequest 객체와 HttpServletResponse 객체 자동 생성&lt;/li&gt;
+&lt;li&gt;Servlet 객체는 최초의 클라이언트 요청시에만 단 한번 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;servlet-라이프사이클&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#servlet-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4&quot; aria-label=&quot;servlet 라이프사이클 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Servlet 라이프사이클&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;기본생성자&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;최초 클라이언트가 호출시 실행되서 객체 생성&lt;/li&gt;
+&lt;li&gt;새로운 로직의 갱신된 객체 생성시 단 한번 생성 (갱신직후 최초 클라이언트가 요청시 단 한번 실행)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;init()&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;생성자 호출 직후에 단 한번 실행&lt;/li&gt;
+&lt;li&gt;공유하는 자원 초기화 로직으로 적합&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;deGet() / doPost()&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;클라이언트 요청시 1:1 실행&lt;/li&gt;
+&lt;li&gt;서비스 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;destroy()&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;갱신된 servlet bytecode가 서버 메모리에 로딩시 자동 호출&lt;/li&gt;
+&lt;li&gt;구버전 객체 메모리 해제시에 자동 실행&lt;/li&gt;
+&lt;li&gt;자원 반환용 로직 구현시 적합&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;메소드&lt;/p&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[실행단위 : cpu core…]]></description><link>https://hyemin-jang.github.io/기타/thread_vs_process/</link><guid isPermaLink="false">https://hyemin-jang.github.io/기타/thread_vs_process/</guid><content:encoded>&lt;p&gt;실행단위 : cpu core에서 실행하는 하나의 단위&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;프로세스&lt;/li&gt;
 &lt;li&gt;스레드 둘다 포함&lt;/li&gt;
@@ -145,7 +270,7 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;li&gt;SQL이 아닌 메소드로 데이터 조작&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h4&gt;🌈 &lt;strong&gt;자바 DB연동 기술의 변천사&lt;/strong&gt;&lt;/h4&gt;
+&lt;h3 id=&quot;-자바-db연동-기술의-변천사&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%9E%90%EB%B0%94-db%EC%97%B0%EB%8F%99-%EA%B8%B0%EC%88%A0%EC%9D%98-%EB%B3%80%EC%B2%9C%EC%82%AC&quot; aria-label=&quot; 자바 db연동 기술의 변천사 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🌈 &lt;strong&gt;자바 DB연동 기술의 변천사&lt;/strong&gt;&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;EJB의 Entity빈 : 구현 및 배포 어려움 등의 여러가지 이슈 있었음&lt;/li&gt;
 &lt;li&gt;Hibernate : 자바 표준은 아니지만 가장 많은 개발자들이 사용하는 ORM 기술&lt;/li&gt;
@@ -154,7 +279,12 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;h2 id=&quot;1-jpa-실행-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-jpa-%EC%8B%A4%ED%96%89-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;1 jpa 실행 구조 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1) JPA 실행 구조&lt;/h2&gt;
 &lt;p&gt;애플리케이션과 JDBC 사이에서 동작.&lt;/p&gt;
 &lt;p&gt;개발자가 JPA를 사용하면 JPA 내부에서 JDBC API를 사용하여 SQL을 호출, DB와 통신한다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;C:%5Cdevelopment%5Cgithubpage%5Cmy-blog%5Ccontent%5Cassets%5Cposting%20images%5Cjpa.PNG&quot;&gt;&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 804px;&quot;&gt;
+      &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 51.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABOElEQVQoz22S246DMAxE+f/f42UL0lZleYByCfe2EHBzsusIVWvJShxPxhPH0ePxEPVlWYITT9Mk4zgGn+c5YI/jEIz17FHbtgFsrZVt22Tfd086DEMgJd80jfR97x3MfxbVde2JINCqGPHnJVWOCMW+Xi9/xhoIsbMS/H6/+/PVAclh+lSUYqxVVfk8Rcqy/CWEHbKu64RY933fSeOAiyPCjDFSukIUa/4IcMi4Fwg5oF+D602apmIcmTGtxHEsX5eLAzdiNyvG4b6vV0mSJBCgmFZgvCw8GfnseQJKiLPbTfKfXLIsd6qq0LuiKHxRCOiztgRRgZBAG8slBX1+ClMAsbW7PJ9PT6orPY5QorN3NpLrunoFTAFFKEp/GRv9ZXLq/pcBoIYK58EmRgkFWXWv+POIqXH2BkfbBWscvKJqAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;jpa1&quot; title=&quot;jpa1&quot; src=&quot;/static/469409e3a56dd6dd0563022b4e5d1673/27b7a/jpa1.png&quot; srcset=&quot;/static/469409e3a56dd6dd0563022b4e5d1673/5a46d/jpa1.png 300w,
+/static/469409e3a56dd6dd0563022b4e5d1673/0a47e/jpa1.png 600w,
+/static/469409e3a56dd6dd0563022b4e5d1673/27b7a/jpa1.png 804w&quot; sizes=&quot;(max-width: 804px) 100vw, 804px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+    &lt;/span&gt;
 &lt;h2 id=&quot;2-jpa를-사용하는-이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-jpa%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;2 jpa를 사용하는 이유 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2) JPA를 사용하는 이유&lt;/h2&gt;
 &lt;h4&gt;(1) 생산성 증가 및 유지보수의 용이&lt;/h4&gt;
 &lt;ul&gt;
@@ -171,19 +301,33 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;C:%5Cdevelopment%5Cgithubpage%5Cmy-blog%5Ccontent%5Cassets%5Cposting%20images%5Cdialect.PNG&quot;&gt;&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 824px;&quot;&gt;
+      &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 57.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABZUlEQVQoz3WTiZKDQAhE/f+fjK5nnMnpnYvlkSVlNrtUISNCdwua9H0vwzCYd10n1+tV3NZnnlM7jqOdz+ezPB4Pe+YRS7icTidLAnA4HGSaJgOvm9rO+/3eHGu3W7ndbpYnrgGJyTg+2ZyVwvv9/lYMEc9QBzBka4VeZ4A0cyDiawMIIkh8LDHGlwAIGMN6NIn8YU7CKFCDWprIo3CeZ8tx3/fDa2TcJy7VHVuWRXa7ndR1LVudGSoADqGVqqo0RlNITVWWlmvb1ojeFDrg5XKR0AZriCG8lEKAQpq5jzEYmAFr/BeQ1wkK9JVlUimIz7FUNUVRaE6bl9mUZ1qTpqnVI+Rjhg6KKmv+YcZQRw6FzJSlcCbHsmzLv8EckKI0SyXPc/s2sXSzMUU46th2qXUob5rmU+F6OZOy54WCHY+2JDbI3DYKChA5lKMawK57fj7/KvS/BSUw++9HjsiccV6bWpzWb6wmomXtr9srAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;jpa2&quot; title=&quot;jpa2&quot; src=&quot;/static/3747fca5df6655ae0d7488157bcfc55c/c1c45/jpa2.png&quot; srcset=&quot;/static/3747fca5df6655ae0d7488157bcfc55c/5a46d/jpa2.png 300w,
+/static/3747fca5df6655ae0d7488157bcfc55c/0a47e/jpa2.png 600w,
+/static/3747fca5df6655ae0d7488157bcfc55c/c1c45/jpa2.png 824w&quot; sizes=&quot;(max-width: 824px) 100vw, 824px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+    &lt;/span&gt;
 &lt;hr&gt;
 &lt;h1 id=&quot;2-jpa-application-개발&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-jpa-application-%EA%B0%9C%EB%B0%9C&quot; aria-label=&quot;2 jpa application 개발 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. JPA Application 개발&lt;/h1&gt;
 &lt;h2 id=&quot;1-개발-환경-구축&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95&quot; aria-label=&quot;1 개발 환경 구축 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1) 개발 환경 구축&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;JPA 프로젝트로 변환&lt;/p&gt;
-&lt;p&gt;: 프로젝트 우클릭 - Configure - Convert to JPA Project - Next - Next - &lt;strong&gt;Disable Library Configuration&lt;/strong&gt;을 설정해 줄 것이다(메이븐 사용할 것임)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;C:%5Cdevelopment%5Cgithubpage%5Cmy-blog%5Ccontent%5Cassets%5Cposting%20images%5Cjpa%20project.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;: 프로젝트 우클릭 - Configure - Convert to JPA Project 클릭하여 JPA 프로젝트로 변환한다 - 마지막에 &lt;strong&gt;Disable Library Configuration&lt;/strong&gt;을 설정해 줄 것이다(메이븐으로 사용할 것임)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 924px;&quot;&gt;
+      &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 108.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAABYlAAAWJQFJUiTwAAACbUlEQVQ4y51U2XLaQBDc//+zPCXYgC4QCJ0LSCBhEtsBOtMjFrDLBxVVdc1qR5qre9cE3hR1XaNtW2w2G2y2WxwOB/A5nU6453l9fdV/TscDTDKPsVgssN/vNYA6xB6PR7Ufwfmc5fP88ozxrILZ1BZ102ArlTVid7udVsqK265DJ+/0Pe2e1LID142+i+26Fn9e/iJb/YZJsxx5nquDAbXt/0DbbrF/6mCiKMLj4yOSJEFZliiKQsEkWZapfY/M2Rs/15kUZ2bzOcIwxGg0gu/7uskPGHy9XmO1Wt0Na60EnM3geR4Gg4FWOhwOZf1L16w+mkSYCKbTqdjJjZ2on+soCnXNyg0dYRhodb7vabXBGfyZHwaBfwnEBC5QEASIZ7EUNEaapkqS4YcMxg9SmQMlRKe1y57NRsjaXMlyxNE2zXXPMW5iCcg2SYoj4zrk+5GmPUGmqiosl8tzxrfgCfoKTVMjr9aYpCsEiUWSL2HIJEFWCTJVlgWsJLm29jnqusFaUJYVCoFhdaySTLN1yocYj8e6x8GTqK9AlmkTkaAGtBKQGz3T/iWII4vSiuP4S5BcEqoBSQaDsKrboKyQEvkuoPNTHYYz44CZoS+/19l3bb4HC2BgQ7nwxYmYVTEbE7FyEnYPOQ6GP7vh30JnKCeEWakvBnbi/QgXYTsN9rp6q0Fad0Hce7WpDnnEmOE9XGa9bM/o5NLVi1fuv51crJ3uby8xTF6Un7dxnp21lc6Twqc0sizForCI0wLzXA6CpVLy/vqaJwtdsPVbcI+g6EkYJRVFEzw8PMAbjzAM5/gx8PHTEw3OEvGPdN7/ALjvXapu5notAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;jpa3&quot; title=&quot;jpa3&quot; src=&quot;/static/0ee1d4c5f37b231b24563113fed256f7/9a1cf/jpa3.png&quot; srcset=&quot;/static/0ee1d4c5f37b231b24563113fed256f7/5a46d/jpa3.png 300w,
+/static/0ee1d4c5f37b231b24563113fed256f7/0a47e/jpa3.png 600w,
+/static/0ee1d4c5f37b231b24563113fed256f7/9a1cf/jpa3.png 924w&quot; sizes=&quot;(max-width: 924px) 100vw, 924px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+    &lt;/span&gt;
 &lt;p&gt;​	아래와 같이 &lt;code class=&quot;language-text&quot;&gt;persistence.xml&lt;/code&gt;파일이 생겼으면 정상적으로 변환 완료&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;C:%5Cdevelopment%5Cgithubpage%5Cmy-blog%5Ccontent%5Cassets%5Cposting%20images%5Cpersistence.PNG&quot;&gt;&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 508px;&quot;&gt;
+      &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 62%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB7ElEQVQoz42SC2+bMBSF+f//a+qkbVESbU1IUt7GNjYY8yaQnF1YW6lSG83SMRjf+/n4Xpz9xoV7uEBphbK0EJwjjCKkPAUjNW2HOI7A0hRKaXT9gEfDWUBt20AIgboioJCo62aFM8aQ5xpNXYMlybqubQ2ecmSZQkXxYZRQTA5J68JYOEwocFkgSDQSYcDJoST48RSQK42AFeBZhSjNEDOFMOMUp+CxGFKV8EIfmTTIKC9IowVoEFKSl9BpvILIzHrA70OIc6Bx8A3csMQxynH0FPY+wx9PYHsK8XxKcHRDuBeJ8yXG9vwCpzIaaRJT7VK6hkQUxeSMo21q+Nxi85Jj6y0qsPUL7DyDHR3y86SwOXr45TKKUf/izhmccejB6YpRzNBTwadpwjzPa4HnO9Bfb+jG2+tzXtX2V7TDoun1fXqXM8/T2pSUBdBKwVoLrTVsVa0NsdZg7GsMncU0NBhJD7u8TOM4oBAeNUSsoMKU9Lu0a/fyokDXViRLsBZ9V+NOzu80fSZn2VxdlhIml1S7BvN1IFfdly6WxAcOibzUi2rXEHRz8LA7J/jxHMDPGiRmhLTDBxdv0M/AzvLpdrvhPo/oqPDPzOLJlfjucjydMnw7cOzD/M3aQ3fvwHkaUekIQoovE+7/AVvGX5s3lJxUUvNmAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;jpa4&quot; title=&quot;jpa4&quot; src=&quot;/static/f8ba0fe96e5e40ff564ac6b52124c937/2fd48/jpa4.png&quot; srcset=&quot;/static/f8ba0fe96e5e40ff564ac6b52124c937/5a46d/jpa4.png 300w,
+/static/f8ba0fe96e5e40ff564ac6b52124c937/2fd48/jpa4.png 508w&quot; sizes=&quot;(max-width: 508px) 100vw, 508px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+    &lt;/span&gt;
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;Maven 프로젝트로 변환 &lt;/p&gt;
@@ -193,7 +337,7 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;/ol&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;...
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
- &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;dependencies&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;dependencies&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 		&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 			&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;javax.persistence&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 			&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;javax.persistence-api&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
@@ -268,20 +412,18 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;class&amp;gt;model.entity.Team&amp;lt;/class&amp;gt;&lt;/code&gt; : Entity 클래스를 등록&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;각 속성(property)의 의미&lt;/p&gt;
-&lt;ul&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;property name=&amp;quot;hibernate.dialect&amp;quot; value=&amp;quot;org.hibernate.dialect.OracleDialect&amp;quot; /&amp;gt;&lt;/code&gt; : 방언처리기 지정 (오라클 Dialect 사용할 것이다)&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;property name=&amp;quot;hibernate.show_sql&amp;quot; value=&amp;quot;true&amp;quot; /&amp;gt;&lt;/code&gt; : 콘솔창에 생성된 sql문 출력하겠다&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;property name=&amp;quot;hibernate.id.new_generator_mappings&amp;quot; value=&amp;quot;true&amp;quot; /&amp;gt;&lt;/code&gt; : 테이블의 PK컬럼을 자동 생성하겠다(value=“true” : SequenceStyleGenerator를 사용하겠다)&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;property name=&amp;quot;hibernate.hbm2ddl.auto&amp;quot; value=&amp;quot;create&amp;quot; /&amp;gt;&lt;/code&gt; : DDL(테이블 생성, 삭제, 변경)을 자동으로 실행하겠다. (실행하지 않으려는 경우 value=“none”)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&quot;2-연관관계-매핑&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84-%EB%A7%A4%ED%95%91&quot; aria-label=&quot;2 연관관계 매핑 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2) 연관관계 매핑&lt;/h2&gt;
 &lt;p&gt;: 객체의 참조 관계와 테이블의 외래키를 매핑하는 것을 의미&lt;/p&gt;
-&lt;p&gt;​	⚡ Member 객체가 Team 객체를 참조하는 경우&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;C:%5Cdevelopment%5Cgithubpage%5Cmy-blog%5Ccontent%5Cassets%5Cposting%20images%5Ctable.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;⚡ Member 객체가 Team 객체를 참조하는 경우	&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 334px;&quot;&gt;
+      &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 42.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAACIklEQVQoz02Sy27TUBCG/RxsoGsegsdALFiwQ+zY0gUSIHas2QGiUksRiKhQkqK2IKQ2TdMmIfd7YuLEduLEce04Tuzk49QB0SN9Z0aa0a9/zhwpO9A41TQqw/+UDVVElZwxwPUXwJK5uC2BI/AE9hUu/hIIJGNaJyZXyZ5FKGZ3+ZXaIXX6id/NAwZTGdO9lIJG+hjl9Tr17Rcktl/SevuE1sZT5I1ndDef03rzmE6jgqTYBo5voVl9uqaGKqIyUunbA6rmCHs6CwXbu6/g/jWMR7fYX79N+94N0neuk7+7xuLhTfwHa8inh0hla0E0FuPDxwjvtrbY3HpPJLJD9MsuiWKD8WwRjlKs1VHiUYxEFCcZRU18o5/cp3uyxzh9SC+xR7OrIumuT29oUlM0mqpOSVYotxVkrc9RQyWrGFwI0WN9RtNZcvDziM3IVz5HYxwnU3yPn4UTXM7RcQKkH12HXKlGtVLmJJGibwz5d3oTX4gFYV4ZuvSdGfrYRjFMYWIsHOnoFxPseYAuas2xhzSYBoxGJn1NRdd0XNdluVyGm9Umc8beSjCuTjjqiElqVZLnKdKZPHKzxXkqQ+IkTipXEQ59pMLQo9Jqk8lkODvP0Ol0yOWLBEFA155jev5qKdYM2fKoGzaF3pCCeIpC1wjzsjoir1r0nDlSQ9isj1xKA9GoWaIwpjxwqJsepeEUL1iEgpeu/cWS1a9ccTVfrrr4A+U+iKYg8+JuAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;jpa5&quot; title=&quot;jpa5&quot; src=&quot;/static/ce93aa61388714486731539501ddfc5f/86d36/jpa5.png&quot; srcset=&quot;/static/ce93aa61388714486731539501ddfc5f/5a46d/jpa5.png 300w,
+/static/ce93aa61388714486731539501ddfc5f/86d36/jpa5.png 334w&quot; sizes=&quot;(max-width: 334px) 100vw, 334px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;JDBC : 연관 관계이 있는 상대 테이블의 PK를 멤버변수로 가진다&lt;/li&gt;
 &lt;li&gt;JPA : &lt;strong&gt;엔티티 객체 자체를 통채로 참조한다&lt;/strong&gt;&lt;/li&gt;
@@ -319,9 +461,11 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;p&gt;🤷‍♀️ 어떻게 판단하나요?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;다대일 단방향 관계 : member1.getTeam() 처럼 멤버가 팀을 참조 가능&lt;/li&gt;
-&lt;li&gt;양방향 관계 : team1.getMember()처럼 팀이 멤버를 참조도 가능하게 하려면 양방향으로 설정하면 됨&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p&gt;양방향 관계 : team1.getMember()처럼 팀이 멤버를 참조도 가능하게 하려면 양방향으로 설정하면 됨&lt;/p&gt;
 &lt;p&gt;=&gt; 역방향으로 객체 탐색이 꼭 필요할때 양방향 관계를 설정하자&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;h4&gt;(3) 연관관계의 주인(Owner)&lt;/h4&gt;
 &lt;ul&gt;
@@ -382,9 +526,12 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;li&gt;EntityManager 생성 &lt;/li&gt;
 &lt;li&gt;EntityTransaction 생성 및 적용 &lt;/li&gt;
 &lt;li&gt;비즈니스 로직(CRUD) &lt;/li&gt;
-&lt;li&gt;자원반환&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;자원반환&lt;/p&gt;
+&lt;p&gt;​		&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;🎈 JPA 주요 API&lt;/h4&gt;
+&lt;h3 id=&quot;-jpa-주요-api&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-jpa-%EC%A3%BC%EC%9A%94-api&quot; aria-label=&quot; jpa 주요 api permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;✅ JPA 주요 API&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -411,7 +558,7 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h4&gt;🎈 EntityManager 의 CRUD 수행 메소드&lt;/h4&gt;
+&lt;h3 id=&quot;-entitymanager-의-crud-수행-메소드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-entitymanager-%EC%9D%98-crud-%EC%88%98%ED%96%89-%EB%A9%94%EC%86%8C%EB%93%9C&quot; aria-label=&quot; entitymanager 의 crud 수행 메소드 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;✅ EntityManager 의 CRUD 수행 메소드&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -480,25 +627,25 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
             &lt;span class=&quot;token class-name&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Member&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; allMember &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; em&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createQuery&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
                 &lt;span class=&quot;token string&quot;&gt;&quot;select m from Member m&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Member&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getResultList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
             &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;멤버 수 : &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; allMember&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-		    &lt;span class=&quot;token comment&quot;&gt;// DELETE&lt;/span&gt;
+			
+            &lt;span class=&quot;token comment&quot;&gt;// DELETE&lt;/span&gt;
             em&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;oneMember&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// 객체를 파라미터로 받아서 pk값을 통해 해당 데이터 삭제&lt;/span&gt;
 
             tx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;commit&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
             
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Exception&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;token comment&quot;&gt;// 에러 발생시 CRUD 결과 저장하지 않고 rollback&lt;/span&gt;
-			tx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;rollback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
-			e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            tx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;rollback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;printStacktrace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;token comment&quot;&gt;// 자원반환&lt;/span&gt;
-			em&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-			emf&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
+            em&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            emf&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;jpa의-성능-최적화-기능&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#jpa%EC%9D%98-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EA%B8%B0%EB%8A%A5&quot; aria-label=&quot;jpa의 성능 최적화 기능 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;JPA의 성능 최적화 기능&lt;/h2&gt;
+&lt;h2 id=&quot;4-jpa의-성능-최적화-기능&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-jpa%EC%9D%98-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EA%B8%B0%EB%8A%A5&quot; aria-label=&quot;4 jpa의 성능 최적화 기능 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4) JPA의 성능 최적화 기능&lt;/h2&gt;
 &lt;h3 id=&quot;1-1차-캐시와-동일성identity-보장&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-1%EC%B0%A8-%EC%BA%90%EC%8B%9C%EC%99%80-%EB%8F%99%EC%9D%BC%EC%84%B1identity-%EB%B3%B4%EC%9E%A5&quot; aria-label=&quot;1 1차 캐시와 동일성identity 보장 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;(1) 1차 캐시와 동일성(identity) 보장&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;같은 트랜잭션 내에서는 같은 Entity를 반환 - 조회 성능 (약간) 향상&lt;/li&gt;
@@ -511,11 +658,11 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;li&gt;캐시에 데이터를 미리 복사해 놓으면 접근 혹은 계산 없이 더 빠른 속도로 데이터를 가져올 수 있음&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;select문장 실행 안하는경우&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id=&quot;2-트랜잭션을-지원하는-쓰기-지원-transactional-write-behind&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EC%9D%84-%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94-%EC%93%B0%EA%B8%B0-%EC%A7%80%EC%9B%90-transactional-write-behind&quot; aria-label=&quot;2 트랜잭션을 지원하는 쓰기 지원 transactional write behind permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;(2) 트랜잭션을 지원하는 쓰기 지원 (transactional write-behind)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update, Delete로 인한 로우(Row) 락 시간 최소화&lt;/li&gt;
-&lt;li&gt;지연 로딩 ???????? 뭔소리야&lt;/li&gt;
+&lt;li&gt;지연 로딩 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;p&gt;[참고한 사이트]&lt;/p&gt;
@@ -573,6 +720,7 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;br&gt;
 &lt;h3 id=&quot;-이클립스에서-jdbc-드라이버-사용하기---oracle11g-xe-기준&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4%EC%97%90%EC%84%9C-jdbc-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0---oracle11g-xe-%EA%B8%B0%EC%A4%80&quot; aria-label=&quot; 이클립스에서 jdbc 드라이버 사용하기   oracle11g xe 기준 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;💎 이클립스에서 JDBC 드라이버 사용하기 - Oracle11g XE 기준&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;오라클이 설치되어 있다면 오라클 드라이버 jar파일(=자바 실행파일)도 이미 가지고 있다. 오라클이 설치된 디렉토리로 가서 &lt;code class=&quot;language-text&quot;&gt;oraclexe\app\oracle\product\11.2.0\server\jdbc\lib&lt;/code&gt; 경로로 찾아가보면 &lt;strong&gt;odbc6.jar&lt;/strong&gt; 파일이 있다(jdk1.8 이상에서 사용). 이 파일을 원하는 위치에 복사해둔다.&lt;/li&gt;
@@ -581,17 +729,32 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;p&gt;목록 중 User Library를 선택한다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;C:%5CUsers%5Chmjan%5CDesktop%5Cimage%5Cimage-20210820191216912.png&quot;&gt;&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1200px;&quot;&gt;
+      &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 82.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAA7DAAAOwwHHb6hkAAACoUlEQVQ4y3VUiYoTQRCd//8fUUEWFARBCKK7IZvJNfd9X525nlU1OyG7ug2PPpJ+/arq1Wjb7TM8z4PjuoiiCFmeI8uylzlH/rIvigJ1XRFqVFUl665roVQnaNtWftMsx0cYJnCJMPB9uSiEhDRNhTCOY4RRiqruUVYd6nZE002EEVUzICsqOq+RFw20MEoQpaWovBgGbNumB0KUZSnk65zQf+p2IIJeSHjNxEWpcDI9nJ0YaU6EXpzj2fBFoWGasCwLQRAIEYPVOY5DFwv8b0zTRKF3uA4j+n6AlqQZfN8TQr4YkDpWyKpEWZIuD1DeeMzzfAOPcZyJUGEYBnTXkQnzRd3lBMs04LkOkjhCXZU3BPRgfUf4WuH86kzLspRIXOjHCw4mqQwzgZ+UcCJep9idTMpPcSOcGNN8I7wfQmh7IR6eAnzcGPiq5/h2KPD9XMv8ZRvh82MI3bARuLaorYpMlHP+RiKM8xpF1aJTlMOYqsw5sm1LQmZ/VVQARkNrl1JgWwbOVLDN9oDNk47fe0pNXNwI/TAG1yKjKLQl+TnO5zNV2BZzrlZZbcPkv3QLH37s8OnnHg+PLv5YmRD+E7JSShYehfO834sPuWNWwtXoRZ7hqiistsa1azAN/ZLPacnpWnmNS84v+YEPg4zNStnk9yq5W5qmeceHb6qs1BX92EM/6TgejqLmbchLL5dymX3HeWPwfhiWsFeIQn6BO+R4PErjM+5bjxWm5FfVT2i7Hi1Vk8FG7tRIZwNFoFATboTsRQ6ZW41D5g/DSsqEvB7HUR7jVmNIlemMC3nteznT+NMzz5OQnCh/bKGUQmSSVSGDH2hbKsY0srvlDmPdMznvNZdM7XqRtN9ut3uVQ56TJJEeNy2HPh4uLNt/F7YT4C8/ixCkMdWLTAAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;jdbc1&quot; title=&quot;jdbc1&quot; src=&quot;/static/69c91e8aa1ae713774ab879e846d13d5/c1b63/jdbc1.png&quot; srcset=&quot;/static/69c91e8aa1ae713774ab879e846d13d5/5a46d/jdbc1.png 300w,
+/static/69c91e8aa1ae713774ab879e846d13d5/0a47e/jdbc1.png 600w,
+/static/69c91e8aa1ae713774ab879e846d13d5/c1b63/jdbc1.png 1200w,
+/static/69c91e8aa1ae713774ab879e846d13d5/1628f/jdbc1.png 1232w&quot; sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+    &lt;/span&gt;
 &lt;ol start=&quot;3&quot;&gt;
 &lt;li&gt;New를 눌러 새로운 라이브러리를 추가한 뒤, &lt;strong&gt;Add External JARs&lt;/strong&gt;를 누르고 아까 복사해뒀던 &lt;strong&gt;odbc6.jar&lt;/strong&gt;를 추가한다.  Apply and Close를 눌러 등록 완료한다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;C:%5CUsers%5Chmjan%5CDesktop%5Cimage%5Cimage-20210821002300277.png&quot; alt=&quot;image-20210821002300277&quot;&gt;&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1200px;&quot;&gt;
+      &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 67.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB6ElEQVQ4y21Ti1KjUAzl///MGdcd66p0tFAob7iA8r48ziZBtIzNTJrc1+EkOTW6vkfXdWjblmIP7xIgV7msh2HAOI7QWku+eo+mqdHQOe9rPWKaFswzKM4wXuwQL1YIP1JQeQ3X8aEIsKoq5HmOsizlg/J40N/gLe3xnUx9Is07+HGJWNUwRkLV4wwKYh8fJbIsk8u2beNwOEi0z+xnWJYl0XEc2ecPMkbTNKiaDsYKw5QXojzJAZebJIk8eDVNXDwPcRzLHkf2MIzg+74ALgsh8A+ZwQk7A87UCGa2WU15mibyoWvjvlqnE45HU9oilARwWRnuAOtaLjAIP7y2jUXXD3g4POPu4RFRkskeD4WPjYWyWXwPyDkPYKtg8w3wn/mGv0+vSFKFQU8IYoXPqoWhhw6jHn6VzBJgwI3ZNWBPUnuiYf25v6d+RsJsk9muZC6z/mLIxhq7ZdyKE/XQPB5JYmp3tgPkphZFQYNI9/q7ctEgsQmCAK7ryr2bQ9HUBz1OCKMYJ9slSQQCzJ4ka2S5vL2/CzuPJHM+O8iJwCT/kpWUsfUlywpc/FgAWXdpmolHEeuO9EcaXNeRrFVeoigr1CTmfphoUJPEb8CKqAe+J7riUjfZcImc88DWvmpZ/2hzwZeyxf8DXXbqwkNo7OAAAAAASUVORK5CYII=&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;jdbc2&quot; title=&quot;jdbc2&quot; src=&quot;/static/1799b7409381cf7c100aa58838daf52e/c1b63/jdbc2.png&quot; srcset=&quot;/static/1799b7409381cf7c100aa58838daf52e/5a46d/jdbc2.png 300w,
+/static/1799b7409381cf7c100aa58838daf52e/0a47e/jdbc2.png 600w,
+/static/1799b7409381cf7c100aa58838daf52e/c1b63/jdbc2.png 1200w,
+/static/1799b7409381cf7c100aa58838daf52e/cf8e5/jdbc2.png 1402w&quot; sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+    &lt;/span&gt;
 &lt;ol start=&quot;4&quot;&gt;
-&lt;li&gt;
-&lt;p&gt;패키지 하단에 이렇게 odbc6.jar가 정상 등록되어 있다면 이제 이클립스에서 oracle JDBC Driver를 사용할 수 있다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;C:%5CUsers%5Chmjan%5CDesktop%5Cimage%5Cimage-20210821002851211.png&quot; alt=&quot;image-20210821002851211&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;패키지 하단에 이렇게 odbc6.jar가 정상 등록되어 있다면 이제 이클립스에서 oracle JDBC Driver를 사용할 수 있다.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 643px;&quot;&gt;
+      &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 41.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABdElEQVQoz3WSiW7UMBCG8/5vxAMAArWilKrsAlly2M59OUdzbPIxm7arqhIjfZ7RHH8mlh0VGqqqwtqGsizp+4EsS/dc17ZE0XO9qevnvsbufbX4tu2Ik2TP7z1Ng6OTglClRHGJ73uclOZw9PF8g6cKvDBFmRxXK6kZ3CDA8wKUSggCD6NDlE7RUYlJapw4zkmyhjS3GInjrCIwFfduwf2p5MGrd397DPn+S3H3J+HuGPHopjJnycuerHwiFbJqwulsLV8LCcNA1o9pZe1pORNVI0aaLmhBybBKa3Teo/IOnbXMCy9sV5xlWcmKgkB+N4lFsOvkbiy9cJ57lrHbPay8tXVdhY335lyOPE84/A344WpZv6EfBhq58HkehYllma8D27btTPP5Kviau7ALTvPMT93w4ZvPp0PMgxm4ORV8PsZ8+Z3y1c35+KikZujGZReZ/yd4SU1DLU8lo+6esP24D9lhopHY9tObeOT8IvJe8NX+AZ17YM1txLz5AAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;jdbc3&quot; title=&quot;jdbc3&quot; src=&quot;/static/b0c19ab0d44b298ca6416a6ff7517c53/b5bda/jdbc3.png&quot; srcset=&quot;/static/b0c19ab0d44b298ca6416a6ff7517c53/5a46d/jdbc3.png 300w,
+/static/b0c19ab0d44b298ca6416a6ff7517c53/0a47e/jdbc3.png 600w,
+/static/b0c19ab0d44b298ca6416a6ff7517c53/b5bda/jdbc3.png 643w&quot; sizes=&quot;(max-width: 643px) 100vw, 643px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+    &lt;/span&gt;
 &lt;h2 id=&quot;3--jdbc-프로그래밍&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3--jdbc-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D&quot; aria-label=&quot;3  jdbc 프로그래밍 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3)  JDBC 프로그래밍&lt;/h2&gt;
 &lt;p&gt;JDBC를 이용한 프로그램은 다음과 같은 흐름으로 구성된다.&lt;/p&gt;
 &lt;ol&gt;
@@ -599,7 +762,7 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;p&gt;특정 DB에 접속하는 객체 생성&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;Connection&lt;/span&gt; con &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;DriverManager&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getConnection
    			 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;jdbc:oracle:thin:@127.0.0.1:1521:xe&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;SCOTT&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;TIGER&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;✔ getConnection 메소드의 인자값&lt;/p&gt;
+&lt;p&gt;✨ getConnection 메소드의 인자값&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;String url : 접속할 서버의 URL이다. 프로토콜 (jdbc:) , 서버주소(127.0.0.1 = 로컬서버라는 뜻), 서버 포트(1521), DB이름(xe)으로 구성된다. &lt;/li&gt;
 &lt;li&gt;String user : DB 로그인 계정&lt;/li&gt;
@@ -637,12 +800,13 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;p&gt;SQL 문장 실행&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// dept테이블의 모든 데이터를 조회하는 select문 실행&lt;/span&gt;
 &lt;span class=&quot;token class-name&quot;&gt;ResultSet&lt;/span&gt; rset &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; stmt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;executeQuery&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;select * from dept&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;✔ SQL문을 실행하기 위해 Statement 객체에서 제공하는 메소드&lt;/p&gt;
+&lt;p&gt;✨ SQL문을 실행하기 위해 Statement 객체에서 제공하는 메소드&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;executeQuery&lt;/code&gt; : select문 실행하여 ResultSet 객체 반환&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ResultSet&lt;/code&gt; : select한 데이터집합을 가지는 객체&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;executeUpdate&lt;/code&gt; : insert, update, delete문 실행&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt; ​		 &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;결과 활용&lt;/p&gt;
@@ -693,16 +857,12 @@ result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span clas
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;✔ ResultSet 객체의 메소드&lt;/p&gt;
+&lt;p&gt;✨ ResultSet 객체의 메소드&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;boolean next()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;next()&lt;/code&gt; : 커서 다음에 레코드가 있는지 판단하여 없으면 false, 있으면 true를 반환한 다음에 커서를 다음 레코드로 이동시킴&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;getInt()&lt;/code&gt; / &lt;code class=&quot;language-text&quot;&gt;getString()&lt;/code&gt;  :  현재 커서가 가리키는 레코드의 컬럼 값을 데이터 타입에 따라 추출. 파라미터로 컬럼 인덱스 또는 컬럼명 사용 가능. &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt; : 커서 다음에 레코드가 있는지 판단하여 없으면 false, 있으면 true를 반환한 다음에 커서를 다음 레코드로 이동시킴&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Int getInt(int columnIndex)&lt;/code&gt; / &lt;code class=&quot;language-text&quot;&gt;Int getInt(String columnLabel)&lt;/code&gt;  /&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt; &lt;code class=&quot;language-text&quot;&gt;String getString(int columnIndex)&lt;/code&gt; / &lt;code class=&quot;language-text&quot;&gt;String getString(String columnLabel)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt; : 현재 커서가 가리키는 레코드의 컬럼 값을 데이터 타입에 따라 추출. 파라미터로 컬럼 인덱스 또는 컬럼명 사용 가능. &lt;/p&gt;
+ &lt;br&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;자원 반환&lt;/p&gt;
@@ -721,12 +881,12 @@ con&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
 &lt;li&gt;각 DAO 클래스는 CRUD 기능을 실행해주는 메소드 제공&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;-dao에서-connection에-접근하는-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-dao%EC%97%90%EC%84%9C-connection%EC%97%90-%EC%A0%91%EA%B7%BC%ED%95%98%EB%8A%94-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot; dao에서 connection에 접근하는 방식 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;💡 DAO에서 Connection에 접근하는 방식&lt;/h3&gt;
-&lt;p&gt;❓ DAO 클래스 내 메소드에서 직접 Connection 생성&lt;/p&gt;
+&lt;p&gt;❓ DAO 클래스 내 메소드에서 직접 Connection 생성한다면?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;메소드를 실행할 때마다 매번 커넥션 생성 및 자원반환 코드를 작성한다 &lt;/li&gt;
 &lt;li&gt;중복 코드로 비효율적임&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;✔ Connection 생성 및 자원반환만 담당하는 &lt;code class=&quot;language-text&quot;&gt;Util 클래스 따로 개발&lt;/code&gt;하고 DAO 클래스 내 메소드에서 가져다 쓰기&lt;/p&gt;
+&lt;p&gt;✅ Connection 생성 및 자원반환만 담당하는 &lt;code class=&quot;language-text&quot;&gt;Util 클래스 따로 개발&lt;/code&gt;하고 DAO 클래스 내 메소드에서 가져다 쓰기!&lt;/p&gt;
 &lt;p&gt;⚡ Util 클래스 개발 예 : &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
