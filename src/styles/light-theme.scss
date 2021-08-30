@@ -47,13 +47,22 @@ body.light {
     h3 {
       color: $dark-gray;
     }
+    time {
+      color: #4b2043;
+    }
     p {
       color: $middle-gray;
     }
     &:hover {
-      text-shadow: $light-hover-text-shadow;
+      text-shadow: 0 0 10px #ece5f1;  
     }
   }
+
+  .thumbnail-date{
+    color: #a9a9a9;    
+    font-size: 0.6rem;
+    font-style: italic;
+  } 
 
   .footer {
     color: $light-gray;
@@ -69,4 +78,8 @@ body.light {
       color: $navigator-text-color;
     }
   }
+  h2{
+    border-bottom: none;
+  }
+  
 }

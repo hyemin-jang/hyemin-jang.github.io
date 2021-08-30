@@ -16,10 +16,13 @@ export const Layout = ({ location, title, children }) => {
       <Top title={title} location={location} rootPath={rootPath} />
       <div
         style={{
+          position: 'relative',
+          height: '100%',
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(30),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          paddingRight: 50
         }}
       >
         <ThemeSwitch />
@@ -27,6 +30,6 @@ export const Layout = ({ location, title, children }) => {
         {children}
         <Footer />
       </div>
-    </React.Fragment>
+    </React.Fragment >
   )
 }
