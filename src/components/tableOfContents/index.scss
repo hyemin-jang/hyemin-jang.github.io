@@ -3,14 +3,15 @@ nav.container {
   width: calc((100vw - 720px) / 2 - 60px);
   display: none;
   @media screen and (min-width: 1200px) {
-    border-left: 2px solid;
-    border-image: linear-gradient(#291e95, #cc007a);
+    // border-left: 2px solid;
+    // border-image: linear-gradient(#291e95, #cc007a);
     border-image-slice: 1;
     position: sticky;
     top: 70px;
     display: block;
     max-width: 360px;
     padding-right: 30px;
+    padding-left: 20px;
     overflow: auto;
     word-break: break-word;
    // max-height: calc(100vh - 200px);
@@ -18,13 +19,17 @@ nav.container {
   }
   
   .contents {    
+    p {
+      margin-bottom: 0px;
+    }
     ul {
       list-style: none;
-      margin-left: 20px;
-      margin-bottom: 0px;     
+      margin-left: 10px;
+      margin-top : 0px;
+      margin-bottom: 0px;  
     }
     ul > li {
-      line-height: 1.0rem;
+      line-height: 1.3rem;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -32,11 +37,10 @@ nav.container {
 
     ul > li a{
       color: #888888;
-     
     }
     ul > li a.isCurrent {
       font-weight: 800;
-      text-shadow: 6px #888888;
+      color: #333;
     }
   }
 }

@@ -65,13 +65,17 @@ body.dark {
 
   // post
   blockquote {
-    border-left: 4px solid #ece5f1;
+    padding: 1.2em;
+    margin: 1.5em 0;
+    background-color: #474c57;
+    border-left: 4px solid $inline-dimmed-color;
+    color: #fff;  
   }
 
-  h1
-  {
-    border-bottom-color: rgba(255, 255, 255, 0.3);
-  }
+  // h1
+  // {
+  //   border-bottom-color: rgba(255, 255, 255, 0.3);
+  // }
 
   .navigator {
     a {
@@ -82,6 +86,15 @@ body.dark {
   td {
     border-bottom: 1px solid #eee;
   }
+
+  nav.container { 
+    .contents {    
+      ul > li a.isCurrent {
+        font-weight: 800;
+        color: #fff;
+      }
+    }
+  } 
 }
 
 

@@ -22,8 +22,8 @@ blockquote {
   padding: 1.2em;
   margin: 1.5em 0;
   background-color: #f8f8f8;
-  border-left: 4px solid #ece5f1;
-  color: $blockquote-text-color;  
+  border-left: 4px solid $inline-dimmed-color;
+  color: $inline-text-color;  
 }
 
 code[class*='language-'],
@@ -151,4 +151,9 @@ pre[class*='language-'] {
 
 .token.inserted {
   color: green;
+}
+
+.gatsby-resp-image-wrapper {
+  margin-bottom : 30px; 
+  box-shadow: 5px 5px 10px #0000009c;
 }
