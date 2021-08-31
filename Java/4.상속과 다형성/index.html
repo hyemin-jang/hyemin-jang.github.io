@@ -222,48 +222,50 @@ VIPCustomer 클래스의 생성자를 명시하지 않았기 때문에, 컴파�
 <li>VIPCustomer는 Customer클래스가 가지고 있는 구성원들을 모두 가지고 있기 때문에 묵시적 Upcasting 가능</li>
 </ul>
 </li>
-<li>
-<p>선언한 클래스형에 기반하여 멤버변수/메서드에 접근할 수 있다.</p>
+<li>선언한 클래스형에 기반하여 멤버변수/메서드에 접근할 수 있다.</li>
+</ul>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomerTest</span> <span class="token punctuation">{</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-	<span class="token class-name">Customer</span> c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Customer</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">"장보리"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token class-name">VIPCustomer</span> v <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VIPCustomer</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token string">"서리태"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		
-   	<span class="token comment">// 묵시적 형변환</span>
-	<span class="token class-name">Customer</span> vc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VIPCustomer</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token string">"김키위"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 	
-	
-    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span>saleRatio<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 0.1		</span>
-<span class="token comment">//		System.out.println(vc.saleRatio);   </span>
-<span class="token comment">//		=> vc는 Customer 클래스를 참조하는 변수임</span>
-<span class="token comment">//         VIPCustomer 클래스만 가지고 있는 saleRatio 변수에 접근 불가</span>
-<span class="token punctuation">}</span></code></pre></div>
-</li>
-</ul>
-<p>}</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">## 2) 가상메서드
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Customer</span> c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Customer</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">"장보리"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">VIPCustomer</span> v <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VIPCustomer</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token string">"서리태"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	
+		<span class="token comment">// 묵시적 형변환	</span>
+		<span class="token class-name">Customer</span> vc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VIPCustomer</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token string">"김키위"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-- `변수`와 `메서드`가 사용하는 메모리는 다르다.
-  - 멤버변수 : 인스턴스가 생성될 때마다 `스택 메모리`에 생성됨
-  - 메서드 : 메모리상의 `메서드 영역`에 생성됨 
-  (멤버변수처럼 인스턴스가 생성될때마다 새로 생성되지 않음)
-- 메서드를 호출하면 메서드 영역의 주소를 참조하여 명령이 실행된다.
-
-  
-```java
-public class CustomerTest {
-
-	public static void main(String[] args) {
-		Customer c = new Customer(10, &quot;장보리&quot;);
-		VIPCustomer v = new VIPCustomer(11, &quot;서리태&quot;);			
-		Customer vc = new VIPCustomer(12, &quot;김키위&quot;); 		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span>saleRatio<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 0.1	</span>
 		
-		System.out.println(c.calcPrice(1000));  // 1000.0
-		System.out.println(v.calcPrice(1000));  // 900.0
-		// 가상메서드 
-		System.out.println(vc.calcPrice(1000));  // 900.0
-	}
+		<span class="token comment">// System.out.println(vc.saleRatio);   </span>
+		<span class="token comment">// => vc는 Customer 클래스를 참조하는 변수임</span>
+		<span class="token comment">// VIPCustomer 클래스만 가지고 있는 saleRatio 변수에 접근 불가</span>
+	<span class="token punctuation">}</span>
+    
+<span class="token punctuation">}</span></code></pre></div>
+<h2 id="2-가상메서드" style="position:relative;"><a href="#2-%EA%B0%80%EC%83%81%EB%A9%94%EC%84%9C%EB%93%9C" aria-label="2 가상메서드 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) 가상메서드</h2>
+<ul>
+<li>
+<p><code class="language-text">변수</code>와 <code class="language-text">메서드</code>가 사용하는 메모리는 다르다.</p>
+<ul>
+<li>멤버변수 : 인스턴스가 생성될 때마다 <code class="language-text">스택 메모리</code>에 생성됨</li>
+<li>메서드 : 메모리상의 <code class="language-text">메서드 영역</code>에 생성됨
+(멤버변수처럼 인스턴스가 생성될때마다 새로 생성되지 않음)</li>
+</ul>
+</li>
+<li>메서드를 호출하면 메서드 영역의 주소를 참조하여 명령이 실행된다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomerTest</span> <span class="token punctuation">{</span>
 
-}</code></pre></div>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Customer</span> c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Customer</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">"장보리"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">VIPCustomer</span> v <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VIPCustomer</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token string">"서리태"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			
+		<span class="token class-name">Customer</span> vc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VIPCustomer</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token string">"김키위"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 		
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span><span class="token function">calcPrice</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 1000.0</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">calcPrice</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 900.0</span>
+		<span class="token comment">// 가상메서드 </span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>vc<span class="token punctuation">.</span><span class="token function">calcPrice</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 900.0</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>vc 변수의 자료형은 Customer형이고, 생성된 인스턴스는 VIPCustomer이다.</li>
 <li>⚡ <strong>선언한 클래스형이 아닌, 생성된 인스턴스의 메서드를 호출</strong>한다. ⚡</li>
@@ -285,6 +287,7 @@ public class CustomerTest {
 <p><a href="/Java/4.%EC%83%81%EC%86%8D%EA%B3%BC%20%EB%8B%A4%ED%98%95%EC%84%B1/#2-%EB%8B%A4%ED%98%95%EC%84%B1-polymorphism">2. 다형성 (Polymorphism)</a></p>
 <ul>
 <li><a href="/Java/4.%EC%83%81%EC%86%8D%EA%B3%BC%20%EB%8B%A4%ED%98%95%EC%84%B1/#1-%EB%AC%B5%EC%8B%9C%EC%A0%81-%ED%81%B4%EB%9E%98%EC%8A%A4-%ED%98%95%EB%B3%80%ED%99%98">1) 묵시적 클래스 형변환</a></li>
+<li><a href="/Java/4.%EC%83%81%EC%86%8D%EA%B3%BC%20%EB%8B%A4%ED%98%95%EC%84%B1/#2-%EA%B0%80%EC%83%81%EB%A9%94%EC%84%9C%EB%93%9C">2) 가상메서드</a></li>
 </ul>
 </li>
 </ul></div></nav></div><div class="social-share"></div><div class="sponsor-button"></div><hr class="custom-hr"/><div class="bio"><div class="author"><div class="author-description"><div class="author-image gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:72px;height:72px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAD8UlEQVQ4y32U61MUVBiH9/9IJQVWEATGKMSgZUEhRIgAuQtDMEqQCpG2QCBYwnIRIwcS2TQChbCJBRZcissy0ggEWMbFhVhAwkujY04aU314OruyyAr04Z0zZ845z/m97+89R9JS9CsvRrNyanlsVk6K0Iv5tCmezacs9q0Myf/D9GhK5mgvvUNTwS0RE7SVzi+trQ2VrAQ93zRpGttLF6jL6aUwKZfsyFiOhYVQfqTKdIm6UL/q3CqgGaYpnqW1eJqS5FIOB3pxNMiNjLc9ObLPjSjPHdTlDnD19AJqpX6VSollupMCNEN9Xh+KyHhS9rqSE+5DVog3OWHeZIbupiAlnrzEZFTH20X6t5ezWUehsegT5MV/QJLvK+RH+6NMDOWyMosBdR3jvVr+XphmSPMV6SH7aSrUL515QaHZzVaRauPJflICfMgI9qLogD/a6jImr3cyO9IHj+7yZHaCf+anOJ2WQGXa11wtu2OhUrKydm0l81zK6eSgnysnIt+kLCGQhuJ8vjn3Gfdv9vPvvRmmf/iOgeYGKrMOUnqogo4z95cNWgaaFRpboiDpY1L3upEf6cfJuEAG6y/QeraUh0LhU/0NdDVVdNepUKbGUH64Dq1QaDZnRcrPYBczO0j29xBG7CFt3+uoPkoD/c9g+IXFqZ94NNxH9+dn0JQXkxsXRW3OdZHVrGUNzRNj4yoiYlGEeJK7fzfZMUHMfq/mr7FB/hjQ8UDbylzLFRYHehirrSAjNIbmIsPqtjGr+0LRztFAD5QHAlCE+xHtK2O4QcXTsX6eiPoZVNXcKDjF4/4ues8VkRoYIQDrAUXn12T3EC1zIT3oDfLjQwjc6URhaiL3+jpM6S4aRvlzWMec9gon4oKJkMmX3V0j5Wnh1DgfRqbh7WJLnNyJd3yE0wL846VqRhprmFA3cD77GG/JZTg52OHrLuPbgjFa1+/DKfF2b1PxfhPpYe+SsMeLWPkurn1ZiaGrhf7aKipO5REWHIy9vQPOTk7C6ctojU9QtI0ZKnlOnzItdJTdNdUmWB7BLrdX6bxYye9DvdxsE4bMjJIQFYGd1J5tDlJiA1IF8DfRNpOWwJU/hhEa7p/Ahk0vcU3TxK1uDbnvHUKtquCxfgSZuzvWm62xt5Pi4x4gPpKZtT8H4y3G285maHAUNXKwd+STzOM8EZCGT5Xode08HB9ih5MzL2+0Qmprw04XDyHA0hgLoLGGqkwdzo7Ophpt3LCJC2VKFgZ1jPe0M6rT4mi/DWurzSag6/bXqM8fESoNq4Hm52eEBstjkUq3YGe7FVtrG7oaa+HBHI3VFVgZ1W2xYautLY522zmv6DKdUS+10H9P11vwy4Ch6AAAAABJRU5ErkJggg==" alt="[hyem]" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/114fe002cfffaf65598b36268e468ff7/e5b88/profile.png 1x,

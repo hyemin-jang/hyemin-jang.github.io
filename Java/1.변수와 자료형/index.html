@@ -177,16 +177,14 @@
 <span class="token keyword">int</span> i2 <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
 <span class="token keyword">float</span> f <span class="token operator">=</span> i2<span class="token punctuation">;</span>
 <span class="token keyword">double</span> d <span class="token operator">=</span> i2 <span class="token operator">+</span> f<span class="token punctuation">;</span>  <span class="token comment">// 1) i2 + f 에서 int형이 float형으로 변환</span>
-		    <span class="token comment">// 2) 더한 결과값이 d에 대입되면서 double형으로 변환</span></code></pre></div>
+		                <span class="token comment">// 2) 더한 결과값이 d에 대입되면서 double형으로 변환</span></code></pre></div>
 <h2 id="2-명시적-형-변환-downcasting" style="position:relative;"><a href="#2-%EB%AA%85%EC%8B%9C%EC%A0%81-%ED%98%95-%EB%B3%80%ED%99%98-downcasting" aria-label="2 명시적 형 변환 downcasting permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) 명시적 형 변환 (Downcasting)</h2>
 <ul>
 <li>묵시적 형 변환과 반대 방향으로 형 변환하는 경우, 자료형을 명시적으로 써주어야 함.</li>
-<li>
-<p>값이 바꿀 자료형의 범위를 넘는 경우 자료 손실이 발생할 수 있음</p>
+<li>값이 바꿀 자료형의 범위를 넘는 경우 자료 손실이 발생할 수 있음</li>
+</ul>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
 <span class="token keyword">byte</span> b <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">)</span> i<span class="token punctuation">;</span>   <span class="token comment">// int형을 강제로 byte형으로 형변환</span></code></pre></div>
-</li>
-</ul>
 <hr>
 <h1 id="3-상수와-리터럴" style="position:relative;"><a href="#3-%EC%83%81%EC%88%98%EC%99%80-%EB%A6%AC%ED%84%B0%EB%9F%B4" aria-label="3 상수와 리터럴 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 상수와 리터럴</h1>
 <p><strong>상수(constant)</strong></p>
@@ -195,25 +193,21 @@
 <li>
 <p><code class="language-text">final</code> 예약어를 사용해 선언</p>
 <ul>
-<li>
-<p>상수로 선언한 변수 이름은 다 대문자로 적는게 일반적임</p>
+<li>상수로 선언한 변수 이름은 다 대문자로 적는게 일반적임</li>
+</ul>
+</li>
+</ul>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">final</span> <span class="token keyword">int</span> MAX_NUM <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span></code></pre></div>
-</li>
-</ul>
-</li>
-</ul>
 <p><strong>리터럴(literal)</strong></p>
 <ul>
 <li>프로그램에서 사용하는 모든 숫자, 문자, 논리값(true, false)</li>
 <li>프로그램이 시작할 때 같이 로딩되어 <strong>특정 메모리 공간인 상수 풀(constant pool)</strong>에 놓임 </li>
-<li>
-<p>변수에 대입될 때 다시 변수 메모리에 복사됨</p>
+<li>변수에 대입될 때 다시 변수 메모리에 복사됨</li>
+</ul>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">char</span> ch <span class="token operator">=</span> <span class="token string">'A'</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
 <span class="token keyword">final</span> <span class="token keyword">double</span> PI <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
-<span class="token comment">// 여기서 'A', 10, 3.14 가 모두 리터럴이다</span></code></pre></div>
-</li>
-</ul></div><div style="position:absolute;top:0;height:100%;right:calc((100vw - 850px) / 2 * (-1))"><nav class="table-of-contents container"><div class="contents"><ul>
+<span class="token comment">// 여기서 'A', 10, 3.14 가 모두 리터럴이다</span></code></pre></div></div><div style="position:absolute;top:0;height:100%;right:calc((100vw - 850px) / 2 * (-1))"><nav class="table-of-contents container"><div class="contents"><ul>
 <li>
 <p><a href="/Java/1.%EB%B3%80%EC%88%98%EC%99%80%20%EC%9E%90%EB%A3%8C%ED%98%95/#1-%EB%B3%80%EC%88%98%EC%99%80-%EC%9E%90%EB%A3%8C%ED%98%95">1. 변수와 자료형</a></p>
 <ul>
