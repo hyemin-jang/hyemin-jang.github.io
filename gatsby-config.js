@@ -104,8 +104,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://your-blog.netlify.app',
-        sitemap: 'https://your-blog.netlify.app/sitemap.xml',
+        host: 'https://hyemin-jang.github.io/',
+        sitemap: 'https://hyemin-jang.github.io/sitemap.xml',
         policy: [
           {
             userAgent: '*',
