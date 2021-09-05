@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hyem.log]]></title><description><![CDATA[Hyem.log]]></description><link>https://hyemin-jang.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 05 Sep 2021 13:05:18 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><link>https://hyemin-jang.github.io/WEB/font awsome/</link><guid isPermaLink="false">https://hyemin-jang.github.io/WEB/font awsome/</guid><content:encoded></content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[1. 재귀함수 메소드 혹은 함수의 내부에서 자기 자신의 메소드 혹은 함수를 다시 호출하는 함수 1) 재귀함수 작동 원리 image-20210829162049519 recur 함수가 호출된다 중간에 recur…]]></description><link>https://hyemin-jang.github.io/Algorithm/재귀함수/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Algorithm/재귀함수/</guid><content:encoded>&lt;h1 id=&quot;1-재귀함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 재귀함수 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 재귀함수&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hyem.log]]></title><description><![CDATA[Hyem.log]]></description><link>https://hyemin-jang.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 05 Sep 2021 13:41:39 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><link>https://hyemin-jang.github.io/WEB/font awsome/</link><guid isPermaLink="false">https://hyemin-jang.github.io/WEB/font awsome/</guid><content:encoded></content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[1. 재귀함수 메소드 혹은 함수의 내부에서 자기 자신의 메소드 혹은 함수를 다시 호출하는 함수 1) 재귀함수 작동 원리 image-20210829162049519 recur 함수가 호출된다 중간에 recur…]]></description><link>https://hyemin-jang.github.io/Algorithm/재귀함수/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Algorithm/재귀함수/</guid><content:encoded>&lt;h1 id=&quot;1-재귀함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 재귀함수 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 재귀함수&lt;/h1&gt;
 &lt;p&gt;메소드 혹은 함수의 내부에서 자기 자신의 메소드 혹은 함수를 다시 호출하는 함수&lt;/p&gt;
 &lt;h2 id=&quot;1-재귀함수-작동-원리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98-%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC&quot; aria-label=&quot;1 재귀함수 작동 원리 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1) 재귀함수 작동 원리&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;C:%5CUsers%5Chmjan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210829162049519.png&quot; alt=&quot;image-20210829162049519&quot;&gt;&lt;/p&gt;
@@ -2031,7 +2031,52 @@ con&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[Java] 10. Maven]]></title><link>https://hyemin-jang.github.io/Java/10.Maven/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/10.Maven/</guid><pubDate>Wed, 04 Aug 2021 10:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 9. Stream API & Lambda]]></title><link>https://hyemin-jang.github.io/Java/9.Stream API &amp; Lambda/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/9.Stream API &amp; Lambda/</guid><pubDate>Tue, 03 Aug 2021 10:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 8. IO]]></title><link>https://hyemin-jang.github.io/Java/8.IO/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/8.IO/</guid><pubDate>Mon, 02 Aug 2021 10:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 7. 예외처리]]></title><link>https://hyemin-jang.github.io/Java/7.예외처리/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/7.예외처리/</guid><pubDate>Sun, 01 Aug 2021 10:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 6. 자바 자료구조 - ArrayList, Set, Map]]></title><link>https://hyemin-jang.github.io/Java/6.자바 자료구조/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/6.자바 자료구조/</guid><pubDate>Sat, 31 Jul 2021 12:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 5. 배열]]></title><link>https://hyemin-jang.github.io/Java/5.배열/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/5.배열/</guid><pubDate>Fri, 30 Jul 2021 12:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 4. 상속과 다형성]]></title><description><![CDATA[자바 클래스를 만들 때, 클래스 간의 관계를 판단해보자. is a 관계 has a 관계 🚗 예1) 자동차 클래스  -  엔진 클래스, 바퀴 클래스 … ‘자동차 has a…]]></description><link>https://hyemin-jang.github.io/Java/4.상속과 다형성/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/4.상속과 다형성/</guid><pubDate>Fri, 30 Jul 2021 11:08:19 GMT</pubDate><content:encoded>&lt;p&gt;자바 클래스를 만들 때, 클래스 간의 관계를 판단해보자.&lt;/p&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[Java] 10. Maven]]></title><link>https://hyemin-jang.github.io/Java/10.Maven/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/10.Maven/</guid><pubDate>Wed, 04 Aug 2021 10:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 9. Stream API & Lambda]]></title><link>https://hyemin-jang.github.io/Java/9.Stream API &amp; Lambda/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/9.Stream API &amp; Lambda/</guid><pubDate>Tue, 03 Aug 2021 10:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 8. IO]]></title><link>https://hyemin-jang.github.io/Java/8.IO/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/8.IO/</guid><pubDate>Mon, 02 Aug 2021 10:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 7. 예외처리]]></title><link>https://hyemin-jang.github.io/Java/7.예외처리/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/7.예외처리/</guid><pubDate>Sun, 01 Aug 2021 10:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 6. 자바 자료구조 - ArrayList, Set, Map]]></title><link>https://hyemin-jang.github.io/Java/6.자바 자료구조/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/6.자바 자료구조/</guid><pubDate>Sat, 31 Jul 2021 12:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Algorithm] 완전탐색/이분탐색]]></title><description><![CDATA[1. 탐색 : 많은 데이터 속에서 원하는 데이터를 찾는 것. 완전탐색 이분탐색 깊이우선탐색 너비우선탐색 문자열탐색, KMP, BM 등등.. 1) 완전탐색 (Brute Force…]]></description><link>https://hyemin-jang.github.io/Algorithm/완전탐색,이분탐색/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Algorithm/완전탐색,이분탐색/</guid><pubDate>Fri, 30 Jul 2021 13:09:19 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-탐색&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%ED%83%90%EC%83%89&quot; aria-label=&quot;1 탐색 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 탐색&lt;/h1&gt;
+&lt;p&gt;: 많은 데이터 속에서 원하는 데이터를 찾는 것.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;완전탐색&lt;/li&gt;
+&lt;li&gt;이분탐색&lt;/li&gt;
+&lt;li&gt;깊이우선탐색&lt;/li&gt;
+&lt;li&gt;너비우선탐색&lt;/li&gt;
+&lt;li&gt;문자열탐색, KMP, BM 등등..&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;1-완전탐색-brute-force&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%99%84%EC%A0%84%ED%83%90%EC%83%89-brute-force&quot; aria-label=&quot;1 완전탐색 brute force permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1) 완전탐색 (Brute Force)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;컴퓨터의 빠른 계산 능력을 이용하여 가능한 모든 경우의 수를 탐색&lt;/li&gt;
+&lt;li&gt;무조건 답을 구하지만, 효율성이 가장 좋지 않은 알고리즘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;✅ 예) 카드들이 들어있는 리스트 &lt;code class=&quot;language-text&quot;&gt;trump&lt;/code&gt;에서 8번 카드를 찾기&lt;/p&gt;
+&lt;h3 id=&quot;1-반복문-사용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B0%98%EB%B3%B5%EB%AC%B8-%EC%82%AC%EC%9A%A9&quot; aria-label=&quot;1 반복문 사용 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;(1) 반복문 사용&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;trump&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;trump&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    	&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; trump&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; i
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; i&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;2-재귀함수-사용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98-%EC%82%AC%EC%9A%A9&quot; aria-label=&quot;2 재귀함수 사용 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;(2) 재귀함수 사용&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;trump&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; loc&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; trump&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;loc&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; loc
+    &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; solution&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;trump&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; loc&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;2-이분탐색-binary-search&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89-binary-search&quot; aria-label=&quot;2 이분탐색 binary search permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2) 이분탐색 (Binary Search)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;정렬된 리스트&lt;/strong&gt;에서 특정 값의 위치를 찾는 알고리즘&lt;/li&gt;
+&lt;li&gt;중간값을 선택하여 찾고자 하는 값보다 큰지 작은지 비교&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;✅ 아까와 같은 카드 8 찾기 - 이분탐색 이용&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;trump&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    left &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    right &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;trump&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;left &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; right&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        mid &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;left&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;right&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; trump&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;mid&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; mid
+        &lt;span class=&quot;token keyword&quot;&gt;elif&lt;/span&gt; trump&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;mid&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            left &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; mid &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;elif&lt;/span&gt; trump&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;mid&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            right &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; mid &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; mid&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[Java] 5. 배열]]></title><link>https://hyemin-jang.github.io/Java/5.배열/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/5.배열/</guid><pubDate>Fri, 30 Jul 2021 12:08:19 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[[Java] 4. 상속과 다형성]]></title><description><![CDATA[자바 클래스를 만들 때, 클래스 간의 관계를 판단해보자. is a 관계 has a 관계 🚗 예1) 자동차 클래스  -  엔진 클래스, 바퀴 클래스 … ‘자동차 has a…]]></description><link>https://hyemin-jang.github.io/Java/4.상속과 다형성/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Java/4.상속과 다형성/</guid><pubDate>Fri, 30 Jul 2021 11:08:19 GMT</pubDate><content:encoded>&lt;p&gt;자바 클래스를 만들 때, 클래스 간의 관계를 판단해보자.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;is a 관계&lt;/li&gt;
@@ -2814,7 +2859,359 @@ student1 인스턴스가 생성될 때 serialNum의 값은 1001이 되었고, �
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;char&lt;/span&gt; ch &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; num &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;double&lt;/span&gt; PI &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3.14&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// 여기서 &apos;A&apos;, 10, 3.14 가 모두 리터럴이다&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[about]]></title><description><![CDATA[Your name Thank you for reading my resume. If you want to contact me, Please send me an email.]]></description><link>https://hyemin-jang.github.io/resume-en/</link><guid isPermaLink="false">https://hyemin-jang.github.io/resume-en/</guid><pubDate>Sun, 27 Jan 2019 16:21:13 GMT</pubDate><content:encoded>&lt;h1 id=&quot;your-name&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#your-name&quot; aria-label=&quot;your name permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Your name&lt;/h1&gt;
+&lt;span class=&quot;token comment&quot;&gt;// 여기서 &apos;A&apos;, 10, 3.14 가 모두 리터럴이다&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[프로그래머스] 주식가격 (파이썬)]]></title><description><![CDATA[문제 문제 설명
+초 단위로 기록된 주식가격이 담긴 배열 prices가 매개변수로 주어질 때, 가격이 떨어지지 않은 기간은 몇 초인지를 return 하도록 solution 함수를 완성하세요. 제한사항
+prices의 각 가격은 1 이상 10,00…]]></description><link>https://hyemin-jang.github.io/Algorithm/[프로그래머스] 주식가격/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Algorithm/[프로그래머스] 주식가격/</guid><pubDate>Tue, 27 Jul 2021 14:09:19 GMT</pubDate><content:encoded>&lt;h1 id=&quot;문제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;문제 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;문제&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;문제 설명&lt;/strong&gt;
+초 단위로 기록된 주식가격이 담긴 배열 prices가 매개변수로 주어질 때, 가격이 떨어지지 않은 기간은 몇 초인지를 return 하도록 solution 함수를 완성하세요.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;제한사항&lt;/strong&gt;
+prices의 각 가격은 1 이상 10,000 이하인 자연수입니다.
+prices의 길이는 2 이상 100,000 이하입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;입출력 예&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;prices&lt;/th&gt;
+&lt;th&gt;return&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[1, 2, 3, 2, 3]&lt;/td&gt;
+&lt;td&gt;[4, 3, 1, 1, 0]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;입출력 예 설명&lt;/strong&gt;
+1초 시점의 ₩1은 끝까지 가격이 떨어지지 않았습니다.
+2초 시점의 ₩2은 끝까지 가격이 떨어지지 않았습니다.
+3초 시점의 ₩3은 1초뒤에 가격이 떨어집니다. 따라서 1초간 가격이 떨어지지 않은 것으로 봅니다.
+4초 시점의 ₩2은 1초간 가격이 떨어지지 않았습니다.
+5초 시점의 ₩3은 0초간 가격이 떨어지지 않았습니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;-풀이과정--완성코드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%ED%92%80%EC%9D%B4%EA%B3%BC%EC%A0%95--%EC%99%84%EC%84%B1%EC%BD%94%EB%93%9C&quot; aria-label=&quot; 풀이과정  완성코드 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;👀 풀이과정 &amp;#x26; 완성코드&lt;/h1&gt;
+&lt;p&gt;이 문제 역시 스택/큐를 활용할 풀이가 생각 안나서.. 완전탐색처럼 풀어봤는데 입력값이 크지 않아서 통과를 하긴 했다.&lt;/p&gt;
+&lt;p&gt;prices 리스트의 각 원소에 대해, 그 다음 값들을 쭉쭉 비교하면서 sec += 1 해주다가, 더 작은 값이 나오면 while 반복문 종료해준다.&lt;/p&gt;
+&lt;p&gt;여기서 헷갈렸던 점이 1초 뒤에 바로 가격이 떨어져도 1초동안은 가격이 떨어지지 않은 것으로 본다는 점이었다.
+그래서 리스트의 끝까지 비교해서 while문이 종료된게 아니라, 뒤에 작은값이 나와서 while문이 끝난 경우, sec에 한번더 +=1 해주었다.&lt;/p&gt;
+&lt;p&gt;완성코드 :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prices&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prices&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        j &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+        sec &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 가격이 몇초간 떨어지지 않는지 담을 변수&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; j &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prices&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;and&lt;/span&gt; prices&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; prices&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            sec &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+            j &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; j &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prices&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            sec &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+        answer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sec&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    answer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 마지막 원소는 비교할 대상이 없으므로 무조건 0&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; answer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;♀️-다른-풀이&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E2%99%80%EF%B8%8F-%EB%8B%A4%EB%A5%B8-%ED%92%80%EC%9D%B4&quot; aria-label=&quot;♀️ 다른 풀이 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🙋‍♀️ 다른 풀이&lt;/h1&gt;
+&lt;p&gt; 위의 코드는 반복문을 2번 돌리기 때문에 O(n^2)이다. 더 효율적으로 풀 방법은 없을까?&lt;/p&gt;
+&lt;p&gt; 이 문제를 다 풀어놓고 이전포스팅&lt;a href=&quot;https://velog.io/@hmjang28/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B8%B0%EB%8A%A5%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%83%9D%ED%81%90-%ED%8C%8C%EC%9D%B4%EC%8D%AC&quot;&gt;(프로그래머스-기능개발 큐 이용해 풀기)&lt;/a&gt;을 하고 왔는데, 그 포스팅을 하면서 이 문제를 스택으로 풀 수 있겠다는 생각을 했다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[프로그래머스] 기능개발 (파이썬)]]></title><description><![CDATA[문제 문제 설명
+프로그래머스 팀에서는 기능 개선 작업을 수행 중입니다. 각 기능은 진도가 10…]]></description><link>https://hyemin-jang.github.io/Algorithm/[프로그래머스] 기능개발/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Algorithm/[프로그래머스] 기능개발/</guid><pubDate>Mon, 26 Jul 2021 14:09:19 GMT</pubDate><content:encoded>&lt;h1 id=&quot;문제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;문제 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;문제&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;문제 설명&lt;/strong&gt;
+프로그래머스 팀에서는 기능 개선 작업을 수행 중입니다. 각 기능은 진도가 100%일 때 서비스에 반영할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;또, 각 기능의 개발속도는 모두 다르기 때문에 뒤에 있는 기능이 앞에 있는 기능보다 먼저 개발될 수 있고, 이때 뒤에 있는 기능은 앞에 있는 기능이 배포될 때 함께 배포됩니다.&lt;/p&gt;
+&lt;p&gt;먼저 배포되어야 하는 순서대로 작업의 진도가 적힌 정수 배열 progresses와 각 작업의 개발 속도가 적힌 정수 배열 speeds가 주어질 때 각 배포마다 몇 개의 기능이 배포되는지를 return 하도록 solution 함수를 완성하세요.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;제한 사항&lt;/strong&gt;
+작업의 개수(progresses, speeds배열의 길이)는 100개 이하입니다.
+작업 진도는 100 미만의 자연수입니다.
+작업 속도는 100 이하의 자연수입니다.
+배포는 하루에 한 번만 할 수 있으며, 하루의 끝에 이루어진다고 가정합니다. 예를 들어 진도율이 95%인 작업의 개발 속도가 하루에 4%라면 배포는 2일 뒤에 이루어집니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;입출력 예&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;progresses&lt;/th&gt;
+&lt;th&gt;speeds&lt;/th&gt;
+&lt;th&gt;return&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[93, 30, 55]&lt;/td&gt;
+&lt;td&gt;[1, 30, 5]&lt;/td&gt;
+&lt;td&gt;[2, 1]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[95, 90, 99, 99, 80, 99]&lt;/td&gt;
+&lt;td&gt;[1, 1, 1, 1, 1, 1]&lt;/td&gt;
+&lt;td&gt;[1, 3, 2]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;입출력 예 설명&lt;/strong&gt;
+[입출력 예 #1]
+첫 번째 기능은 93% 완료되어 있고 하루에 1%씩 작업이 가능하므로 7일간 작업 후 배포가 가능합니다.
+두 번째 기능은 30%가 완료되어 있고 하루에 30%씩 작업이 가능하므로 3일간 작업 후 배포가 가능합니다. 하지만 이전 첫 번째 기능이 아직 완성된 상태가 아니기 때문에 첫 번째 기능이 배포되는 7일째 배포됩니다.
+세 번째 기능은 55%가 완료되어 있고 하루에 5%씩 작업이 가능하므로 9일간 작업 후 배포가 가능합니다.&lt;/p&gt;
+&lt;p&gt;따라서 7일째에 2개의 기능, 9일째에 1개의 기능이 배포됩니다.&lt;/p&gt;
+&lt;p&gt;[입출력 예 #2]
+모든 기능이 하루에 1%씩 작업이 가능하므로, 작업이 끝나기까지 남은 일수는 각각 5일, 10일, 1일, 1일, 20일, 1일입니다. 어떤 기능이 먼저 완성되었더라도 앞에 있는 모든 기능이 완성되지 않으면 배포가 불가능합니다.&lt;/p&gt;
+&lt;p&gt;따라서 5일째에 1개의 기능, 10일째에 3개의 기능, 20일째에 2개의 기능이 배포됩니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;-풀이과정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%ED%92%80%EC%9D%B4%EA%B3%BC%EC%A0%95&quot; aria-label=&quot; 풀이과정 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;💡 풀이과정&lt;/h1&gt;
+&lt;p&gt;우선 각 기능이 100%가 될 때 까지 며칠이 더 걸리는지를 구하는 것은 어렵지 않았다.&lt;/p&gt;
+&lt;p&gt;그렇게 얻은 값을 가지고 배포를 언제 시켜야 하는지 구하는 게 문제였는데.. 처음에는 이렇게 접근해보았다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;progress&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; speeds&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    days &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 각 기능이 완성되기까지 남은 날짜&lt;/span&gt;
+    release &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 배포 기능 개수&lt;/span&gt;
+    answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;progress&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        day&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; mod &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;divmod&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;progress&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;speeds&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; mod &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            day &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+        
+    &lt;span class=&quot;token comment&quot;&gt;# 몇 개씩 배포되는지 구하기        &lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; days&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; days&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; day&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;token keyword&quot;&gt;pass&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 
+                answer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                release &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+        days&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;day&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        release &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;    
+    
+    answer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 마지막으로 배포되는 기능들&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; answer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 각 기능이 배포되기까지 남은 날짜인 day를 구해 days라는 새로운 리스트에 넣고 그때마다 release를 1씩 증가시켜줬다.
+&lt;strong&gt;현재 기능의 day가 직전 기능의 day보다 큰 경우&lt;/strong&gt;를 만나면 지금까지 쌓여있던 release를 answer 리스트에 넣고 0으로 초기화시켜주었다.&lt;/p&gt;
+&lt;p&gt;이렇게하니 예제 2개는 통과하지만, 실행결과 테스트케이스 3개빼고 다 실패…
+어떤 분이 좋은 케이스를 알려주셔서 해결할 수 있었다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;progress&lt;/th&gt;
+&lt;th&gt;speeds&lt;/th&gt;
+&lt;th&gt;return&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[96,99,98,97]&lt;/td&gt;
+&lt;td&gt;[1,1,1,1]&lt;/td&gt;
+&lt;td&gt;[4]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;이 경우 answer = [4] 인데, 위 코드로 풀면 [2,1,1] 이 나온다.
+day를 구해보면 각각 4, 1, 2, 3 인데, 세번째 기능이 아직 맨처음 기능이 완성되지 않았음에도 불구하고 직전 기능보다 day 값이 크기 때문에 자기 혼자 배포되는 것으로 처리되기 때문이다.&lt;/p&gt;
+&lt;p&gt;그래서 직전 기능이랑만 비교할 게 아니라 &lt;strong&gt;days 리스트에 들어가있는 모든 기능의 최댓값보다 클때&lt;/strong&gt; answer.append(release)해주었다. 그리고 그 후에는 release와 days 리스트를 모두 초기화해주었다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;-완성-코드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%99%84%EC%84%B1-%EC%BD%94%EB%93%9C&quot; aria-label=&quot; 완성 코드 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🎈 완성 코드&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;progress&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; speeds&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    days &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    release &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;progress&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        day&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; mod &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;divmod&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;progress&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;speeds&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; mod &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            day &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+        
+        &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; days&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; day &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;days&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                answer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+                release &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+                days &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  
+            &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 
+                &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;      
+        days&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;day&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        release &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    
+    answer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; answer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;-다른-풀이---큐-활용하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EB%8B%A4%EB%A5%B8-%ED%92%80%EC%9D%B4---%ED%81%90-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot; 다른 풀이   큐 활용하기 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;👭 다른 풀이 - 큐 활용하기&lt;/h1&gt;
+&lt;p&gt; 스택/큐 문제인데.. 뭔가 해당 자료구조를 잘 활용하진 못한것 같아서 찾아본 다른 분들의 풀이…&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;progresses&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; speeds&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+   answer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+   time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 날짜 경과&lt;/span&gt;
+   release &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+   &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;progresses&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+       &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;progresses&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; time&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;speeds&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+           progresses&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pop&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+           speeds&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pop&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+           release &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+       &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  
+           &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; release &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 완료됐는데 아직 배포되지 못한 기능들&lt;/span&gt;
+               answer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+               release &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+           time &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+   answer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;release&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; answer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt; 내가 days라는 새로운 리스트를 만들어서 거기 값을 넣어놓고 비교했던 것과는 달리, progress 리스트를 큐로 활용하여 풀었다.
+time 변수를 1씩 증가시키다가 완료되는 날짜에 pop(0)으로 배포(대기)를 시켜주었다. 그리고 다음 기능으로 넘어가기 전에 만약 이전에 release 대기중인 기능들이 있으면 answer에 추가해주었다.&lt;/p&gt;
+&lt;p&gt;😊 스택/큐 문제는 데이터 입출력을 컨베이어벨트(큐의 경우) 등의 모습을 그려보며 시각적으로 상상해보면 풀기가 쉬운 것 같다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Algorithm] 스택, 큐]]></title><description><![CDATA[1. 스택(Stack) ‘쌓는다’는 의미.
+하나의 리스트에 대해 한쪽 방향에서만 접근이 가능한 구조.
+LIFO (Last-In, First-Out) 가 기본원리…]]></description><link>https://hyemin-jang.github.io/Algorithm/스택, 큐/</link><guid isPermaLink="false">https://hyemin-jang.github.io/Algorithm/스택, 큐/</guid><pubDate>Mon, 26 Jul 2021 13:09:19 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-스택stack&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%8A%A4%ED%83%9Dstack&quot; aria-label=&quot;1 스택stack permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 스택(Stack)&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;‘쌓는다’는 의미.
+하나의 리스트에 대해 한쪽 방향에서만 접근이 가능한 구조.
+LIFO (Last-In, First-Out) 가 기본원리&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-스택의-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%8A%A4%ED%83%9D%EC%9D%98-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;1 스택의 구조 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1) 스택의 구조&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;push&lt;/code&gt; : 새로운 데이터를 리스트의 가장 마지막 데이터 뒤에 넣음&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;peek&lt;/code&gt; : 가장 마지막 데이터가 무엇인지 확인함&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;pop&lt;/code&gt; : 가장 마지막 데이터를 꺼냄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-스택-구현하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%8A%A4%ED%83%9D-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot; aria-label=&quot;2 스택 구현하기 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2) 스택 구현하기&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;직접 구현&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# push&lt;/span&gt;
+push &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append
+
+&lt;span class=&quot;token comment&quot;&gt;# peek&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;peek&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; self&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# pop은 원래 list의 내장함수라서 따로 구현하지 않음&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List를 스택으로 구현&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;s &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;push&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#push&quot; aria-label=&quot;push permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;push&lt;/h1&gt;
+&lt;p&gt;s.append(1)
+s.append(2)
+s.append(3)&lt;/p&gt;
+&lt;p&gt;print(s)  # [1,2,3]&lt;/p&gt;
+&lt;h1 id=&quot;pop&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pop&quot; aria-label=&quot;pop permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;pop&lt;/h1&gt;
+&lt;p&gt;print(s.pop())  # 3
+print(s)  # [1,2]&lt;/p&gt;
+&lt;h1 id=&quot;peek&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#peek&quot; aria-label=&quot;peek permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;peek&lt;/h1&gt;
+&lt;p&gt;print(s[-1])  # 2
+print(s)  # [1,2]&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;## 3) 스택의 활용
+
+- 웹브라우저에서 이전 페이지 / 다음 페이지
+
+- 깊이우선탐색(DFS)
+
+  ​	  
+
+---------------------------
+
+# 2. 큐 (Queue)
+&amp;gt; &amp;#39;일이 처리되기를 기다리는 리스트&amp;#39;라는 의미.
+&amp;gt; 하나의 리스트에 양쪽에서 접근이 가능한 구조.
+&amp;gt; FIFO (First-In, First-Out) 가 기본원리.
+
+_먼저 줄선 사람이 먼저 입장하는 걸 상상하자_
+
+## 1) 큐의 구조
+- `put` : 새로운 데이터를 리스트의 가장 마지막 데이터 뒤에 넣음
+- `peek` : **가장 먼저 들어간 데이터**가 무엇인지 확인
+- `get` : **가장 먼저 들어간 데이터**를 꺼냄
+
+## 2) 큐 구현
+1. 직접 구현
+```python
+class Queue(list):
+    # put
+    put = list.append
+    
+    # peek
+    def peek(self):
+    	return self[0]
+    
+    # get
+    def get(self):
+    	return self.pop(0)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;이미 구현된 클래스 import&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; queue &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Queue&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;q = Queue()&lt;/p&gt;
+&lt;h1 id=&quot;put&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#put&quot; aria-label=&quot;put permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;put&lt;/h1&gt;
+&lt;p&gt;q.put(1)
+q.put(2)
+q.put(3)
+print(q)  # [1,2,3]&lt;/p&gt;
+&lt;h1 id=&quot;get&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#get&quot; aria-label=&quot;get permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;get&lt;/h1&gt;
+&lt;p&gt;print(q.get())  # 1
+print(q)  # [2,3]&lt;/p&gt;
+&lt;h1 id=&quot;peek-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#peek-1&quot; aria-label=&quot;peek 1 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;peek&lt;/h1&gt;
+&lt;p&gt;print(q.peek())  # 2
+print(q)  # [2,3]&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;3. List를 큐로 활용
+```python
+q = []
+
+# put
+q.append(1)
+q.append(2)
+q.append(3)
+print(q)  # [1,2,3]
+
+# get
+print(q.pop(0))  # 1
+print(q)  # [2,3]
+
+# peek
+print(q[0])  # 2
+print(q)  # [2,3]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;3-큐의-활용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%ED%81%90%EC%9D%98-%ED%99%9C%EC%9A%A9&quot; aria-label=&quot;3 큐의 활용 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3) 큐의 활용&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;프린터 인쇄 대기열&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;너비우선탐색(BFS)&lt;/p&gt;
+&lt;p&gt;​	  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;3-데크-deque&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EB%8D%B0%ED%81%AC-deque&quot; aria-label=&quot;3 데크 deque permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 데크 (Deque)&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;양쪽에서 모두 데이터를 처리할 수 있는&lt;/strong&gt; 자료형.
+양방향이기 때문에 리스트보다 출입 연산이 더 효율적이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-데크-구현&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%8D%B0%ED%81%AC-%EA%B5%AC%ED%98%84&quot; aria-label=&quot;1 데크 구현 permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1) 데크 구현&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;파이썬 모듈 import&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; collections &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; deque&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;d = deque()&lt;/p&gt;
+&lt;p&gt;d.append(1)
+d.append(2)
+d.append(3)
+print(d)  # [1,2,3]&lt;/p&gt;
+&lt;p&gt;d.appendleft(4)
+d.appendleft(5)
+print(d)  # [4,5,1,2,3]&lt;/p&gt;
+&lt;p&gt;print(d.pop())  # 3
+print(d)  # [4,5,1,2]&lt;/p&gt;
+&lt;p&gt;print(d.popleft())  # 4
+print(d)  # [5,1,2]&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;문제 풀 때 큐를 리스트로 사용하는 것보다 deque로 사용하는 것이 효율적이다. 
+- 리스트에서 get 메서드를 구현하기 위해 pop(0)을 사용시 시간복잡도는 O(n)이다. 맨 앞 데이터를 추출하고 빈 자리에 모든 데이터들을 한칸씩 앞으로 당겨야 하기 때문이다.
+- 반면 deque의 popleft() 메서드를 사용하면 시간복잡도는 O(1)이다. 
+
+
+## 2) deque 활용 문제
+1. 리스트트를 n만큼 회전시키기
+a = [1,2,3,4,5] 일 때, 이 리스트를 2만큼 오른쪽으로 회전시켜 [4,5,1,2,3] 으로 만들기
+
+```python
+from collections import deque
+
+a = [1,2,3,4,5]
+q = deque(a)
+q.rotate(2)
+result = list(q)
+print(result)  # [4,5,1,2,3]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[about]]></title><description><![CDATA[Your name Thank you for reading my resume. If you want to contact me, Please send me an email.]]></description><link>https://hyemin-jang.github.io/resume-en/</link><guid isPermaLink="false">https://hyemin-jang.github.io/resume-en/</guid><pubDate>Sun, 27 Jan 2019 16:21:13 GMT</pubDate><content:encoded>&lt;h1 id=&quot;your-name&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#your-name&quot; aria-label=&quot;your name permalink&quot; class=&quot;anchor-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Your name&lt;/h1&gt;
 &lt;div align=&quot;center&quot;&gt;
 &lt;p&gt;&lt;em&gt;Thank you for reading my resume. If you want to contact me, Please send me an email.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;</content:encoded></item></channel></rss>
