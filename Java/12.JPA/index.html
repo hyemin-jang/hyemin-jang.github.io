@@ -263,11 +263,11 @@
 <li><strong>양방향 관계</strong> : 양쪽 엔티티가 각각 참조용 필드를 갖고 서로 참조하고 있는 것</li>
 </ul>
 <blockquote>
-<p>🤷‍♀️ 어떻게 판단하나요?</p>
+<p>🤷‍♀️ 단방향.. 양방향…? 어떨때 써야할까???</p>
 <ul>
 <li>다대일 단방향 관계 : member1.getTeam() 처럼 멤버가 팀을 참조 가능</li>
 <li>
-<p>양방향 관계 : team1.getMember()처럼 팀이 멤버를 참조도 가능하게 하려면 양방향으로 설정하면 됨</p>
+<p>양방향 관계 : team1.getMembers()처럼 팀이 멤버를 참조도 가능하게 하려면 양방향으로 설정하면 됨</p>
 <p>=> 역방향으로 객체 탐색이 꼭 필요할때 양방향 관계를 설정하자</p>
 </li>
 </ul>
@@ -283,6 +283,7 @@
 </li>
 <li>주인이 아닌 객체 쪽에서 <code class="language-text">mappedBy</code> 속성을 사용하면 된다.</li>
 </ul>
+<p>&#x3C;Team.java> - 부모 엔티티</p>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@AllArgsConstructor</span>
 <span class="token annotation punctuation">@NoArgsConstructor</span>
 <span class="token annotation punctuation">@Setter</span>
@@ -304,9 +305,9 @@
      */</span>
 	<span class="token annotation punctuation">@OneToMany</span><span class="token punctuation">(</span>mappedBy<span class="token operator">=</span><span class="token string">"teamId"</span><span class="token punctuation">)</span>       
 	<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Member</span><span class="token punctuation">></span></span> members <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Member</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	
-	
-<span class="token annotation punctuation">@AllArgsConstructor</span>
+	</code></pre></div>
+<p>&#x3C;Member.java> - 자식 엔티티, 외래키를 가짐(Team), 연관관계의 주인</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@AllArgsConstructor</span>
 <span class="token annotation punctuation">@NoArgsConstructor</span>
 <span class="token annotation punctuation">@Setter</span>
 <span class="token annotation punctuation">@Getter</span>
