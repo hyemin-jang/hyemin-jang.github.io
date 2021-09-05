@@ -27,8 +27,7 @@ jobs:
         env:
           NODE_ENV: production
           
-      - name: copy files
-        # ${{google020755b2e4cb3190.html}} 
+      - name: copy files     
         run: |
           cp CNAME public/
           cp ${{google020755b2e4cb3190.html}} public/
