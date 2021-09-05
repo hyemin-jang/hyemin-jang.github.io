@@ -30,7 +30,7 @@ jobs:
       - name: copy files     
         run: |
           cp CNAME public/          
-          cp ${{google020755b2e4cb3190.html}} public/
+          cp google020755b2e4cb3190.html public/
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
