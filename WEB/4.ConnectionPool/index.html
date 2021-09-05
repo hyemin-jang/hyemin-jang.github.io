@@ -64,476 +64,222 @@
       
       
       
-      }</script><link rel="icon" href="/icons/icon-48x48.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><title data-react-helmet="true">[Java] 12. JPA | Hyem.log</title><meta data-react-helmet="true" name="description" content="1. JPA ? : Java Persistence API 자바 진영의  기술 표준. 자바 어플리케이션에서 관계형 데이터베이스를 사용하는 방식을 정의한 이다. 💡 ORM(Object Relational Mapping) SQL을 직접 다루지 않고, 객체와 테이블을 매핑하여 간접적으로 DB데이터 관리 객체 간 관계를 바탕으로 SQL 문장 자동 생성 SQL이 아닌 메소드로 데이터 조작 🌈 자바 DB연동 기술의 변천사 EJB의 Entity…"/><meta data-react-helmet="true" property="og:title" content="[Java] 12. JPA"/><meta data-react-helmet="true" property="og:description" content="1. JPA ? : Java Persistence API 자바 진영의  기술 표준. 자바 어플리케이션에서 관계형 데이터베이스를 사용하는 방식을 정의한 이다. 💡 ORM(Object Relational Mapping) SQL을 직접 다루지 않고, 객체와 테이블을 매핑하여 간접적으로 DB데이터 관리 객체 간 관계를 바탕으로 SQL 문장 자동 생성 SQL이 아닌 메소드로 데이터 조작 🌈 자바 DB연동 기술의 변천사 EJB의 Entity…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="[hyem]"/><meta data-react-helmet="true" name="twitter:title" content="[Java] 12. JPA"/><meta data-react-helmet="true" name="twitter:description" content="1. JPA ? : Java Persistence API 자바 진영의  기술 표준. 자바 어플리케이션에서 관계형 데이터베이스를 사용하는 방식을 정의한 이다. 💡 ORM(Object Relational Mapping) SQL을 직접 다루지 않고, 객체와 테이블을 매핑하여 간접적으로 DB데이터 관리 객체 간 관계를 바탕으로 SQL 문장 자동 생성 SQL이 아닌 메소드로 데이터 조작 🌈 자바 DB연동 기술의 변천사 EJB의 Entity…"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link as="script" rel="preload" href="/webpack-runtime-2ebdf06ea1ad3400ea3a.js"/><link as="script" rel="preload" href="/framework-727eca7a674e10b21a9f.js"/><link as="script" rel="preload" href="/app-a5201d43d146dd2e804c.js"/><link as="script" rel="preload" href="/styles-9605c3fbd8ad08ecf405.js"/><link as="script" rel="preload" href="/428cc97b99dda93b6f894a0194db3c3a0ab8bbd5-b9cdbc495dc2d8ef3640.js"/><link as="script" rel="preload" href="/4213a708e3c149581c4f5e97d71bfc3d00067ec6-b792a54f974cd65f790a.js"/><link as="script" rel="preload" href="/69ca9dfa785447e3d8b116b383997bcdc8df623a-d931e9d5f7ff71cda877.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-10344e360d08abbd2fb1.js"/><link as="fetch" rel="preload" href="/page-data/Java/12.JPA/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="top"><a class="link" href="/">Hyem.log</a><a href="https://github.com/hyemin-jang" class="github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a></div><div style="position:relative;height:100%;margin-left:auto;margin-right:auto;max-width:48.75rem;padding:2.4375rem 1.21875rem"><div class="switch-container"><label for="normal-switch"><div style="position:relative;display:inline-block;text-align:left;opacity:1;direction:ltr;border-radius:12px;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s;touch-action:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"><div class="react-switch-bg" style="height:24px;width:48px;margin:0;position:relative;background:#d9dfe2;border-radius:12px;cursor:pointer;-webkit-transition:background 0.25s;-moz-transition:background 0.25s;transition:background 0.25s"><div style="height:24px;width:26px;position:relative;opacity:0;pointer-events:none;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s"><div class="icon checkedIcon"><svg width="24" height="24"><rect width="24" height="24" fill="none" rx="0" ry="0"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M14.8102 3.2H13.8202C13.4902 3.2 13.2302 2.93 13.2302 2.6C13.2302 2.27 13.5002 2 13.8302 2H16.2602C16.5002 2 16.7202 2.15 16.8102 2.37C16.9002 2.59 16.8502 2.85 16.6802 3.02L15.2702 4.43H16.2602C16.5902 4.43 16.8602 4.7 16.8602 5.03C16.8602 5.36 16.5902 5.63 16.2602 5.63H13.8202C13.5802 5.63 13.3602 5.48 13.2702 5.26C13.1802 5.04 13.2302 4.78 13.4002 4.61L14.8102 3.2ZM20.1401 11.0101H21.1301C21.4601 11.0101 21.7401 11.2801 21.7401 11.6101C21.7401 11.9401 21.4701 12.2101 21.1401 12.2101H18.7001C18.4601 12.2101 18.2401 12.0601 18.1501 11.8401C18.0601 11.6201 18.1101 11.3601 18.2801 11.1901L19.6901 9.78008H18.7001C18.3701 9.78008 18.1001 9.51008 18.1001 9.18008C18.1001 8.85008 18.3701 8.58008 18.7001 8.58008H21.1301C21.3701 8.58008 21.5901 8.73008 21.6801 8.95008C21.7701 9.17008 21.7201 9.43008 21.5501 9.60008L20.1401 11.0101ZM11.0302 9.8499H12.8502L10.7002 11.9999C10.5302 12.1699 10.4802 12.4299 10.5702 12.6499C10.6602 12.8699 10.8802 13.0199 11.1202 13.0199H14.2902C14.6202 13.0199 14.8902 12.7499 14.8902 12.4199C14.8902 12.0899 14.6202 11.8199 14.2902 11.8199H12.5602L14.7102 9.6699C14.8802 9.4999 14.9302 9.2399 14.8402 9.0199C14.7502 8.7999 14.5302 8.6499 14.2902 8.6499H11.0202C10.6902 8.6499 10.4202 8.9199 10.4202 9.2499C10.4202 9.5799 10.7002 9.8499 11.0302 9.8499ZM14.5501 16.89C15.6601 16.89 16.7201 16.66 17.7101 16.19C17.9401 16.08 18.2101 16.13 18.3801 16.3C18.5601 16.48 18.6101 16.75 18.5001 16.98C17.0901 20.05 13.9901 22.03 10.6001 22.03C5.79013 22.03 1.88013 18.12 1.88013 13.31C1.88013 9.94004 3.87013 6.84004 6.93013 5.40004C7.16013 5.29004 7.43012 5.34004 7.61012 5.52004C7.79012 5.70004 7.84013 5.97004 7.73013 6.20004C7.27013 7.19004 7.03012 8.26004 7.03012 9.38004C7.03012 13.52 10.4001 16.89 14.5501 16.89ZM3.09013 13.31C3.09013 17.46 6.46012 20.83 10.6101 20.83C12.9901 20.83 15.2001 19.7 16.6001 17.85C15.9401 18.01 15.2501 18.09 14.5501 18.09C9.74013 18.09 5.83012 14.18 5.83012 9.38004C5.83012 8.68004 5.91013 7.99004 6.07013 7.32004C4.22013 8.73004 3.09013 10.94 3.09013 13.31Z"></path></svg></div></div><div style="height:24px;width:26px;position:absolute;opacity:1;right:0;top:0;pointer-events:none;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s"><div class="icon uncheckedIcon"><svg width="24" height="24"><rect width="24" height="24" fill="none" rx="0" ry="0"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7488 5.67224C13.1057 5.67298 13.3958 5.38416 13.3965 5.0271C13.3973 4.67005 13.1084 4.37989 12.7515 4.37915C12.3943 4.37842 12.1043 4.66724 12.1035 5.02442C12.1028 5.38135 12.3916 5.67151 12.7488 5.67224ZM9.39535 6.57153C9.70504 6.39355 9.81173 5.99841 9.63388 5.68884C9.45602 5.37914 9.06076 5.27245 8.75119 5.45031C8.44162 5.62817 8.3348 6.02343 8.51266 6.333C8.69064 6.64257 9.08578 6.74926 9.39535 6.57153ZM6.94091 9.02688C6.76171 9.33571 6.3662 9.44094 6.05736 9.26174C5.74852 9.08254 5.6433 8.68691 5.8225 8.37807C6.0017 8.06923 6.39733 7.96413 6.70617 8.14333C7.015 8.32253 7.12011 8.71804 6.94091 9.02688ZM6.04309 12.3806C6.04383 12.0234 5.75501 11.7334 5.39795 11.7327C5.0409 11.7319 4.75074 12.0208 4.75 12.3779C4.74927 12.7349 5.03809 13.0249 5.39527 13.0256C5.7522 13.0265 6.04236 12.7376 6.04309 12.3806ZM5.82116 16.3781C5.6433 16.0684 5.74999 15.6734 6.05968 15.4954C6.36925 15.3176 6.7644 15.4244 6.94237 15.734C7.12023 16.0435 7.01342 16.4388 6.70385 16.6165C6.39428 16.7945 5.99902 16.6877 5.82116 16.3781ZM9.39773 18.1882C9.08889 18.0091 8.69338 18.1142 8.51418 18.423C8.33498 18.7319 8.44008 19.1275 8.74892 19.3067C9.05776 19.4858 9.45339 19.3808 9.63259 19.072C9.81179 18.7631 9.70656 18.3674 9.39773 18.1882ZM12.1035 19.7313C12.1043 19.3743 12.3943 19.0855 12.7515 19.0862C13.1084 19.0869 13.3973 19.377 13.3965 19.7341C13.3958 20.0911 13.1057 20.3799 12.7488 20.3792C12.3916 20.3784 12.1028 20.0884 12.1035 19.7313ZM16.1047 18.1869C15.7951 18.3647 15.6883 18.7599 15.8662 19.0695C16.0442 19.3791 16.4392 19.4859 16.7489 19.308C17.0584 19.1302 17.1652 18.735 16.9873 18.4255C16.8095 18.1158 16.4143 18.009 16.1047 18.1869ZM18.559 15.7315C18.7382 15.4227 19.134 15.3177 19.4428 15.4969C19.7516 15.676 19.8566 16.0716 19.6775 16.3804C19.4983 16.6893 19.1027 16.7945 18.7939 16.6153C18.485 16.4361 18.3799 16.0403 18.559 15.7315ZM20.105 11.7327C19.7478 11.7319 19.4578 12.0208 19.457 12.3779C19.4563 12.7349 19.7451 13.0249 20.1022 13.0256C20.4592 13.0265 20.7493 12.7376 20.75 12.3806C20.7507 12.0234 20.4619 11.7334 20.105 11.7327ZM19.679 8.38046C19.8569 8.69003 19.75 9.08529 19.4405 9.26315C19.1309 9.44101 18.7356 9.33432 18.5579 9.02462C18.3799 8.71505 18.4867 8.31991 18.7964 8.14193C19.106 7.96408 19.5011 8.07089 19.679 8.38046ZM16.1022 6.57006C16.4111 6.74926 16.8068 6.64415 16.986 6.33532C17.1652 6.02648 17.06 5.63085 16.7512 5.45165C16.4423 5.27245 16.0467 5.37767 15.8676 5.68651C15.6884 5.99535 15.7934 6.39086 16.1022 6.57006ZM8.26319 12.3795C8.26319 9.90466 10.2761 7.8916 12.75 7.8916C15.2249 7.8916 17.2379 9.90466 17.2379 12.3795C17.2379 14.8534 15.2249 16.8663 12.75 16.8663C10.2761 16.8663 8.26319 14.8534 8.26319 12.3795ZM9.5553 12.3795C9.5553 14.141 10.9885 15.5741 12.75 15.5741C14.5115 15.5741 15.9458 14.141 15.9458 12.3795C15.9458 10.618 14.5115 9.18372 12.75 9.18372C10.9885 9.18372 9.5553 10.618 9.5553 12.3795Z"></path></svg></div></div></div><div class="react-switch-handle" style="height:22px;width:22px;background:#ffffff;display:inline-block;cursor:pointer;border-radius:50%;position:absolute;transform:translateX(1px);top:1px;outline:0;border:0;-webkit-transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s;-moz-transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s;transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s"></div><input type="checkbox" role="switch" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px" id="normal-switch"/></div></label></div><h1>[Java] 12. JPA</h1><p class="post-date">August 21, 2021</p><div><h1 id="1-jpa-" style="position:relative;"><a href="#1-jpa-" aria-label="1 jpa  permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. JPA ?</h1>
-<p>: <strong>Java Persistence API</strong></p>
-<p>자바 진영의 <code class="language-text">ORM</code> 기술 표준. 자바 어플리케이션에서 관계형 데이터베이스를 사용하는 방식을 정의한 <code class="language-text">인터페이스</code>이다.</p>
-<blockquote>
-<p>💡 <strong>ORM</strong>(Object Relational Mapping)</p>
+      }</script><link rel="icon" href="/icons/icon-48x48.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=d785e87462519aef6f5110f35e978e6d"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><title data-react-helmet="true">[WEB] 4. DB연동과 Connection Pool | Hyem.log</title><meta data-react-helmet="true" name="description" content="1. Connection Pool 1) Connection Pool을 사용하는 이유 자바 프로그램에서 DBMS로 커넥션을 생성하려면 시간이 많이 걸린다. 사용자가 접속할 때 커넥션을 생성하면 오버헤드가 발생할 수 있다. 그래서 웹 어플리케이션을 실행함과 동시에 커넥션 풀에 일정 개수의 DB 커넥션을 미리 만들어둔다. (풀 - 서버에 이미 내장된 메모리) 요청을 처리하는 각 스레드에서 커넥션을 생성하지 않고, 커넥션풀의 커넥션 객체를 할당받아 사용한 뒤 반납한다 img 이미지 출처 https…"/><meta data-react-helmet="true" property="og:title" content="[WEB] 4. DB연동과 Connection Pool"/><meta data-react-helmet="true" property="og:description" content="1. Connection Pool 1) Connection Pool을 사용하는 이유 자바 프로그램에서 DBMS로 커넥션을 생성하려면 시간이 많이 걸린다. 사용자가 접속할 때 커넥션을 생성하면 오버헤드가 발생할 수 있다. 그래서 웹 어플리케이션을 실행함과 동시에 커넥션 풀에 일정 개수의 DB 커넥션을 미리 만들어둔다. (풀 - 서버에 이미 내장된 메모리) 요청을 처리하는 각 스레드에서 커넥션을 생성하지 않고, 커넥션풀의 커넥션 객체를 할당받아 사용한 뒤 반납한다 img 이미지 출처 https…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="[hyem]"/><meta data-react-helmet="true" name="twitter:title" content="[WEB] 4. DB연동과 Connection Pool"/><meta data-react-helmet="true" name="twitter:description" content="1. Connection Pool 1) Connection Pool을 사용하는 이유 자바 프로그램에서 DBMS로 커넥션을 생성하려면 시간이 많이 걸린다. 사용자가 접속할 때 커넥션을 생성하면 오버헤드가 발생할 수 있다. 그래서 웹 어플리케이션을 실행함과 동시에 커넥션 풀에 일정 개수의 DB 커넥션을 미리 만들어둔다. (풀 - 서버에 이미 내장된 메모리) 요청을 처리하는 각 스레드에서 커넥션을 생성하지 않고, 커넥션풀의 커넥션 객체를 할당받아 사용한 뒤 반납한다 img 이미지 출처 https…"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link as="script" rel="preload" href="/webpack-runtime-2ebdf06ea1ad3400ea3a.js"/><link as="script" rel="preload" href="/framework-727eca7a674e10b21a9f.js"/><link as="script" rel="preload" href="/app-a5201d43d146dd2e804c.js"/><link as="script" rel="preload" href="/styles-9605c3fbd8ad08ecf405.js"/><link as="script" rel="preload" href="/428cc97b99dda93b6f894a0194db3c3a0ab8bbd5-b9cdbc495dc2d8ef3640.js"/><link as="script" rel="preload" href="/4213a708e3c149581c4f5e97d71bfc3d00067ec6-b792a54f974cd65f790a.js"/><link as="script" rel="preload" href="/69ca9dfa785447e3d8b116b383997bcdc8df623a-d931e9d5f7ff71cda877.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-10344e360d08abbd2fb1.js"/><link as="fetch" rel="preload" href="/page-data/WEB/4.ConnectionPool/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="top"><a class="link" href="/">Hyem.log</a><a href="https://github.com/hyemin-jang" class="github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a></div><div style="position:relative;height:100%;margin-left:auto;margin-right:auto;max-width:48.75rem;padding:2.4375rem 1.21875rem"><div class="switch-container"><label for="normal-switch"><div style="position:relative;display:inline-block;text-align:left;opacity:1;direction:ltr;border-radius:12px;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s;touch-action:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none"><div class="react-switch-bg" style="height:24px;width:48px;margin:0;position:relative;background:#d9dfe2;border-radius:12px;cursor:pointer;-webkit-transition:background 0.25s;-moz-transition:background 0.25s;transition:background 0.25s"><div style="height:24px;width:26px;position:relative;opacity:0;pointer-events:none;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s"><div class="icon checkedIcon"><svg width="24" height="24"><rect width="24" height="24" fill="none" rx="0" ry="0"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M14.8102 3.2H13.8202C13.4902 3.2 13.2302 2.93 13.2302 2.6C13.2302 2.27 13.5002 2 13.8302 2H16.2602C16.5002 2 16.7202 2.15 16.8102 2.37C16.9002 2.59 16.8502 2.85 16.6802 3.02L15.2702 4.43H16.2602C16.5902 4.43 16.8602 4.7 16.8602 5.03C16.8602 5.36 16.5902 5.63 16.2602 5.63H13.8202C13.5802 5.63 13.3602 5.48 13.2702 5.26C13.1802 5.04 13.2302 4.78 13.4002 4.61L14.8102 3.2ZM20.1401 11.0101H21.1301C21.4601 11.0101 21.7401 11.2801 21.7401 11.6101C21.7401 11.9401 21.4701 12.2101 21.1401 12.2101H18.7001C18.4601 12.2101 18.2401 12.0601 18.1501 11.8401C18.0601 11.6201 18.1101 11.3601 18.2801 11.1901L19.6901 9.78008H18.7001C18.3701 9.78008 18.1001 9.51008 18.1001 9.18008C18.1001 8.85008 18.3701 8.58008 18.7001 8.58008H21.1301C21.3701 8.58008 21.5901 8.73008 21.6801 8.95008C21.7701 9.17008 21.7201 9.43008 21.5501 9.60008L20.1401 11.0101ZM11.0302 9.8499H12.8502L10.7002 11.9999C10.5302 12.1699 10.4802 12.4299 10.5702 12.6499C10.6602 12.8699 10.8802 13.0199 11.1202 13.0199H14.2902C14.6202 13.0199 14.8902 12.7499 14.8902 12.4199C14.8902 12.0899 14.6202 11.8199 14.2902 11.8199H12.5602L14.7102 9.6699C14.8802 9.4999 14.9302 9.2399 14.8402 9.0199C14.7502 8.7999 14.5302 8.6499 14.2902 8.6499H11.0202C10.6902 8.6499 10.4202 8.9199 10.4202 9.2499C10.4202 9.5799 10.7002 9.8499 11.0302 9.8499ZM14.5501 16.89C15.6601 16.89 16.7201 16.66 17.7101 16.19C17.9401 16.08 18.2101 16.13 18.3801 16.3C18.5601 16.48 18.6101 16.75 18.5001 16.98C17.0901 20.05 13.9901 22.03 10.6001 22.03C5.79013 22.03 1.88013 18.12 1.88013 13.31C1.88013 9.94004 3.87013 6.84004 6.93013 5.40004C7.16013 5.29004 7.43012 5.34004 7.61012 5.52004C7.79012 5.70004 7.84013 5.97004 7.73013 6.20004C7.27013 7.19004 7.03012 8.26004 7.03012 9.38004C7.03012 13.52 10.4001 16.89 14.5501 16.89ZM3.09013 13.31C3.09013 17.46 6.46012 20.83 10.6101 20.83C12.9901 20.83 15.2001 19.7 16.6001 17.85C15.9401 18.01 15.2501 18.09 14.5501 18.09C9.74013 18.09 5.83012 14.18 5.83012 9.38004C5.83012 8.68004 5.91013 7.99004 6.07013 7.32004C4.22013 8.73004 3.09013 10.94 3.09013 13.31Z"></path></svg></div></div><div style="height:24px;width:26px;position:absolute;opacity:1;right:0;top:0;pointer-events:none;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;transition:opacity 0.25s"><div class="icon uncheckedIcon"><svg width="24" height="24"><rect width="24" height="24" fill="none" rx="0" ry="0"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7488 5.67224C13.1057 5.67298 13.3958 5.38416 13.3965 5.0271C13.3973 4.67005 13.1084 4.37989 12.7515 4.37915C12.3943 4.37842 12.1043 4.66724 12.1035 5.02442C12.1028 5.38135 12.3916 5.67151 12.7488 5.67224ZM9.39535 6.57153C9.70504 6.39355 9.81173 5.99841 9.63388 5.68884C9.45602 5.37914 9.06076 5.27245 8.75119 5.45031C8.44162 5.62817 8.3348 6.02343 8.51266 6.333C8.69064 6.64257 9.08578 6.74926 9.39535 6.57153ZM6.94091 9.02688C6.76171 9.33571 6.3662 9.44094 6.05736 9.26174C5.74852 9.08254 5.6433 8.68691 5.8225 8.37807C6.0017 8.06923 6.39733 7.96413 6.70617 8.14333C7.015 8.32253 7.12011 8.71804 6.94091 9.02688ZM6.04309 12.3806C6.04383 12.0234 5.75501 11.7334 5.39795 11.7327C5.0409 11.7319 4.75074 12.0208 4.75 12.3779C4.74927 12.7349 5.03809 13.0249 5.39527 13.0256C5.7522 13.0265 6.04236 12.7376 6.04309 12.3806ZM5.82116 16.3781C5.6433 16.0684 5.74999 15.6734 6.05968 15.4954C6.36925 15.3176 6.7644 15.4244 6.94237 15.734C7.12023 16.0435 7.01342 16.4388 6.70385 16.6165C6.39428 16.7945 5.99902 16.6877 5.82116 16.3781ZM9.39773 18.1882C9.08889 18.0091 8.69338 18.1142 8.51418 18.423C8.33498 18.7319 8.44008 19.1275 8.74892 19.3067C9.05776 19.4858 9.45339 19.3808 9.63259 19.072C9.81179 18.7631 9.70656 18.3674 9.39773 18.1882ZM12.1035 19.7313C12.1043 19.3743 12.3943 19.0855 12.7515 19.0862C13.1084 19.0869 13.3973 19.377 13.3965 19.7341C13.3958 20.0911 13.1057 20.3799 12.7488 20.3792C12.3916 20.3784 12.1028 20.0884 12.1035 19.7313ZM16.1047 18.1869C15.7951 18.3647 15.6883 18.7599 15.8662 19.0695C16.0442 19.3791 16.4392 19.4859 16.7489 19.308C17.0584 19.1302 17.1652 18.735 16.9873 18.4255C16.8095 18.1158 16.4143 18.009 16.1047 18.1869ZM18.559 15.7315C18.7382 15.4227 19.134 15.3177 19.4428 15.4969C19.7516 15.676 19.8566 16.0716 19.6775 16.3804C19.4983 16.6893 19.1027 16.7945 18.7939 16.6153C18.485 16.4361 18.3799 16.0403 18.559 15.7315ZM20.105 11.7327C19.7478 11.7319 19.4578 12.0208 19.457 12.3779C19.4563 12.7349 19.7451 13.0249 20.1022 13.0256C20.4592 13.0265 20.7493 12.7376 20.75 12.3806C20.7507 12.0234 20.4619 11.7334 20.105 11.7327ZM19.679 8.38046C19.8569 8.69003 19.75 9.08529 19.4405 9.26315C19.1309 9.44101 18.7356 9.33432 18.5579 9.02462C18.3799 8.71505 18.4867 8.31991 18.7964 8.14193C19.106 7.96408 19.5011 8.07089 19.679 8.38046ZM16.1022 6.57006C16.4111 6.74926 16.8068 6.64415 16.986 6.33532C17.1652 6.02648 17.06 5.63085 16.7512 5.45165C16.4423 5.27245 16.0467 5.37767 15.8676 5.68651C15.6884 5.99535 15.7934 6.39086 16.1022 6.57006ZM8.26319 12.3795C8.26319 9.90466 10.2761 7.8916 12.75 7.8916C15.2249 7.8916 17.2379 9.90466 17.2379 12.3795C17.2379 14.8534 15.2249 16.8663 12.75 16.8663C10.2761 16.8663 8.26319 14.8534 8.26319 12.3795ZM9.5553 12.3795C9.5553 14.141 10.9885 15.5741 12.75 15.5741C14.5115 15.5741 15.9458 14.141 15.9458 12.3795C15.9458 10.618 14.5115 9.18372 12.75 9.18372C10.9885 9.18372 9.5553 10.618 9.5553 12.3795Z"></path></svg></div></div></div><div class="react-switch-handle" style="height:22px;width:22px;background:#ffffff;display:inline-block;cursor:pointer;border-radius:50%;position:absolute;transform:translateX(1px);top:1px;outline:0;border:0;-webkit-transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s;-moz-transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s;transition:background-color 0.25s, transform 0.25s, box-shadow 0.15s"></div><input type="checkbox" role="switch" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px" id="normal-switch"/></div></label></div><h1>[WEB] 4. DB연동과 Connection Pool</h1><p class="post-date">September 05, 2021</p><div><h1 id="1-connection-pool" style="position:relative;"><a href="#1-connection-pool" aria-label="1 connection pool permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Connection Pool</h1>
+<h2 id="1-connection-pool을-사용하는-이유" style="position:relative;"><a href="#1-connection-pool%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0" aria-label="1 connection pool을 사용하는 이유 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1) Connection Pool을 사용하는 이유</h2>
 <ul>
-<li>SQL을 직접 다루지 않고, <strong>객체와 테이블을 매핑</strong>하여 간접적으로 DB데이터 관리</li>
-<li>객체 간 관계를 바탕으로 SQL 문장 자동 생성</li>
-<li>SQL이 아닌 메소드로 데이터 조작</li>
+<li>자바 프로그램에서 DBMS로 커넥션을 생성하려면 시간이 많이 걸린다.</li>
+<li>사용자가 접속할 때 커넥션을 생성하면 오버헤드가 발생할 수 있다.</li>
+<li>그래서 웹 어플리케이션을 실행함과 동시에 <strong>커넥션 풀에 일정 개수의 DB 커넥션을 미리 만들어둔다.</strong> (풀 - 서버에 이미 내장된 메모리)</li>
+<li>요청을 처리하는 각 스레드에서 커넥션을 생성하지 않고, 커넥션풀의 커넥션 객체를 할당받아 사용한 뒤 반납한다</li>
 </ul>
-</blockquote>
-<h3 id="-자바-db연동-기술의-변천사" style="position:relative;"><a href="#-%EC%9E%90%EB%B0%94-db%EC%97%B0%EB%8F%99-%EA%B8%B0%EC%88%A0%EC%9D%98-%EB%B3%80%EC%B2%9C%EC%82%AC" aria-label=" 자바 db연동 기술의 변천사 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🌈 <strong>자바 DB연동 기술의 변천사</strong></h3>
-<ol>
-<li>EJB의 Entity빈 : 구현 및 배포 어려움 등의 여러가지 이슈 있었음</li>
-<li>Hibernate : 자바 표준은 아니지만 가장 많은 개발자들이 사용하는 ORM 기술</li>
-<li>JPA : 하이버네이트 개발자들이 만든 자바 표준 ORM 기술</li>
-</ol>
-<h2 id="1-jpa-실행-구조" style="position:relative;"><a href="#1-jpa-%EC%8B%A4%ED%96%89-%EA%B5%AC%EC%A1%B0" aria-label="1 jpa 실행 구조 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1) JPA 실행 구조</h2>
-<p>애플리케이션과 JDBC 사이에서 동작.</p>
-<p>개발자가 JPA를 사용하면 JPA 내부에서 JDBC API를 사용하여 SQL을 호출, DB와 통신한다.</p>
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 898px;">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom: 55.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABnElEQVQoz3VTXU/CQBDk//8SX3zyyWhMNMFgUSMCJooUqa2U0trr9ZtCx93DqxR1k+m1e3ezu7PbDsjqusZ2u8VmszkA+bZ1G+Tn8/rePtg6/CiKAnEcI8sy5Hn+jQJZSj65+kEcIM9SdU4TatOkipDJkiRRxC0LJ4BzA7j3wOIO0jEwC14hE9kc0dVoU4RRFGG9XqvIZVmqSEVZoFwMgI8+ynmPiPvw7T6GyzGiWKjLnESa7jLmd5atIeTs2BmGIXzfRyhC5M4Dqvk1xPMlEd/Cs3oY2I9YrlwIEcGyLLiuC8/zYNs2qqraEUopEQS+WpncnJpIUiI3DYwvjrAanauSF7Muzu7O4bg2BRYqKFfGVXFCDSGTsFMTcpYpiS9mfUy6xzCNE3iDU7y9XGG8fMK7YyH8DJFR8/ieJuW1paEQQmnCm3mRo3IfSTsDNekH28CSSh66o0ZDDqqngnVsdZmzO+xyLaaoqSk1d5kgScf5p9l0Wc8v49ccckM4SgukYyqDBllMjfqe1cM51N+d/6a+Ae/t449h3v9TvgAb507GyYUsNgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;"></span>
-  <img class="gatsby-resp-image-image" alt="jpa1" title="jpa1" src="/static/38ece4620d4dfd5a64c26dbf7aa2540b/84cc5/jpa1.png" srcset="/static/38ece4620d4dfd5a64c26dbf7aa2540b/5a46d/jpa1.png 300w,
-/static/38ece4620d4dfd5a64c26dbf7aa2540b/0a47e/jpa1.png 600w,
-/static/38ece4620d4dfd5a64c26dbf7aa2540b/84cc5/jpa1.png 898w" sizes="(max-width: 898px) 100vw, 898px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy">
-    </span>
-<h2 id="2-jpa를-사용하는-이유" style="position:relative;"><a href="#2-jpa%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0" aria-label="2 jpa를 사용하는 이유 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) JPA를 사용하는 이유</h2>
-<h4>(1) 생산성 증가 및 유지보수의 용이</h4>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/2629B3375492CD3E10" alt="img"></p>
+<p>[이미지 출처] <a href="https://devbox.tistory.com/entry/JSP-%EC%BB%A4%EB%84%A5%EC%85%98-%ED%92%80-1">https://devbox.tistory.com/entry/JSP-%EC%BB%A4%EB%84%A5%EC%85%98-%ED%92%80-1</a></p>
+<h2 id="2-connection-pool-만들기" style="position:relative;"><a href="#2-connection-pool-%EB%A7%8C%EB%93%A4%EA%B8%B0" aria-label="2 connection pool 만들기 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) Connection Pool 만들기</h2>
+<h3 id="1--datasource" style="position:relative;"><a href="#1--datasource" aria-label="1  datasource permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(1)  DataSource</h3>
 <ul>
-<li>간단한 메소드로 CRUD가 가능하다.</li>
-<li>필드 변경시 직접 모든 SQL을 수정해야 할 필요 없이 JPA가 알아서 처리해준다.</li>
+<li>자바 웹 어플리케이션에서 커넥션풀 객체를 구현하기 위한 스펙을 정의해놓은 인터페이스 =  <code class="language-text">javax.sql.DataSource</code></li>
+<li><strong>DataSource 객체에 DB연결에 필요한 URL, ID, Password, DriverClass를 미리 정의해놓고 사용</strong>한다 - DB연결시마다 해당 정보를 매번 입력해야 하는 번거로움 해소</li>
 </ul>
-<h4>(2) 데이터 접근 추상화, 벤더 독립적 개발</h4>
+<h3 id="2--jndi-java-naming-and-directory-interface" style="position:relative;"><a href="#2--jndi-java-naming-and-directory-interface" aria-label="2  jndi java naming and directory interface permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(2)  JNDI (Java Naming and Directory Interface)</h3>
 <ul>
-<li>
-<p>💎 <strong>Dialect</strong> (방언) 설정</p>
+<li>분산된 객체를 찾기위해 <strong>특정한 이름으로 객체를 등록해서 관리할 수 있게</strong> 해주는 자바 API</li>
+<li>Tomcat과 같은 WAS에서는 특정 폴더에 필요한 데이터 소스(라이브러리)가 있는데 그것을 사용하기 위해 JNDI 기술을 활용한다.</li>
+<li>미리 지정한 이름(<code class="language-text">name</code>)을 찾아서(<code class="language-text">lookup</code>) 활용하면 된다.</li>
+<li><code class="language-text">Initialcontext</code>는 JNDI namespace의 모든 명명된 객체를 찾을 때 사용하는 객체</li>
+</ul>
+<h3 id="-tomcat에서-jndi-활용해서-db연결하기" style="position:relative;"><a href="#-tomcat%EC%97%90%EC%84%9C-jndi-%ED%99%9C%EC%9A%A9%ED%95%B4%EC%84%9C-db%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0" aria-label=" tomcat에서 jndi 활용해서 db연결하기 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>💎 Tomcat에서 JNDI 활용해서 DB연결하기</h3>
 <ul>
-<li>JPA에 Dialect를 설정할 수 있는 추상화 방언 클래스를 제공하여, 설정된 방언으로 각 DBMS에 맞게 구현</li>
-<li>각 DBMS들만의 독자적인 기능/문법 고려할 필요 없이 사용 가능</li>
+<li><code class="language-text">context.xml</code> 파일에 커넥션풀을 만드는 DataSource 리소스를 등록한다</li>
+<li>JNDI기술을 통해 해당 리소스의 이름을 가져와서 사용한다(ds라는 변수에 넣어 사용하자)</li>
+<li>ds는 사용자 요청이 있을 때마다 Connection을 제공한다.</li>
 </ul>
-</li>
-</ul>
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 883px;">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom: 60.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABgUlEQVQoz4WS226DMBBE+f9P62ulRpFaKSkQSLgHcMzFnu5sQkurJLVkrbHZs+NZB957zPMM55xOrh8N5zz8LTrvdY/5/rbmCC6XC4wx6LpO4/l8xjiO+pPpud9LlkPeWGwPAzZhJ9EiKkbSfgEZA0Koqu97WGsVuqxZpJP1YC8Ij2e8xRNeNie87g0+i5+brKEBYYQQsADXg+fjMKA3FkVjkGQ1sqpD015zBjlbg4N7Xi0VeXVaME2TTLHBzWjqSiAWbp60WNM0ev6t0K98WEunt3Vd43Q6qY/X7wbH4xFVVYlig7ZtkSQpyrJSm+4qXID0LwpDRFEkSYkm7Pd7XTNSGc93ux1CiVmWXRU+As5yjTzPFdB1rT6psiyR3hSOw9WOw+GgsL43z4EEEMYEgrlPC7iXpqn6RpVUx7k087FCMTyW676/f6AoCgVUonC73UqRRLtLYBzHSKQALflXIRPYFF6HBaw0huqWzrNReZ6hFAsGeRFPgYyELvC/8dHr+ALf6KXP5Sj3rAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;"></span>
-  <img class="gatsby-resp-image-image" alt="jpa2" title="jpa2" src="/static/2496f976f3351f5bc337f91e205783a1/fe9f1/jpa2.png" srcset="/static/2496f976f3351f5bc337f91e205783a1/5a46d/jpa2.png 300w,
-/static/2496f976f3351f5bc337f91e205783a1/0a47e/jpa2.png 600w,
-/static/2496f976f3351f5bc337f91e205783a1/fe9f1/jpa2.png 883w" sizes="(max-width: 883px) 100vw, 883px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy">
-    </span>
 <hr>
-<h1 id="2-jpa-application-개발" style="position:relative;"><a href="#2-jpa-application-%EA%B0%9C%EB%B0%9C" aria-label="2 jpa application 개발 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. JPA Application 개발</h1>
-<h2 id="1-개발-환경-구축" style="position:relative;"><a href="#1-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95" aria-label="1 개발 환경 구축 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1) 개발 환경 구축</h2>
+<h1 id="2-웹-프로젝트에서-db-연동하기" style="position:relative;"><a href="#2-%EC%9B%B9-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90%EC%84%9C-db-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0" aria-label="2 웹 프로젝트에서 db 연동하기 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 웹 프로젝트에서 DB 연동하기</h1>
+<h2 id="1-jdbc-사용" style="position:relative;"><a href="#1-jdbc-%EC%82%AC%EC%9A%A9" aria-label="1 jdbc 사용 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1) JDBC 사용</h2>
 <ol>
 <li>
-<p>JPA 프로젝트로 변환</p>
-<p>: 프로젝트 우클릭 - Configure - Convert to JPA Project 클릭하여 JPA 프로젝트로 변환한다 - 마지막에 <strong>Disable Library Configuration</strong>을 설정해 줄 것이다(메이븐으로 사용할 것임)</p>
+<p>JDBC Driver 설정</p>
+<ul>
+<li>오라클 11g xe 기준 -<code class="language-text">ojdbc6.jar</code>파일을 <code class="language-text">WebContent\WEP-INF\lib</code> 폴더에 넣는다</li>
+</ul>
 </li>
-</ol>
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 924px;">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom: 108.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAABYlAAAWJQFJUiTwAAACbUlEQVQ4y51U2XLaQBDc//+zPCXYgC4QCJ0LSCBhEtsBOtMjFrDLBxVVdc1qR5qre9cE3hR1XaNtW2w2G2y2WxwOB/A5nU6453l9fdV/TscDTDKPsVgssN/vNYA6xB6PR7Ufwfmc5fP88ozxrILZ1BZ102ArlTVid7udVsqK265DJ+/0Pe2e1LID142+i+26Fn9e/iJb/YZJsxx5nquDAbXt/0DbbrF/6mCiKMLj4yOSJEFZliiKQsEkWZapfY/M2Rs/15kUZ2bzOcIwxGg0gu/7uskPGHy9XmO1Wt0Na60EnM3geR4Gg4FWOhwOZf1L16w+mkSYCKbTqdjJjZ2on+soCnXNyg0dYRhodb7vabXBGfyZHwaBfwnEBC5QEASIZ7EUNEaapkqS4YcMxg9SmQMlRKe1y57NRsjaXMlyxNE2zXXPMW5iCcg2SYoj4zrk+5GmPUGmqiosl8tzxrfgCfoKTVMjr9aYpCsEiUWSL2HIJEFWCTJVlgWsJLm29jnqusFaUJYVCoFhdaySTLN1yocYj8e6x8GTqK9AlmkTkaAGtBKQGz3T/iWII4vSiuP4S5BcEqoBSQaDsKrboKyQEvkuoPNTHYYz44CZoS+/19l3bb4HC2BgQ7nwxYmYVTEbE7FyEnYPOQ6GP7vh30JnKCeEWakvBnbi/QgXYTsN9rp6q0Fad0Hce7WpDnnEmOE9XGa9bM/o5NLVi1fuv51crJ3uby8xTF6Un7dxnp21lc6Twqc0sizForCI0wLzXA6CpVLy/vqaJwtdsPVbcI+g6EkYJRVFEzw8PMAbjzAM5/gx8PHTEw3OEvGPdN7/ALjvXapu5notAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;"></span>
-  <img class="gatsby-resp-image-image" alt="jpa3" title="jpa3" src="/static/0ee1d4c5f37b231b24563113fed256f7/9a1cf/jpa3.png" srcset="/static/0ee1d4c5f37b231b24563113fed256f7/5a46d/jpa3.png 300w,
-/static/0ee1d4c5f37b231b24563113fed256f7/0a47e/jpa3.png 600w,
-/static/0ee1d4c5f37b231b24563113fed256f7/9a1cf/jpa3.png 924w" sizes="(max-width: 924px) 100vw, 924px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy">
-    </span>
-<p>​	아래와 같이 <code class="language-text">persistence.xml</code>파일이 생겼으면 정상적으로 변환 완료</p>
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 508px;">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom: 62%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB7ElEQVQoz42SC2+bMBSF+f//a+qkbVESbU1IUt7GNjYY8yaQnF1YW6lSG83SMRjf+/n4Xpz9xoV7uEBphbK0EJwjjCKkPAUjNW2HOI7A0hRKaXT9gEfDWUBt20AIgboioJCo62aFM8aQ5xpNXYMlybqubQ2ecmSZQkXxYZRQTA5J68JYOEwocFkgSDQSYcDJoST48RSQK42AFeBZhSjNEDOFMOMUp+CxGFKV8EIfmTTIKC9IowVoEFKSl9BpvILIzHrA70OIc6Bx8A3csMQxynH0FPY+wx9PYHsK8XxKcHRDuBeJ8yXG9vwCpzIaaRJT7VK6hkQUxeSMo21q+Nxi85Jj6y0qsPUL7DyDHR3y86SwOXr45TKKUf/izhmccejB6YpRzNBTwadpwjzPa4HnO9Bfb+jG2+tzXtX2V7TDoun1fXqXM8/T2pSUBdBKwVoLrTVsVa0NsdZg7GsMncU0NBhJD7u8TOM4oBAeNUSsoMKU9Lu0a/fyokDXViRLsBZ9V+NOzu80fSZn2VxdlhIml1S7BvN1IFfdly6WxAcOibzUi2rXEHRz8LA7J/jxHMDPGiRmhLTDBxdv0M/AzvLpdrvhPo/oqPDPzOLJlfjucjydMnw7cOzD/M3aQ3fvwHkaUekIQoovE+7/AVvGX5s3lJxUUvNmAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;"></span>
-  <img class="gatsby-resp-image-image" alt="jpa4" title="jpa4" src="/static/f8ba0fe96e5e40ff564ac6b52124c937/2fd48/jpa4.png" srcset="/static/f8ba0fe96e5e40ff564ac6b52124c937/5a46d/jpa4.png 300w,
-/static/f8ba0fe96e5e40ff564ac6b52124c937/2fd48/jpa4.png 508w" sizes="(max-width: 508px) 100vw, 508px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy">
-    </span>
-<ol start="2">
 <li>
-<p>Maven 프로젝트로 변환 </p>
-<p>: 프로젝트 우클릭 - Configure - Convert to Maven project</p>
-</li>
-<li>Maven 설정파일 pom.xml에 JPA 사용을 위한 dependencies 추가</li>
-</ol>
-<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml">...
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>javax.persistence<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>javax.persistence-api<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.hibernate<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>hibernate-entitymanager<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>5.4.2.Final<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-
-		<span class="token comment">&lt;!-- lombok 사용 --></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.projectlombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>lombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.18.20<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-		
-		<span class="token comment">&lt;!-- oracle driver의 설정 --></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.jslsolucoes<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>ojdbc6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>11.2.0.1.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
-		
-	<span class="token comment">&lt;!-- oracle driver의 추가 설정 정보 --></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repositories</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>oracle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>ORACLE JDBC Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>https://maven.atlassian.com/3rdparty/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repositories</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">></span></span>
-    	</code></pre></div>
-<h3 id="-jpa-설정파일-persistencexml-이해하기" style="position:relative;"><a href="#-jpa-%EC%84%A4%EC%A0%95%ED%8C%8C%EC%9D%BC-persistencexml-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0" aria-label=" jpa 설정파일 persistencexml 이해하기 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>💎 JPA 설정파일 (persistence.xml) 이해하기</h3>
+<p>커넥션풀에 대한 정보를 DataSource에 설정</p>
+<ul>
+<li>첫번째 방법) <code class="language-text">Servers\Tomcat v9.0 Server at localhost-config\context.xml</code> 파일에 설정해도 되고,</li>
+<li>두번째 방법) <code class="language-text">Servers\Tomcat v9.0 Server at localhost-config\context.xml</code>을 복사해서 현 프로젝트의 <code class="language-text">META-INF</code> 하단에 붙여넣기 후 편집해도 된다. </li>
+</ul>
+<p>프로젝트마다 설정하는 것이 더 안정적이므로 두번째 방법으로 하겠다.</p>
+<p>&#x3C;META-INF \ context.xml></p>
 <div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>persistence</span> <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2.1<span class="token punctuation">"</span></span> 
-             <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://xmlns.jcp.org/xml/ns/persistence<span class="token punctuation">"</span></span> 
-             <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span> 
-             <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-	
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>persistence-unit</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>oracleDB<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>	
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span><span class="token punctuation">></span></span>model.entity.Team<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>class</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span><span class="token punctuation">></span></span>model.entity.Member<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>class</span><span class="token punctuation">></span></span>
-
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>javax.persistence.jdbc.driver<span class="token punctuation">"</span></span> 
-                      <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>oracle.jdbc.OracleDriver<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>javax.persistence.jdbc.url<span class="token punctuation">"</span></span> 
-                      <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>jdbc:oracle:thin:@127.0.0.1:1521:xe<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>javax.persistence.jdbc.user<span class="token punctuation">"</span></span> 
-                      <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>SCOTT<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>javax.persistence.jdbc.password<span class="token punctuation">"</span></span> 
-                      <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>TIGER<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>        
-            
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hibernate.dialect<span class="token punctuation">"</span></span> 
-                      <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.hibernate.dialect.OracleDialect<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>	
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hibernate.show_sql<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hibernate.id.new_generator_mappings<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hibernate.hbm2ddl.auto<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>create<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-           
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>persistence-unit</span><span class="token punctuation">></span></span>	
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>persistence</span><span class="token punctuation">></span></span></code></pre></div>
-<ul>
-<li>
-<p><code class="language-text">&lt;persistence-unit&gt;</code> : JPA가 연동할 DataBase에 대한 정보 보유 (연동하고자 하는 DB가 여러개인 경우 여러개의 persistence-unit 설정하면 됨)</p>
-<ul>
-<li>JDBC Driver 종류 / url / user /password 정보 가지고 있음</li>
-</ul>
-</li>
-<li><code class="language-text">&lt;class&gt;model.entity.Team&lt;/class&gt;</code> : Entity 클래스를 등록</li>
-<li><code class="language-text">&lt;property name=&quot;hibernate.dialect&quot; value=&quot;org.hibernate.dialect.OracleDialect&quot; /&gt;</code> : 방언처리기 지정 (오라클 Dialect 사용할 것이다)</li>
-<li><code class="language-text">&lt;property name=&quot;hibernate.show_sql&quot; value=&quot;true&quot; /&gt;</code> : 콘솔창에 생성된 sql문 출력하겠다</li>
-<li><code class="language-text">&lt;property name=&quot;hibernate.id.new_generator_mappings&quot; value=&quot;true&quot; /&gt;</code> : 테이블의 PK컬럼을 자동 생성하겠다(value=“true” : SequenceStyleGenerator를 사용하겠다)</li>
-<li><code class="language-text">&lt;property name=&quot;hibernate.hbm2ddl.auto&quot; value=&quot;create&quot; /&gt;</code> : DDL(테이블 생성, 삭제, 변경)을 자동으로 실행하겠다. (실행하지 않으려는 경우 value=“none”)</li>
-</ul>
-<h2 id="2-연관관계-매핑" style="position:relative;"><a href="#2-%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84-%EB%A7%A4%ED%95%91" aria-label="2 연관관계 매핑 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) 연관관계 매핑</h2>
-<p>: 객체의 참조 관계와 테이블의 외래키를 매핑하는 것을 의미</p>
-<p>⚡ Member 객체가 Team 객체를 참조하는 경우	<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 334px;">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom: 42.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAACIklEQVQoz02Sy27TUBCG/RxsoGsegsdALFiwQ+zY0gUSIHas2QGiUksRiKhQkqK2IKQ2TdMmIfd7YuLEduLEce04Tuzk49QB0SN9Z0aa0a9/zhwpO9A41TQqw/+UDVVElZwxwPUXwJK5uC2BI/AE9hUu/hIIJGNaJyZXyZ5FKGZ3+ZXaIXX6id/NAwZTGdO9lIJG+hjl9Tr17Rcktl/SevuE1sZT5I1ndDef03rzmE6jgqTYBo5voVl9uqaGKqIyUunbA6rmCHs6CwXbu6/g/jWMR7fYX79N+94N0neuk7+7xuLhTfwHa8inh0hla0E0FuPDxwjvtrbY3HpPJLJD9MsuiWKD8WwRjlKs1VHiUYxEFCcZRU18o5/cp3uyxzh9SC+xR7OrIumuT29oUlM0mqpOSVYotxVkrc9RQyWrGFwI0WN9RtNZcvDziM3IVz5HYxwnU3yPn4UTXM7RcQKkH12HXKlGtVLmJJGibwz5d3oTX4gFYV4ZuvSdGfrYRjFMYWIsHOnoFxPseYAuas2xhzSYBoxGJn1NRdd0XNdluVyGm9Umc8beSjCuTjjqiElqVZLnKdKZPHKzxXkqQ+IkTipXEQ59pMLQo9Jqk8lkODvP0Ol0yOWLBEFA155jev5qKdYM2fKoGzaF3pCCeIpC1wjzsjoir1r0nDlSQ9isj1xKA9GoWaIwpjxwqJsepeEUL1iEgpeu/cWS1a9ccTVfrrr4A+U+iKYg8+JuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;"></span>
-  <img class="gatsby-resp-image-image" alt="jpa5" title="jpa5" src="/static/ce93aa61388714486731539501ddfc5f/86d36/jpa5.png" srcset="/static/ce93aa61388714486731539501ddfc5f/5a46d/jpa5.png 300w,
-/static/ce93aa61388714486731539501ddfc5f/86d36/jpa5.png 334w" sizes="(max-width: 334px) 100vw, 334px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy">
-    </span></p>
-<ul>
-<li>JDBC : 연관 관계이 있는 상대 테이블의 PK를 멤버변수로 가진다</li>
-<li>JPA : <strong>엔티티 객체 자체를 통채로 참조한다</strong></li>
-</ul>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token comment">// JDBC에서의 설계</span>
-<span class="token keyword">class</span> <span class="token class-name">Member</span><span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">long</span> memberId<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token keyword">long</span> teamId<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// JPA에서의 설계</span>
-<span class="token keyword">class</span> <span class="token class-name">Member</span><span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">long</span> memberId<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">Team</span> team<span class="token punctuation">;</span>  <span class="token comment">// 엔티티 객체를 참조</span>
-<span class="token punctuation">}</span></code></pre></div>
-<h3 id="-연관관계-매핑시-고려해야할-요소" style="position:relative;"><a href="#-%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84-%EB%A7%A4%ED%95%91%EC%8B%9C-%EA%B3%A0%EB%A0%A4%ED%95%B4%EC%95%BC%ED%95%A0-%EC%9A%94%EC%86%8C" aria-label=" 연관관계 매핑시 고려해야할 요소 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✨ 연관관계 매핑시 고려해야할 요소</h3>
-<h4>(1)  <strong>다중성</strong> - 해당 엔티티를 중심으로 상대 엔티티를 바라봤을때</h4>
-<ul>
-<li>OneToOne : 일대일 관계</li>
-<li>OneToMany : 일대다 관계</li>
-<li>ManyToOne : 다대일 관계</li>
-<li>ManyToMany : 다대다 관계</li>
-</ul>
-<p>DB 설계상 <strong>‘다’인 쪽이 외래 키를 갖는다</strong>. 😊무.조.건.</p>
-<h4>(2) 방향</h4>
-<p>데이터베이스 테이블은 외래키 하나로 양쪽 테이블을 조인하므로 단방향이니 양방향이니 나눌 필요가 없다.</p>
-<p>하지만 객체는 참조용 필드가 있는 객체만 다른 객체를 참조하는 것이 가능하므로, JPA를 사용하여 데이터베이스와 패러다임을 맞추기 위해서는 연관관계의 방향을 선택해야 한다.</p>
-<ul>
-<li><strong>단방향 관계</strong> : 한쪽의 엔티티만 참조용 필드를 갖고 다른 객체를 참조하고 있는 것</li>
-<li><strong>양방향 관계</strong> : 양쪽 엔티티가 각각 참조용 필드를 갖고 서로 참조하고 있는 것</li>
-</ul>
-<blockquote>
-<p>🤷‍♀️ 어떻게 판단하나요?</p>
-<ul>
-<li>다대일 단방향 관계 : member1.getTeam() 처럼 멤버가 팀을 참조 가능</li>
-<li>
-<p>양방향 관계 : team1.getMember()처럼 팀이 멤버를 참조도 가능하게 하려면 양방향으로 설정하면 됨</p>
-<p>=> 역방향으로 객체 탐색이 꼭 필요할때 양방향 관계를 설정하자</p>
-</li>
-</ul>
-</blockquote>
-<h4>(3) 연관관계의 주인(Owner)</h4>
-<ul>
-<li>두 객체가 양방향 관계를 가질 때, 연관관계의 주인을 지정해야 한다.</li>
-<li>
-<p><strong>외래키를 갖는 테이블</strong>이 연관관계의 주인이 된다. 😊무.조.건.</p>
-<ul>
-<li>주인 쪽이 외래키를 관리(등록, 수정, 삭제)할 수 있고, 다른 쪽은 읽기만 가능하다.</li>
-</ul>
-</li>
-<li>주인이 아닌 객체 쪽에서 <code class="language-text">mappedBy</code> 속성을 사용하면 된다.</li>
-</ul>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@AllArgsConstructor</span>
-<span class="token annotation punctuation">@NoArgsConstructor</span>
-<span class="token annotation punctuation">@Setter</span>
-<span class="token annotation punctuation">@Getter</span>
-<span class="token annotation punctuation">@Entity</span>
-<span class="token keyword">class</span> <span class="token class-name">Team</span><span class="token punctuation">{</span>	
-	<span class="token annotation punctuation">@Id</span>	
-	<span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"team_id"</span><span class="token punctuation">)</span>
-	<span class="token keyword">private</span> <span class="token class-name">Long</span> teamId<span class="token punctuation">;</span>
-
-	<span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"team_name"</span><span class="token punctuation">)</span>
-	<span class="token keyword">private</span> <span class="token class-name">String</span> teamName<span class="token punctuation">;</span>
-	
-    <span class="token comment">/* 해당 엔티티(Team)가 상대 엔티티(Member)의 여러 객체를 가질 수 있음 
-     * `일`인 쪽에 @OneToMany를 추가하여 양방향 관계 만듬 
-     * 	- 팀에서 여러 멤버들을 참조 가능하게 ArrayList 만들어준다
-     * mappedBy 사용하여 연관관계의 주인을 설정해줌 
-     * 	- mappedBy의 값은 대상이 되는 변수명(Member 테이블의 teamId 변수)
-     */</span>
-	<span class="token annotation punctuation">@OneToMany</span><span class="token punctuation">(</span>mappedBy<span class="token operator">=</span><span class="token string">"teamId"</span><span class="token punctuation">)</span>       
-	<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Member</span><span class="token punctuation">></span></span> members <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Member</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	
-	
-<span class="token annotation punctuation">@AllArgsConstructor</span>
-<span class="token annotation punctuation">@NoArgsConstructor</span>
-<span class="token annotation punctuation">@Setter</span>
-<span class="token annotation punctuation">@Getter</span>
-<span class="token annotation punctuation">@Entity</span>
-<span class="token keyword">class</span> <span class="token class-name">Member</span><span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Id</span>
-    <span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"member_id"</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> <span class="token keyword">long</span> memberId<span class="token punctuation">;</span>
-    
-    <span class="token annotation punctuation">@Column</span><span class="token punctuation">(</span>length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
-    
-    <span class="token comment">// JoinColumn : 외래키를 매핑하는 애노테이션. </span>
-    <span class="token comment">// 해당 엔티티(Member)의 여러 객체가 상대 엔티티(Team)에 대응 - 다대일 관계(@ManyToOne)</span>
-    <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"team_id"</span><span class="token punctuation">)</span>  
-    <span class="token annotation punctuation">@ManyToOne</span>
-    <span class="token keyword">private</span> <span class="token class-name">Team</span> teamId<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<h2 id="3-개발-proccess" style="position:relative;"><a href="#3-%EA%B0%9C%EB%B0%9C-proccess" aria-label="3 개발 proccess permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3) 개발 Proccess</h2>
-<ul>
-<li>EntityManagerFactory 생성 </li>
-<li>EntityManager 생성 </li>
-<li>EntityTransaction 생성 및 적용 </li>
-<li>비즈니스 로직(CRUD) </li>
-<li>
-<p>자원반환</p>
-<p>​		</p>
-</li>
-</ul>
-<h3 id="-jpa-주요-api" style="position:relative;"><a href="#-jpa-%EC%A3%BC%EC%9A%94-api" aria-label=" jpa 주요 api permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✅ JPA 주요 API</h3>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Context</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Resource</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>jdbc/myoracle<span class="token punctuation">"</span></span> 
+             <span class="token attr-name">auth</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Container<span class="token punctuation">"</span></span>
+             <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>javax.sql.DataSource<span class="token punctuation">"</span></span> 
+             <span class="token attr-name">driverClassName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>oracle.jdbc.OracleDriver<span class="token punctuation">"</span></span>
+             <span class="token attr-name">url</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>jdbc:oracle:thin:@127.0.0.1:1521:xe<span class="token punctuation">"</span></span>
+             <span class="token attr-name">username</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>SCOTT<span class="token punctuation">"</span></span> <span class="token attr-name">password</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>TIGER<span class="token punctuation">"</span></span> 
+             <span class="token attr-name">maxTotal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> 
+             <span class="token attr-name">maxIdle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span>
+             <span class="token attr-name">maxWaitMillis</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Context</span><span class="token punctuation">></span></span></code></pre></div>
+<p>위와 같이 이렇게 <strong>이름이 “jdbc/myoracle”이고, 종류는 DataSource인</strong> resource를 생성하였다.</p>
+<p>✅ Resource 설정값 설명</p>
 <table>
 <thead>
 <tr>
-<th>API</th>
-<th>역할</th>
+<th>커넥션풀 설정값</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Persistence</td>
-<td>EntityManagerFactory 인스턴스를 얻기 위한 메소드를 가짐 = <code class="language-text">createEntityManagerFactory()</code></td>
+<td>initialSize</td>
+<td>최초로 커넥션풀 생성 시 만들 Connection 객체의 수 (기본값 0)</td>
 </tr>
 <tr>
-<td><code class="language-text">EntityManagerFactory</code></td>
-<td>클라이언트 요청시마다(=각 스레드마다) EntityManager 객체 생성, 관리</td>
+<td>minIdle</td>
+<td>최소한으로 유지될 Connection 객체의 수 (기본값 0)</td>
 </tr>
 <tr>
-<td><code class="language-text">EntityManager</code></td>
-<td>엔티티에 대한 모든 작업 (CRUD) 처리</td>
+<td>maxIdle</td>
+<td>커넥션풀에 반납된 유휴 Connection 객체를 유지할 수 있는 최대값 (기본값 8)</td>
 </tr>
 <tr>
-<td><code class="language-text">EntityTransaction</code></td>
-<td>EntityManager와 1:1 관계. 각 EntityManager의 작업은 EntityTransaction 클래스에 의해 유지 관리.</td>
+<td>maxTotal (= maxActive)</td>
+<td>동시에 사용할 수 있는 최대 커넥션 갯수 (기본값 8)</td>
+</tr>
+<tr>
+<td>maxWaitMillis (=maxWait)</td>
+<td>할당받을 Connection 객체가 없을 때 스레드를 블록시킬 시간 (1/1000초 단위) / -1 : 무한 대기 의미</td>
 </tr>
 </tbody>
 </table>
-<h3 id="-entitymanager-의-crud-수행-메소드" style="position:relative;"><a href="#-entitymanager-%EC%9D%98-crud-%EC%88%98%ED%96%89-%EB%A9%94%EC%86%8C%EB%93%9C" aria-label=" entitymanager 의 crud 수행 메소드 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✅ EntityManager 의 CRUD 수행 메소드</h3>
-<table>
-<thead>
-<tr>
-<th>메소드</th>
-<th>기능</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="language-text">persist(Object entity)</code></td>
-<td>entity를 영속화 (INSERT)</td>
-</tr>
-<tr>
-<td><code class="language-text">merge(Object entity)</code></td>
-<td>준영속 상태의 entity를 영속화 (UPDATE)</td>
-</tr>
-<tr>
-<td><code class="language-text">remove(Object entity)</code></td>
-<td>영속 상태의 entity를 제거 (DELETE)</td>
-</tr>
-<tr>
-<td><code class="language-text">find(Class entity, Object pk)</code></td>
-<td>하나의 entity 검색 (SELECT one)</td>
-</tr>
-<tr>
-<td><code class="language-text">createQuery(String jpql, Class resultClass)</code></td>
-<td>JPQL에 해당하는 entity 목록 검색 (SELECT list)</td>
-</tr>
-</tbody>
-</table>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RunningTest</span> <span class="token punctuation">{</span>
+<p>​	 </p>
+</li>
+<li>
+<p>.java 혹은 .jsp 파일에서 사용</p>
+<p>&#x3C;DButil.java></p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">util</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Connection</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">DriverManager</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">ResultSet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">SQLException</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Statement</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>naming<span class="token punctuation">.</span></span><span class="token class-name">Context</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>naming<span class="token punctuation">.</span></span><span class="token class-name">InitialContext</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>naming<span class="token punctuation">.</span></span><span class="token class-name">NamingException</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">DataSource</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DBUtil</span> <span class="token punctuation">{</span>
+
+	<span class="token comment">// datasource는 static 멤버변수로 설정 - 하나의 객체만 생성</span>
+   <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">DataSource</span> ds<span class="token punctuation">;</span>   
 	
-	<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		<span class="token class-name">EntityManagerFactory</span> emf <span class="token operator">=</span> <span class="token class-name">Persistence</span><span class="token punctuation">.</span><span class="token function">createEntityManagerFactory</span><span class="token punctuation">(</span><span class="token string">"oracleDB"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token class-name">EntityManager</span> em <span class="token operator">=</span> emf<span class="token punctuation">.</span><span class="token function">createEntityManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token class-name">EntityTransaction</span> tx <span class="token operator">=</span> em<span class="token punctuation">.</span><span class="token function">getTransaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		
-        tx<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		
-        <span class="token keyword">try</span><span class="token punctuation">{</span>
-        	<span class="token comment">// 엔티티 클래스의 setter 메소드 - tx.commit() 시에 UPDATE문 수행 </span>
-            <span class="token class-name">Team</span> t1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Team</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            t1<span class="token punctuation">.</span><span class="token function">setTeamName</span><span class="token punctuation">(</span><span class="token string">"우리팀"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-            <span class="token class-name">Member</span> m1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Member</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            m1<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"장보리"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            m1<span class="token punctuation">.</span><span class="token function">setTeamId</span><span class="token punctuation">(</span>t1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-            <span class="token class-name">Member</span> m2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Member</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            m2<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"서리태"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            m2<span class="token punctuation">.</span><span class="token function">setTeamId</span><span class="token punctuation">(</span>t1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-            t1<span class="token punctuation">.</span><span class="token function">getMembers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>m1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            t1<span class="token punctuation">.</span><span class="token function">getMembers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>m2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            
-            <span class="token comment">// INSERT</span>
-            em<span class="token punctuation">.</span><span class="token function">persist</span><span class="token punctuation">(</span>t1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            em<span class="token punctuation">.</span><span class="token function">persist</span><span class="token punctuation">(</span>m1<span class="token punctuation">)</span><span class="token punctuation">;</span>		
-            em<span class="token punctuation">.</span><span class="token function">persist</span><span class="token punctuation">(</span>m2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-           
-            <span class="token comment">// SELECT one</span>
-            <span class="token class-name">Member</span> oneMember <span class="token operator">=</span> em<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token class-name">Member</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token number">1L</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// pk값(1)으로 조회</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"조회한 멤버 : "</span> <span class="token operator">+</span> oneMember<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            
-            <span class="token comment">// SELECT list</span>
-            <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Member</span><span class="token punctuation">></span></span> allMember <span class="token operator">=</span> em<span class="token punctuation">.</span><span class="token function">createQuery</span><span class="token punctuation">(</span>
-                <span class="token string">"select m from Member m"</span><span class="token punctuation">,</span> <span class="token class-name">Member</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getResultList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"멤버 수 : "</span> <span class="token operator">+</span> allMember<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">static</span> <span class="token punctuation">{</span>
+		<span class="token keyword">try</span> <span class="token punctuation">{</span>
+           <span class="token comment">// InitialContext가 생성되면서 context.xml에 저장된 정보를 읽어온다</span>
+           <span class="token class-name">Context</span> initContext <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InitialContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 			
-            <span class="token comment">// DELETE</span>
-            em<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>oneMember<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 객체를 파라미터로 받아서 pk값을 통해 해당 데이터 삭제</span>
+           <span class="token comment">// "java:/comp/env" = java environment상의 component(=재사용 가능한 객체)</span>
+           <span class="token comment">// 자바 실행환경 내부에 저장된 자원을 검색해서 사용하겠다는 뜻</span>
+           <span class="token class-name">Context</span> envContext  <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Context</span><span class="token punctuation">)</span>initContext<span class="token punctuation">.</span><span class="token function">lookup</span><span class="token punctuation">(</span><span class="token string">"java:/comp/env"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+			
+           <span class="token comment">// "jdbc/myoracle" 이름으로 되어있는 자원(즉 Datasource)을 ds라는 변수명으로 사용</span>
+           ds <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">DataSource</span><span class="token punctuation">)</span>envContext<span class="token punctuation">.</span><span class="token function">lookup</span><span class="token punctuation">(</span><span class="token string">"jdbc/myoracle"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           
+       <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">NamingException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
+		
+	<span class="token punctuation">}</span>
 
-            tx<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            
-        <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// 에러 발생시 CRUD 결과 저장하지 않고 rollback</span>
-            tx<span class="token punctuation">.</span><span class="token function">rollback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            e<span class="token punctuation">.</span><span class="token function">printStacktrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token keyword">finally</span> <span class="token punctuation">{</span>
-            <span class="token comment">// 자원반환</span>
-            em<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            emf<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-	
+	<span class="token comment">// getConnection() 메소드 실행시마다 커넥션풀로부터 커넥션 받아오는 메소드</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Connection</span> <span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">SQLException</span> <span class="token punctuation">{</span>
+       <span class="token keyword">return</span> ds<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+   <span class="token punctuation">}</span>
+
 <span class="token punctuation">}</span></code></pre></div>
-<h2 id="4-jpa의-성능-최적화-기능" style="position:relative;"><a href="#4-jpa%EC%9D%98-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EA%B8%B0%EB%8A%A5" aria-label="4 jpa의 성능 최적화 기능 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4) JPA의 성능 최적화 기능</h2>
-<h3 id="1-1차-캐시와-동일성identity-보장" style="position:relative;"><a href="#1-1%EC%B0%A8-%EC%BA%90%EC%8B%9C%EC%99%80-%EB%8F%99%EC%9D%BC%EC%84%B1identity-%EB%B3%B4%EC%9E%A5" aria-label="1 1차 캐시와 동일성identity 보장 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(1) 1차 캐시와 동일성(identity) 보장</h3>
-<ul>
-<li>같은 트랜잭션 내에서는 같은 Entity를 반환 - 조회 성능 (약간) 향상</li>
-</ul>
-<blockquote>
-<p>💡 <strong>캐시 (Cache)</strong></p>
-<ul>
-<li>데이터를 미리 복사해 놓는 임시 저장소</li>
-<li>기존 데이터에 접근하는 시간이 오래 걸리는 경우 / 값을 다시 계산하는 시간을 절약하고 싶은 경우 사용</li>
-<li>캐시에 데이터를 미리 복사해 놓으면 접근 혹은 계산 없이 더 빠른 속도로 데이터를 가져올 수 있음</li>
-</ul>
-</blockquote>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"></code></pre></div>
-<h3 id="2-트랜잭션을-지원하는-쓰기-지원-transactional-write-behind" style="position:relative;"><a href="#2-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EC%9D%84-%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94-%EC%93%B0%EA%B8%B0-%EC%A7%80%EC%9B%90-transactional-write-behind" aria-label="2 트랜잭션을 지원하는 쓰기 지원 transactional write behind permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>(2) 트랜잭션을 지원하는 쓰기 지원 (transactional write-behind)</h3>
-<ul>
-<li>Update, Delete로 인한 로우(Row) 락 시간 최소화</li>
-<li>지연 로딩 </li>
-</ul>
-<p><br></br></p>
-<p>[참고한 사이트]</p>
-<p><a href="https://jeong-pro.tistory.com/231">https://jeong-pro.tistory.com/231</a></p></div><div style="position:absolute;top:0;height:100%;right:calc((100vw - 850px) / 2 * (-1))"><nav class="table-of-contents container"><div class="contents"><ul>
+</li>
+</ol>
+<h2 id="2-jpa-사용" style="position:relative;"><a href="#2-jpa-%EC%82%AC%EC%9A%A9" aria-label="2 jpa 사용 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) JPA 사용</h2>
+<ol>
+<li>프로젝트를 JPA 프로젝트로 변환 </li>
 <li>
-<p><a href="/Java/12.JPA/#1-jpa-">1. JPA ?</a></p>
+<p>프로젝트를 Maven 프로젝트로 변환 </p>
 <ul>
-<li>
-<ul>
-<li><a href="/Java/12.JPA/#-%EC%9E%90%EB%B0%94-db%EC%97%B0%EB%8F%99-%EA%B8%B0%EC%88%A0%EC%9D%98-%EB%B3%80%EC%B2%9C%EC%82%AC">🌈 <strong>자바 DB연동 기술의 변천사</strong></a></li>
+<li><code class="language-text">pom.xml</code> 설정파일 수정하여 oracle Driver 등록 및 javax.persistence, org.hibernate 등록 </li>
+<li>lombok, slf4j 등등도 등록해서 사용</li>
 </ul>
 </li>
-<li><a href="/Java/12.JPA/#1-jpa-%EC%8B%A4%ED%96%89-%EA%B5%AC%EC%A1%B0">1) JPA 실행 구조</a></li>
+<li><code class="language-text">persistence.xml</code> 설정파일 수정 (1~3번 과정  이전 포스팅 참고 - <a href="https://hyemin-jang.github.io/Java/12.JPA/">[Java] 12. JPA</a> )</li>
 <li>
-<p><a href="/Java/12.JPA/#2-jpa%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0">2) JPA를 사용하는 이유</a></p>
-<ul>
+<p>.java 혹은 .jsp 파일에서 사용</p>
+<p>&#x3C;DBUtil.java></p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">util</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Connection</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">ResultSet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">SQLException</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Statement</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>naming<span class="token punctuation">.</span></span><span class="token class-name">Context</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>naming<span class="token punctuation">.</span></span><span class="token class-name">InitialContext</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>naming<span class="token punctuation">.</span></span><span class="token class-name">NamingException</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">EntityManager</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">EntityManagerFactory</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">Persistence</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DBUtil</span> <span class="token punctuation">{</span>
+   <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">EntityManagerFactory</span> emf<span class="token punctuation">;</span>
+   
+   <span class="token keyword">static</span> <span class="token punctuation">{</span>
+       emf <span class="token operator">=</span> <span class="token class-name">Persistence</span><span class="token punctuation">.</span><span class="token function">createEntityManagerFactory</span><span class="token punctuation">(</span><span class="token string">"myoracle"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token comment">// EntityManagerFactory는 웹어플리케이션이 로딩되는 시점에 딱 한개만 생성</span>
+       <span class="token comment">// 사용자 요청시마다(=스레드 하나 생성될때마다) EntityManager를 생성, 관리</span>
+       <span class="token comment">// JDBC의 Connection Pool과 같다고 생각하면 됨</span>
+   <span class="token punctuation">}</span>
+   
+   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">EntityManager</span> <span class="token function">getEntityManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">SQLException</span> <span class="token punctuation">{</span>
+       <span class="token keyword">return</span> emf<span class="token punctuation">.</span><span class="token function">createEntityManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token comment">// EntityManager는 스레드 간에 공유되지 않음</span>
+       <span class="token comment">// 엔티티와 관련된 모든 일(CRUD) 처리</span>
+       <span class="token comment">// JDBC의 Connection 객체와 같다고 생각하면 됨</span>
+   <span class="token punctuation">}</span>
+   
+   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       emf<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       emf <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span></code></pre></div>
+</li>
+</ol></div><div style="position:absolute;top:0;height:100%;right:calc((100vw - 850px) / 2 * (-1))"><nav class="table-of-contents container"><div class="contents"><ul>
 <li>
+<p><a href="/WEB/4.ConnectionPool/#1-connection-pool">1. Connection Pool</a></p>
 <ul>
-<li><a href="/Java/12.JPA/#1-%EC%83%9D%EC%82%B0%EC%84%B1-%EC%A6%9D%EA%B0%80-%EB%B0%8F-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98%EC%9D%98-%EC%9A%A9%EC%9D%B4">(1) 생산성 증가 및 유지보수의 용이</a></li>
-<li><a href="/Java/12.JPA/#2-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%91%EA%B7%BC-%EC%B6%94%EC%83%81%ED%99%94-%EB%B2%A4%EB%8D%94-%EB%8F%85%EB%A6%BD%EC%A0%81-%EA%B0%9C%EB%B0%9C">(2) 데이터 접근 추상화, 벤더 독립적 개발</a></li>
+<li><a href="/WEB/4.ConnectionPool/#1-connection-pool%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0">1) Connection Pool을 사용하는 이유</a></li>
+<li>
+<p><a href="/WEB/4.ConnectionPool/#2-connection-pool-%EB%A7%8C%EB%93%A4%EA%B8%B0">2) Connection Pool 만들기</a></p>
+<ul>
+<li><a href="/WEB/4.ConnectionPool/#1--datasource">(1)  DataSource</a></li>
+<li><a href="/WEB/4.ConnectionPool/#2--jndi-java-naming-and-directory-interface">(2)  JNDI (Java Naming and Directory Interface)</a></li>
+<li><a href="/WEB/4.ConnectionPool/#-tomcat%EC%97%90%EC%84%9C-jndi-%ED%99%9C%EC%9A%A9%ED%95%B4%EC%84%9C-db%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0">💎 Tomcat에서 JNDI 활용해서 DB연결하기</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><a href="/Java/12.JPA/#2-jpa-application-%EA%B0%9C%EB%B0%9C">2. JPA Application 개발</a></p>
-<ul>
-<li>
-<p><a href="/Java/12.JPA/#1-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95">1) 개발 환경 구축</a></p>
-<ul>
-<li><a href="/Java/12.JPA/#-jpa-%EC%84%A4%EC%A0%95%ED%8C%8C%EC%9D%BC-persistencexml-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0">💎 JPA 설정파일 (persistence.xml) 이해하기</a></li>
-</ul>
-</li>
-<li>
-<p><a href="/Java/12.JPA/#2-%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84-%EB%A7%A4%ED%95%91">2) 연관관계 매핑</a></p>
-<ul>
-<li>
-<p><a href="/Java/12.JPA/#-%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84-%EB%A7%A4%ED%95%91%EC%8B%9C-%EA%B3%A0%EB%A0%A4%ED%95%B4%EC%95%BC%ED%95%A0-%EC%9A%94%EC%86%8C">✨ 연관관계 매핑시 고려해야할 요소</a></p>
-<ul>
-<li><a href="/Java/12.JPA/#1--%EB%8B%A4%EC%A4%91%EC%84%B1---%ED%95%B4%EB%8B%B9-%EC%97%94%ED%8B%B0%ED%8B%B0%EB%A5%BC-%EC%A4%91%EC%8B%AC%EC%9C%BC%EB%A1%9C-%EC%83%81%EB%8C%80-%EC%97%94%ED%8B%B0%ED%8B%B0%EB%A5%BC-%EB%B0%94%EB%9D%BC%EB%B4%A4%EC%9D%84%EB%95%8C">(1)  <strong>다중성</strong> - 해당 엔티티를 중심으로 상대 엔티티를 바라봤을때</a></li>
-<li><a href="/Java/12.JPA/#2-%EB%B0%A9%ED%96%A5">(2) 방향</a></li>
-<li><a href="/Java/12.JPA/#3-%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84%EC%9D%98-%EC%A3%BC%EC%9D%B8owner">(3) 연관관계의 주인(Owner)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><a href="/Java/12.JPA/#3-%EA%B0%9C%EB%B0%9C-proccess">3) 개발 Proccess</a></p>
-<ul>
-<li><a href="/Java/12.JPA/#-jpa-%EC%A3%BC%EC%9A%94-api">✅ JPA 주요 API</a></li>
-<li><a href="/Java/12.JPA/#-entitymanager-%EC%9D%98-crud-%EC%88%98%ED%96%89-%EB%A9%94%EC%86%8C%EB%93%9C">✅ EntityManager 의 CRUD 수행 메소드</a></li>
 </ul>
 </li>
 <li>
-<p><a href="/Java/12.JPA/#4-jpa%EC%9D%98-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EA%B8%B0%EB%8A%A5">4) JPA의 성능 최적화 기능</a></p>
+<p><a href="/WEB/4.ConnectionPool/#2-%EC%9B%B9-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90%EC%84%9C-db-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0">2. 웹 프로젝트에서 DB 연동하기</a></p>
 <ul>
-<li><a href="/Java/12.JPA/#1-1%EC%B0%A8-%EC%BA%90%EC%8B%9C%EC%99%80-%EB%8F%99%EC%9D%BC%EC%84%B1identity-%EB%B3%B4%EC%9E%A5">(1) 1차 캐시와 동일성(identity) 보장</a></li>
-<li><a href="/Java/12.JPA/#2-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EC%9D%84-%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94-%EC%93%B0%EA%B8%B0-%EC%A7%80%EC%9B%90-transactional-write-behind">(2) 트랜잭션을 지원하는 쓰기 지원 (transactional write-behind)</a></li>
-</ul>
-</li>
+<li><a href="/WEB/4.ConnectionPool/#1-jdbc-%EC%82%AC%EC%9A%A9">1) JDBC 사용</a></li>
+<li><a href="/WEB/4.ConnectionPool/#2-jpa-%EC%82%AC%EC%9A%A9">2) JPA 사용</a></li>
 </ul>
 </li>
 </ul></div></nav></div><div class="social-share"></div><div class="sponsor-button"></div><hr class="custom-hr"/><div class="bio"><div class="author"><div class="author-description"><div class="author-image gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:72px;height:72px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAD8UlEQVQ4y32U61MUVBiH9/9IJQVWEATGKMSgZUEhRIgAuQtDMEqQCpG2QCBYwnIRIwcS2TQChbCJBRZcissy0ggEWMbFhVhAwkujY04aU314OruyyAr04Z0zZ845z/m97+89R9JS9CsvRrNyanlsVk6K0Iv5tCmezacs9q0Myf/D9GhK5mgvvUNTwS0RE7SVzi+trQ2VrAQ93zRpGttLF6jL6aUwKZfsyFiOhYVQfqTKdIm6UL/q3CqgGaYpnqW1eJqS5FIOB3pxNMiNjLc9ObLPjSjPHdTlDnD19AJqpX6VSollupMCNEN9Xh+KyHhS9rqSE+5DVog3OWHeZIbupiAlnrzEZFTH20X6t5ezWUehsegT5MV/QJLvK+RH+6NMDOWyMosBdR3jvVr+XphmSPMV6SH7aSrUL515QaHZzVaRauPJflICfMgI9qLogD/a6jImr3cyO9IHj+7yZHaCf+anOJ2WQGXa11wtu2OhUrKydm0l81zK6eSgnysnIt+kLCGQhuJ8vjn3Gfdv9vPvvRmmf/iOgeYGKrMOUnqogo4z95cNWgaaFRpboiDpY1L3upEf6cfJuEAG6y/QeraUh0LhU/0NdDVVdNepUKbGUH64Dq1QaDZnRcrPYBczO0j29xBG7CFt3+uoPkoD/c9g+IXFqZ94NNxH9+dn0JQXkxsXRW3OdZHVrGUNzRNj4yoiYlGEeJK7fzfZMUHMfq/mr7FB/hjQ8UDbylzLFRYHehirrSAjNIbmIsPqtjGr+0LRztFAD5QHAlCE+xHtK2O4QcXTsX6eiPoZVNXcKDjF4/4ues8VkRoYIQDrAUXn12T3EC1zIT3oDfLjQwjc6URhaiL3+jpM6S4aRvlzWMec9gon4oKJkMmX3V0j5Wnh1DgfRqbh7WJLnNyJd3yE0wL846VqRhprmFA3cD77GG/JZTg52OHrLuPbgjFa1+/DKfF2b1PxfhPpYe+SsMeLWPkurn1ZiaGrhf7aKipO5REWHIy9vQPOTk7C6ctojU9QtI0ZKnlOnzItdJTdNdUmWB7BLrdX6bxYye9DvdxsE4bMjJIQFYGd1J5tDlJiA1IF8DfRNpOWwJU/hhEa7p/Ahk0vcU3TxK1uDbnvHUKtquCxfgSZuzvWm62xt5Pi4x4gPpKZtT8H4y3G285maHAUNXKwd+STzOM8EZCGT5Xode08HB9ih5MzL2+0Qmprw04XDyHA0hgLoLGGqkwdzo7Ophpt3LCJC2VKFgZ1jPe0M6rT4mi/DWurzSag6/bXqM8fESoNq4Hm52eEBstjkUq3YGe7FVtrG7oaa+HBHI3VFVgZ1W2xYautLY522zmv6DKdUS+10H9P11vwy4Ch6AAAAABJRU5ErkJggg==" alt="[hyem]" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/114fe002cfffaf65598b36268e468ff7/e5b88/profile.png 1x,
 /static/114fe002cfffaf65598b36268e468ff7/e7bd6/profile.png 1.5x,
 /static/114fe002cfffaf65598b36268e468ff7/a12fc/profile.png 2x" /><img loading="lazy" width="72" height="72" srcset="/static/114fe002cfffaf65598b36268e468ff7/e5b88/profile.png 1x,
 /static/114fe002cfffaf65598b36268e468ff7/e7bd6/profile.png 1.5x,
-/static/114fe002cfffaf65598b36268e468ff7/a12fc/profile.png 2x" src="/static/114fe002cfffaf65598b36268e468ff7/e5b88/profile.png" alt="[hyem]" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><div class="author-name"><span class="author-name-prefix">Written by</span><a class="author-name-content" href="/about"><span>@<!-- -->[hyem]</span></a><div class="author-introduction">Hyem&#x27;s Dev Note</div><p class="author-socials"><a href="https://github.com/hyemin-jang">GitHub</a></p></div></div></div></div><ul class="navigator"><li><a rel="prev" href="/Java/11.JDBC/">← <!-- -->[Java] 11. JDBC</a></li><li><a rel="next" href="/WEB/1.Servlet/">[WEB] 1. Servlet<!-- --> →</a></li></ul><div class="utterances"></div><footer class="footer">©<a href="https://github.com/hyemin-jang">Hyem</a>, Built with<!-- --> <a href="https://github.com/JaeYeopHan/gatsby-starter-bee">Gatsby-starter-bee</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/Java/12.JPA/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-a5201d43d146dd2e804c.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-38fe08ef875e5952d5f0.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-10344e360d08abbd2fb1.js"],"component---src-pages-404-js":["/component---src-pages-404-js-ab1d14d8fe8d5f781253.js"],"component---src-pages-about-js":["/component---src-pages-about-js-f43a9b41ff18f6404175.js"],"component---src-pages-index-js":["/component---src-pages-index-js-23b236bbe6ea0db6c18a.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-10344e360d08abbd2fb1.js" async=""></script><script src="/69ca9dfa785447e3d8b116b383997bcdc8df623a-d931e9d5f7ff71cda877.js" async=""></script><script src="/4213a708e3c149581c4f5e97d71bfc3d00067ec6-b792a54f974cd65f790a.js" async=""></script><script src="/428cc97b99dda93b6f894a0194db3c3a0ab8bbd5-b9cdbc495dc2d8ef3640.js" async=""></script><script src="/styles-9605c3fbd8ad08ecf405.js" async=""></script><script src="/app-a5201d43d146dd2e804c.js" async=""></script><script src="/framework-727eca7a674e10b21a9f.js" async=""></script><script src="/webpack-runtime-2ebdf06ea1ad3400ea3a.js" async=""></script></body></html>
+/static/114fe002cfffaf65598b36268e468ff7/a12fc/profile.png 2x" src="/static/114fe002cfffaf65598b36268e468ff7/e5b88/profile.png" alt="[hyem]" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><div class="author-name"><span class="author-name-prefix">Written by</span><a class="author-name-content" href="/about"><span>@<!-- -->[hyem]</span></a><div class="author-introduction">Hyem&#x27;s Dev Note</div><p class="author-socials"><a href="https://github.com/hyemin-jang">GitHub</a></p></div></div></div></div><ul class="navigator"><li><a rel="prev" href="/WEB/3.JSP/">← <!-- -->[WEB] 3. JSP</a></li><li></li></ul><div class="utterances"></div><footer class="footer">©<a href="https://github.com/hyemin-jang">Hyem</a>, Built with<!-- --> <a href="https://github.com/JaeYeopHan/gatsby-starter-bee">Gatsby-starter-bee</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/WEB/4.ConnectionPool/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-a5201d43d146dd2e804c.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-38fe08ef875e5952d5f0.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-10344e360d08abbd2fb1.js"],"component---src-pages-404-js":["/component---src-pages-404-js-ab1d14d8fe8d5f781253.js"],"component---src-pages-about-js":["/component---src-pages-about-js-f43a9b41ff18f6404175.js"],"component---src-pages-index-js":["/component---src-pages-index-js-23b236bbe6ea0db6c18a.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-10344e360d08abbd2fb1.js" async=""></script><script src="/69ca9dfa785447e3d8b116b383997bcdc8df623a-d931e9d5f7ff71cda877.js" async=""></script><script src="/4213a708e3c149581c4f5e97d71bfc3d00067ec6-b792a54f974cd65f790a.js" async=""></script><script src="/428cc97b99dda93b6f894a0194db3c3a0ab8bbd5-b9cdbc495dc2d8ef3640.js" async=""></script><script src="/styles-9605c3fbd8ad08ecf405.js" async=""></script><script src="/app-a5201d43d146dd2e804c.js" async=""></script><script src="/framework-727eca7a674e10b21a9f.js" async=""></script><script src="/webpack-runtime-2ebdf06ea1ad3400ea3a.js" async=""></script></body></html>
