@@ -1,7 +1,7 @@
 ---
 title: '[JavaScript] Web Storage'
 date: 2021-09-16 01:08:71
-category: 'JavaScript'
+category: 'JavaScript & Vue'
 thumbnail: { thumbnailSrc }
 draft: false
 ---
@@ -24,7 +24,7 @@ draft: false
   - 요청시 Header에 자동으로 전송되지 않음 - 쿠키의 CSRF,  트래픽 문제 해결
   - 문자열 데이터 뿐 아니라 직렬화를 통해 객체 저장 가능 (아래에서 자세히)
 
-  - 이전 포스팅 참조 - [화면이동과 상태유지 기법](https://hyemin-jang.github.io/Servlet%20&%20JSP/%ED%99%94%EB%A9%B4%EC%9D%B4%EB%8F%99%EA%B3%BC%20%EC%83%81%ED%83%9C%EC%9C%A0%EC%A7%80/)
+  - 이전 포스팅 참조 - [화면이동과 상태유지 기법](https://hyemin-jang.github.io/Servlet%20&%20JSP/2.Servlet-%ED%99%94%EB%A9%B4%EC%9D%B4%EB%8F%99%EA%B3%BC%20%EC%83%81%ED%83%9C%EC%9C%A0%EC%A7%80/)
 
 
 

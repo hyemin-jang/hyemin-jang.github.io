@@ -1,7 +1,7 @@
 ---
 title: '[JavaScript] 자바스크립트 객체'
 date: 2021-09-14 01:08:71
-category: 'JavaScript'
+category: 'JavaScript & Vue'
 thumbnail: { thumbnailSrc }
 draft: false
 ---
