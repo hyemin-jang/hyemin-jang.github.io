@@ -24,7 +24,7 @@ draft: false
   - 요청시 Header에 자동으로 전송되지 않음 - 쿠키의 CSRF,  트래픽 문제 해결
   - 문자열 데이터 뿐 아니라 직렬화를 통해 객체 저장 가능 (아래에서 자세히)
 
-  - 이전 포스팅 참조 - [화면이동과 상태유지 기법]
+  - 이전 포스팅 참조 - [화면이동과 상태유지 기법](https://hyemin-jang.github.io/Servlet%20&%20JSP/%ED%99%94%EB%A9%B4%EC%9D%B4%EB%8F%99%EA%B3%BC%20%EC%83%81%ED%83%9C%EC%9C%A0%EC%A7%80/)
 
 
 
@@ -34,15 +34,17 @@ draft: false
 
 - 동일 컴퓨터, 동일 브라우저 내에서는 여러 탭 간에 데이터가 서로 공유된다.
 
-- `localStorage.setItem("key", value)` : 로컬스토리지에 key값으로 데이터 저장
+- localStorage 객체의 메소드
 
-- `localStorage.getItem("key")` : 로컬스토리지로부터 key값으로 데이터 읽기
+  - `localStorage.setItem("key", value)` : 로컬스토리지에 key값으로 데이터 저장
 
-- `localStorage.removeItem("key")` : 로컬스토리지에서 key값으로 저장된 데이터 삭제
+  - `localStorage.getItem("key")` : 로컬스토리지로부터 key값으로 데이터 읽기
 
-- `localStorage.clear()` : 로컬스토리지의 모든 데이터 삭제
+  - `localStorage.removeItem("key")` : 로컬스토리지에서 key값으로 저장된 데이터 삭제
 
-  
+  - `localStorage.clear()` : 로컬스토리지의 모든 데이터 삭제
+
+    
 
 ### ✅ Session Storage
 
@@ -54,9 +56,9 @@ draft: false
 
 ### ⚡ 주의
 
-웹스토리지에 데이터를 저장할 때는 오직 **문자열** 데이터 타입만 지원된다!!
+웹스토리지에 데이터를 저장할 때는 **문자열**로 저장된다!! 
 
-- 객체리터럴 혹은 JSON 데이터를 저장하려면 `JSON.stringify()` 함수를 통해 `JSON 문자열` 형태로 직렬화하여 저장한 후, 데이터를 활용할 때는`JSON.parse()` 함수를 통해 JSON 형태로 역직렬화하여 활용한다.
+- 객체리터럴 혹은 JSON 데이터를 저장하려면 `JSON.stringify()` 함수를 통해 JSON 문자열 형태로 `직렬화`하여 저장한 후, 데이터를 활용할 때는`JSON.parse()` 함수를 통해 JSON 형태로 `역직렬화`하여 활용한다.
 
 ```html
 <!DOCTYPE html>
