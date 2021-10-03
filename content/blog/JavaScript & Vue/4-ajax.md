@@ -47,7 +47,7 @@ draft: false
 
 ​	  
 
-### ✅ XMLHttpRequest의 속성들
+### 💎 XMLHttpRequest의 속성들
 
 - `onreadystatechange` : readyState 속성이 변경되면 실행될 함수 정의
 
@@ -72,17 +72,19 @@ draft: false
 
 ### (1) GET 방식 요청
 
-<jsp 파일> 
+✅  서버로부터 데이터 받아서 출력하기
+
+<ajaxRes.jsp> 
 
 ```jsp
 <%@ page language="java" contentType="text/plain; charset=UTF-8"
     pageEncoding="UTF-8"%>
-{"name":"bori", "age":6}
+{"name":"보리", "age":6}
 ```
 
 
 
-\<html 파일>
+\<ajaxReq.html>
 
 ```html
 <!DOCTYPE html>
@@ -92,8 +94,9 @@ draft: false
 <title>Insert title here</title>
 </head>
 <body>
-    <button id="btn1">클릭</button>
+    <button onclick="loadDoc()">클릭</button>
     <div id="div1"></div>
+    
     <script>
     	function loadDoc() {     
             // ajax 요청 객체 생성
@@ -103,7 +106,7 @@ draft: false
             xhttp.onreadystatechange = function() { // onreadystatechange 이벤트 핸들러 설정
                 if (this.readyState == 4 && this.status == 200) {  // 응답 완료 && 정상응답이면
                     let data = this.responseText;  // 응답받을 데이터
-                    document.getElementById("div1").innerHTML = JSON.parse(data).name; 
+                    document.getElementById("div1").innerHTML = "이름은 " + JSON.parse(data).name; 
                 }
             };
             
@@ -113,8 +116,56 @@ draft: false
     </script>
 </body>
 </html>
-
 ```
+
+
+
+✅  서버로 데이터 전송하고, 응답 받아서 출력하기
+
+<ajaxRes.jsp>
+
+```html
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8"); %>  
+저는 이름은 ${param.name}이고 나이는 ${param.age}살인 귀여운 고양이애오
+```
+
+EL태그 `${param}` (`request.getParameter("key값")`과 동일)을 사용해 request에 저장되어 전송되는 데이터를 출력할 수 있다.
+
+\<ajaxReq.html> 
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 비동기 방식으로 개발할거기 때문에 form일 필요가 없다 -->
+	<input type="text" id="name" value="보리"><br>
+	<input type="text" id="age" value="6"><br>
+	<div id="dataView"></div>
+	
+	<script>
+		const xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200){
+				let data = this.responseText;
+				console.log(data);
+				dataView.innerText = data;  
+			}
+		}
+		// 요청방식 지정, 요청할 주소 지정(쿼리스트링으로 데이터 전달)
+		xhr.open("GET", "ajaxRes.jsp?name="+ document.getElementById("name").value +"&age="+ document.getElementById("age").value);		
+		xhr.send();		
+	</script>
+</body>
+</html>
+```
+
+
 
 
 
@@ -126,7 +177,18 @@ draft: false
 - `setRequestHeader(헤더명, 헤더의 값)` 형식
 - `application/x-www-form-urlencoded`은 웹브라우저가 폼 태그를 이용해서 입력받은 데이터를 POST 방식으로 전송할 때 사용하는 표준 MIME type이다.
 
-\<html 파일> 
+<ajaxRes.jsp> 
+
+```html
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("UTF-8"); %>  
+저는 이름은 ${param.name}이고 나이는 ${param.age}살인 귀여운 고양이애오
+```
+
+
+
+\<ajaxReq.html> 
 
 ```html
 <!DOCTYPE html>
@@ -135,47 +197,32 @@ draft: false
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-    <!-- 브라우저에서 사용자로부터 데이터 입력받음 -->
-    <div id="inputs">
-        <input type="text" id="name" placeholder="이름"><br>
-        <input type="text" id="age" placeholder="나이"><br>
-        <input type="text" id="address" placeholder="주소"><br>
-    </div>
-    <button id="btn">입력</button>
-    
-    <script>
-    	function loadDoc() {     
-            const xhttp = new XMLHttpRequest();  
-
-            xhttp.onreadystatechange = function() { 
-                if (this.readyState == 4 && this.status == 200) {  
-                    let data = this.responseText; 
-                    document.getElementById("div1").innerHTML = JSON.parse(data).name; 
-                }
-            };
-            
-            xhttp.open("POST", "ajaxRes.jsp");   
-            // post방식으로 서버에 데이터 전송시 필수 header 설정             
-            xttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");  
-            xhttp.send();  
-        }
-    </script>
+<body>	
+	<input type="text" id="name" value="보리"><br>
+	<input type="text" id="age" value="6"><br>
+	<div id="dataView"></div>
+	
+	<script>
+		const xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200){
+				let data = this.responseText;
+				console.log(data);
+				dataView.innerText = data;  
+			}
+		}		
+		xhr.open("POST", "ajaxRes.jsp");  // POST방식은 url에 데이터 노출시키지 않음
+        
+        // post방식으로 서버에 데이터 전송시 필수 header 설정 
+		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");  
+        
+		xhr.send("name="+ document.getElementById("name").value +"&age="+ document.getElementById("age").value);
+	</script>
 </body>
 </html>
-
 ```
 
-<jsp 파일> 
 
-```html
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<% request.setCharacterEncoding("UTF-8"); %>  
-안녕하세요 ${param.id}님
-```
-
-- EL태그 `${param}` (`request.getParameter("key값")`과 동일)을 사용해 request에 저장되어 전송되는 데이터를 출력할 수 있다.
 
 
 
