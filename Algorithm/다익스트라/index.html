@@ -107,7 +107,8 @@
 <li>마지막 남은 노드인 5번까지 최소 비용으로 연결하고 작업을 종료한다.</li>
 <li>모든 노드를 연결하는 최소 비용은 0+2+4+2+3+6 = 17 이다.</li>
 </ul>
-<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">costs <span class="token operator">=</span> <span class="token punctuation">[</span>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">n <span class="token operator">=</span> <span class="token number">6</span>  <span class="token comment"># 노드의 총 개수</span>
+costs <span class="token operator">=</span> <span class="token punctuation">[</span>  <span class="token comment"># [노드a, 노드b, a에서 b로 이동하는 비용]</span>
     <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
     <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
     <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -189,6 +190,7 @@
 </ul>
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> sys
 
+n <span class="token operator">=</span> <span class="token number">6</span>
 costs <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
     <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -207,19 +209,18 @@ costs <span class="token operator">=</span> <span class="token punctuation">[</s
     visited <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token boolean">False</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment"># 방문 배열 : False로 초기 설정</span>
     
     start <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 시작 노드</span>
-    visited<span class="token punctuation">[</span>start<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">True</span>
-    values<span class="token punctuation">[</span>start<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>    
+    values<span class="token punctuation">[</span>start<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>   
     
     <span class="token keyword">while</span> <span class="token boolean">False</span> <span class="token keyword">in</span> visited<span class="token punctuation">:</span>
-        <span class="token comment"># 방문하지 않은 노드 찾기</span>
-        checkLoc <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>  <span class="token comment"># 이동할 노드를 담을 변수</span>
+        <span class="token comment"># 탐색하지 않은 노드 찾기</span>
+        checkLoc <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>  <span class="token comment"># 탐색할 노드를 담을 변수</span>
         checkValue <span class="token operator">=</span> sys<span class="token punctuation">.</span>maxsize  <span class="token comment"># 해당 노드까지 가는 비용을 담을 변수</span>
         <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
             <span class="token keyword">if</span> visited<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token boolean">False</span> <span class="token keyword">and</span> values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> checkValue<span class="token punctuation">:</span>  
                 checkLoc <span class="token operator">=</span> i  
                 checkValue <span class="token operator">=</span> values<span class="token punctuation">[</span>i<span class="token punctuation">]</span>  
-                
-        <span class="token comment"># 방문하지 않은 노드가 없다면(for문 다 돌았는데 checkLoc가 바뀌지 않음) while문 종료</span>
+                       
+        <span class="token comment"># 탐색하지 않은 노드가 없다면(for문 다 돌았는데 checkLoc가 바뀌지 않음) while문 종료</span>
         <span class="token keyword">if</span> checkLoc <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
             <span class="token keyword">break</span>       
         
@@ -231,7 +232,7 @@ costs <span class="token operator">=</span> <span class="token punctuation">[</s
             <span class="token keyword">if</span> v2 <span class="token operator">==</span> checkLoc <span class="token keyword">and</span> visited<span class="token punctuation">[</span>v1<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token boolean">False</span><span class="token punctuation">:</span>   <span class="token comment"># v2에서 v1로 가는 경우</span>
                 values<span class="token punctuation">[</span>v1<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>values<span class="token punctuation">[</span>v1<span class="token punctuation">]</span><span class="token punctuation">,</span> values<span class="token punctuation">[</span>v2<span class="token punctuation">]</span><span class="token operator">+</span>c<span class="token punctuation">)</span>
         
-    
+    <span class="token keyword">return</span> values   
     </code></pre></div></div><div style="position:absolute;top:0;height:100%;right:calc((100vw - 850px) / 2 * (-1))"><nav class="table-of-contents container"><div class="contents"><ul>
 <li>
 <p><a href="/Algorithm/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC/#1-%EC%B5%9C%EB%8B%A8-%EA%B2%BD%EB%A1%9C-%EC%B0%BE%EA%B8%B0">1. 최단 경로 찾기</a></p>
