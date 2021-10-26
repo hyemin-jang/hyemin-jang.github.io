@@ -155,6 +155,16 @@ costs <span class="token operator">=</span> <span class="token punctuation">[</s
 	<span class="token keyword">return</span> answer</code></pre></div>
 <h2 id="2-다익스트라-알고리즘" style="position:relative;"><a href="#2-%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" aria-label="2 다익스트라 알고리즘 permalink" class="anchor-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2) 다익스트라 알고리즘</h2>
 <p><strong>특정 노드에서 다른 노드까지의 최단 경로</strong>를 찾는 알고리즘</p>
+<blockquote>
+<p> 💡 <strong>동작 원리</strong></p>
+<ol>
+<li>출발 노드를 설정한다</li>
+<li>비용 리스트를 (무한으로) 초기화한다</li>
+<li>방문하지 않은 노드 중 최단 거리가 가장 짧은 노드를 선택한다</li>
+<li>해당 노드를 거쳐 다음 노드로 가는 비용을 계산한다. 다음 노드로 가는 비용을 기존에 구해놓은 값이 있다면, 새로 구한 값과 기존값중 최소값으로 비용 리스트를 갱신한다</li>
+<li>3~4번 과정을 반복한다</li>
+</ol>
+</blockquote>
 <p>예: 1번 노드에서 4번 노드까지의 최단경로 찾기</p>
 <span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 417px;">
       <span class="gatsby-resp-image-background-image" style="padding-bottom: 58.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABvklEQVQoz22T227TQBCG86w8AQjBTYXgLeAaiYMEF0DUBwC1cMUVglKpbUia1kkdx4mdbLzew8ceXMdNs9JoT/P/O//sTA8M3qzV7dyaO0GtQczCunvXxXSt1920jsE8RU359SXJuyeQnnr6xsfuJQuEAWxVNL/WtTuXAZzPJlx9fMb5qwcUp8cBgq4wdcUWp8OaJvIe4SWiPD9EQXZxxr9pRrooqdML1Ogn+XLJ8GbO7OQ3Jk9bTMDdksYI3b5IYDlmVUkuJzcksznKR+oDCsLj0EYxSTPnkwZfijGUkzukPVZT8s/PGb99TDb8w0aZBh5zqt0sRueoRUYrwvlkg19cvXlE8uHAHaTNpykXYTml6L8gef8Umw8jlRQxl45MG021zLEhby4GUUbWfMDw9UOu7xEGyddO8iXKGKS1rM/+Us9jnoyTqUN+bHhAjAZUUlI7X4+hTDqS731KLAWfP1lLjLsTmzVFsQhrqWr3qP/Npsx2P8Xulk2naL150qPjb3zpfyKbZxEe7m8LfFtuniyWDTFU9nSAl/v9xxGHh/0QJZ1u2ZLqRlm0nU4xjRzddoSUG4RY3bmPRGZvp/wHTBahax3gFSYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;"></span>
@@ -172,7 +182,7 @@ costs <span class="token operator">=</span> <span class="token punctuation">[</s
 <li><code class="language-text">비용 배열</code>과 <code class="language-text">방문 배열</code>을 선언한다. 비용 배열은 <code class="language-text">int값이 가질 수 있는 최대값</code>을, 방문 배열에는 아직 방문하지 않았음을 의미하는 <code class="language-text">False</code>를 담아둔다.</li>
 <li>비용배열의 0번째 인덱스 값을 0번 노드에서 0번 노드까지의 거리인 <code class="language-text">0</code>으로, 방문배열의 0번째 인덱스 값을 <code class="language-text">True</code>로 갱신한다.</li>
 <li>0번 노드에서 연결할 수 있는 노드는 1, 4, 5번 노드이다.  비용배열의 1, 4, 5번 인덱스 값을 기존값(maxsize)과 비교하여 더 작은 값인 <code class="language-text">7</code>, <code class="language-text">3</code>, <code class="language-text">10</code>으로 각각 갱신한다.</li>
-<li>4번 노드까지의 거리가 최소값이므로, 방문배열의 4번째 인덱스값을 <code class="language-text">True</code>로 갱신한다.</li>
+<li><strong>4번 노드까지의 거리가 최소값</strong>이므로, 방문배열의 4번째 인덱스값을 <code class="language-text">True</code>로 갱신한다.</li>
 <li>4번 노드에서 아직 방문하지 않았으면서 연결할 수 있는 노드는 1, 3번 노드이다. 그런데 1번 노드까지 가는 길은 0번에서 4번을 거쳐서 1번으로 가는 방법도 있지만(비용 3+2 = 5), 아까 계산해놓은 0번에서 1번으로 바로 가는 방법도 있다(비용 7).  <strong>⚡즉, 다익스트라 알고리즘에서는 현재 노드까지 오는 비용에 새로운 노드로 가는 비용을 누적하고, 그 누적값을 기존값과 비교하여 최소값으로 갱신한다.</strong> ⚡  따라서 1번 노드로 가는 비용은 3+2=5와 기존값(7) 중 최솟값인 <code class="language-text">5</code>로 갱신한다. 3번으로 가는 비용은 3+11 = 14와 기존값(maxsize) 중 최솟값인 <code class="language-text">14</code>로 갱신한다.  비용 갱신을 마친 후 탐색을 종료한다.</li>
 </ul>
 <span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 1031px;">
@@ -182,7 +192,7 @@ costs <span class="token operator">=</span> <span class="token punctuation">[</s
 /static/db9750ea7946b924467d8c680e5ce2fc/23592/dijkstra7.png 1031w" sizes="(max-width: 1031px) 100vw, 1031px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy">
     </span>
 <ul>
-<li>아직 방문하지 않은 1, 2, 3, 5번 노드 중에서 비용 최소값을 갖는 1번 노드에서 탐색을 시작한다.  1번 노드를 방문했음을 표시하기 위해 방문배열의 1번인덱스 값을 <code class="language-text">True</code>로 변경한다.</li>
+<li><strong>아직 방문하지 않은 1, 2, 3, 5번 노드 중에서 비용 최소값을 갖는</strong> 1번 노드에서 탐색을 시작한다.  1번 노드를 방문했음을 표시하기 위해 방문배열의 1번인덱스 값을 <code class="language-text">True</code>로 변경한다.</li>
 <li>1번 노드에서 아직 방문하지 않았으면서 연결할 수 있는 노드는 2, 3, 5번이다.  1번 노드까지 오는 비용(5)에 새로 연결될 노드까지 가는 비용 4, 10, 6을 더한 9, 15, 11을 기존 비용(maxsize, 14, 10)과 비교하여, 둘 중 최소값인 <code class="language-text">9</code>, <code class="language-text">14</code>, <code class="language-text">10</code>으로 각각 갱신한다. 비용 갱신을 마친 후 탐색을 종료한다.</li>
 <li>… 반복 …</li>
 <li>마지막으로 방문하지 않은 3번 노드에서 탐색을 시작한다. 아직 방문하지 않았으면서 연결할 수 있는 노드가 더이상 없으므로 알고리즘을 종료한다.</li>
@@ -216,7 +226,7 @@ costs <span class="token operator">=</span> <span class="token punctuation">[</s
         checkLoc <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>  <span class="token comment"># 탐색할 노드를 담을 변수</span>
         checkValue <span class="token operator">=</span> sys<span class="token punctuation">.</span>maxsize  <span class="token comment"># 해당 노드까지 가는 비용을 담을 변수</span>
         <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> visited<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token boolean">False</span> <span class="token keyword">and</span> values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> checkValue<span class="token punctuation">:</span>  
+            <span class="token keyword">if</span> visited<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token boolean">False</span> <span class="token keyword">and</span> values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> checkValue<span class="token punctuation">:</span>  <span class="token comment"># for문을 돌면서 방문하지 않은 노드 중 비용 최솟값을 갖는 노드를 선택</span>
                 checkLoc <span class="token operator">=</span> i  
                 checkValue <span class="token operator">=</span> values<span class="token punctuation">[</span>i<span class="token punctuation">]</span>  
                        
