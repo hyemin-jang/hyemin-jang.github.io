@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://hyemin-jang.github.io/JavaScript/2-브라우저렌더링/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/[백준]1932정수삼각형/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/[백준]21317징검다리건너기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/[백준]14501/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -13,20 +14,19 @@
 <url> <loc>https://hyemin-jang.github.io/Algorithm/[프로그래머스]더맵게/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/연결리스트/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Python/[python]정규표현식-/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Spring/3-springMVC/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Spring/2-aop/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/그리디/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/JavaScript &amp; Vue/5-axios/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/JavaScript/5-axios/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/다익스트라/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/JavaScript &amp; Vue/4-ajax/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/JavaScript &amp; Vue/3-storage/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/JavaScript &amp; Vue/2-js객체/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/JavaScript &amp; Vue/1-javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Servlet &amp; JSP/4.ConnectionPool/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/JavaScript/4-ajax/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/JavaScript/3-storage/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/JavaScript/2-js객체/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/JavaScript/1-javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/Java/13.ConnectionPool/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/동적계획법/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Servlet &amp; JSP/3.JSP/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Servlet &amp; JSP/2.Servlet-화면이동과 상태유지/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Servlet &amp; JSP/1.Servlet/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/WEB/3.JSP/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/WEB/2.Servlet-화면이동과 상태유지/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://hyemin-jang.github.io/WEB/1.Servlet/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/재귀함수/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/해시/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Java/12.JPA/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -34,17 +34,11 @@
 <url> <loc>https://hyemin-jang.github.io/Algorithm/[백준]5692/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/비트연산,진법변환/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/DFS,BFS/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Java/10.Maven/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Java/9.Stream API &amp; Lambda/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/[프로그래머스]소수찾기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/[프로그래머스]모의고사/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Java/8.IO/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Java/7.예외처리/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/[프로그래머스]카펫/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/[백준]10816/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Java/6.자바 자료구조/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Algorithm/완전탐색,이분탐색/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://hyemin-jang.github.io/Java/5.배열/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Java/4.상속과 다형성/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Java/3.접근제한자와 &amp; Static/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://hyemin-jang.github.io/Java/2.클래스와-객체/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
