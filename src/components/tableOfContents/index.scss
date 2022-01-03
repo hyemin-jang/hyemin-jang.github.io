@@ -11,22 +11,22 @@ nav.container {
     display: block;
     max-width: 360px;
     padding-right: 30px;
-    padding-left: 20px;
+    padding-left: 60px;
     overflow: auto;
     word-break: break-word;
-   // max-height: calc(100vh - 200px);
-    font-size: 9px;    
+    // max-height: calc(100vh - 200px);
+    font-size: 9px;
   }
-  
-  .contents {    
+
+  .contents {
     p {
       margin-bottom: 0px;
     }
     ul {
       list-style: none;
       margin-left: 10px;
-      margin-top : 0px;
-      margin-bottom: 0px;  
+      margin-top: 0px;
+      margin-bottom: 0px;
     }
     ul > li {
       line-height: 1.3rem;
@@ -35,7 +35,7 @@ nav.container {
       white-space: nowrap;
     }
 
-    ul > li a{
+    ul > li a {
       color: #888888;
     }
     ul > li a.isCurrent {

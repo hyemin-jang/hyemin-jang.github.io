@@ -1,7 +1,7 @@
 ---
 title: '[JavaScript] Axios'
 date: 2021-09-25 01:08:71
-category: 'JavaScript & Vue'
+category: 'TIL - Playdata'
 thumbnail: { thumbnailSrc }
 draft: false
 
@@ -11,7 +11,7 @@ draft: false
 
 
 
-# 1. Axios?
+## Axios?
 
 브라우저, Node.js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리
 
@@ -30,17 +30,17 @@ draft: false
 
 
 
-## 1) Axios 실행 환경 설정
+### Axios 실행 환경 설정
 
 Axios를 설치하기 위한 여러 방법이 있지만 두 가지만 정리하자면, 
 
 1. npm을 통한 설치
 
-   ```
-   $ npm install axios
-   ```
+```
+$ npm install axios
+```
 
-   
+
 
 > ⚡ Node.js와 npm이 설치되어 있어야 한다 ➡ [Node.js 설치](https://nodejs.org/ko/)
 >
@@ -79,7 +79,7 @@ head 태그 내에 아래 코드 추가
 
 
 
-## 2) Axios 사용하기
+## Axios 사용하기
 
 ✅ **GET 방식**으로 서버(response.jsp)에 요청을 보내고 응답을 받아보자
 
@@ -132,6 +132,8 @@ head 태그 내에 아래 코드 추가
 
 
 
+<br>
+
 #### 💎 단축된 axios 메소드
 
 - GET : 데이터 조회  `axios.get(url [, config])`
@@ -140,6 +142,8 @@ head 태그 내에 아래 코드 추가
 - DELETE : 데이터 삭제 `axios.delete(url [, config])`
 
 
+
+<br>
 
 ✅ **get()**으로 서버(response.jsp)에서 JSON 데이터 받아오기
 
@@ -184,7 +188,7 @@ head 태그 내에 아래 코드 추가
 	
 ```
 
-
+<br>
 
 ✅ **get()**으로 서버(response.jsp)에 파라미터 데이터 전송하기 - `query string` 사용
 
@@ -214,7 +218,7 @@ head 태그 내에 아래 코드 추가
 </html>
 ```
 
-
+<br>
 
 ✅  **get()**으로 서버(response.jsp)에 파라미터 데이터 전송하기 - `params` 속성 사용
 
@@ -248,7 +252,7 @@ head 태그 내에 아래 코드 추가
 </html>
 ```
 
-
+<br>
 
 ✅  **POST방식**으로 서버에 데이터 전송
 

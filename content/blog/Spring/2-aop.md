@@ -1,7 +1,7 @@
 ---
 title: '[Spring] AOP (관점 지향 프로그래밍)'
 date: 2021-10-04 20:08:71
-category: 'Spring'
+category: 'TIL - Playdata'
 thumbnail: { thumbnailSrc }
 draft: false
 ---
@@ -10,19 +10,17 @@ draft: false
 
 
 
-# AOP
+## AOP
 
 **Aspect Oriented Programming**, 관점 지향 프로그래밍
 
-> - `OOP(Object Oriental Programming, 객체 지향 프로그래밍)`의 핵심 단위는 `클래스`이다. 한 클래스가 단일 책임을 가지도록 분리한다.
-> - AOP에서 핵심 단위는 `Aspect(관점, 관심사)`이다. 즉, **필수적이지만 어쩔 수 없이 반복적으로 사용되는 코드들을 분리**하여 모듈성을 증가시킨다.
-> - AOP는 OOP의 단점(코드의 중복, 유지보수의 어려움, 재사용성 저하)를 보완해줄 수 있다. 
+- `OOP(Object Oriental Programming, 객체 지향 프로그래밍)`의 핵심 단위는 `클래스`이다. 한 클래스가 단일 책임을 가지도록 분리한다.
+- AOP에서 핵심 단위는 `Aspect(관점, 관심사)`이다. 즉, **필수적이지만 어쩔 수 없이 반복적으로 사용되는 코드들을 분리**하여 모듈성을 증가시킨다.
+- AOP는 OOP의 단점(코드의 중복, 유지보수의 어려움, 재사용성 저하)를 보완해줄 수 있다. 
 
 
 
-
-
-## 1) Aspect
+### Aspect?
 
 로그기록, 성능측정, .. 등과 같은 **부가기능**이다.  즉 핵심 비즈니스 로직이 필요로 하는 **인프라 로직**이라고 생각하면 된다.
 
@@ -60,7 +58,7 @@ Spring AOP는 AspectJ를 가져와서 사용한다.
 
 
 
-## 2) AOP의 주요 개념
+## AOP의 주요 개념
 
 ![img](https://blog.kakaocdn.net/dn/bGj1OP/btqBWqWH25j/emfSR96ekPcjbD1Ftea5KK/img.jpg)
 
@@ -112,7 +110,7 @@ Spring AOP는 AspectJ를 가져와서 사용한다.
 
   
 
-> ### 💡 **Proxy 패턴 **
+> 💡 **Proxy 패턴**
 >
 > Proxy는 '대리자'라는 뜻을 가지고 있다.
 >
@@ -136,13 +134,15 @@ Spring AOP는 AspectJ를 가져와서 사용한다.
 
 
 
+<br>
 
+<br>
 
-### 3) 실습 예제
+### 실습 예제
 
-글 작성과 댓글 작성 기능을 핵심 로직으로 하는 어플리케이션이 있다고 가정하자. (예제를 간단히 하기 위해 실제 기능을 1도 구현하지 않은 예제입니다)
+글 작성과 댓글 작성 기능을 핵심 로직으로 하는 어플리케이션이 있다고 가정하자. (예제를 간단히 하기 위해 실제 기능을 1도 구현하지 않은 예제임)
 
-
+<br>
 
 <Biz.java>  : 핵심 로직이 구현된 클래스
 
@@ -171,9 +171,9 @@ public class Biz {
 
 여기에 여러 부가 기능들을 적용시키려고 한다. 예제 코드에는 메소드가 2개밖에 없지만 메소드가 1억개쯤 있는 어플리케이션이라면 각 메소드마다 하나하나 부가기능을 추가하기 어려울 것이다. 필요한 부가기능들을 분리하여 Aspect로 개발한다.
 
+<br>
 
-
-#### ✅ XML 스키마 기반
+#### (1) XML 스키마 기반
 
 아래와 같은 부가 기능들을 적용한다고 가정하자.
 
@@ -245,13 +245,7 @@ public class Common {
 </beans>
 ```
 
-> execution: 가장 강력한 포인트컨 지시자
->
-> within() 표현식:  (스프링에서만 쓸 수 있는 표현식)
->
-> 
 
- 
 
 이와 같이 설정 후 메인 메소드에서 테스트해보자.
 
@@ -291,6 +285,8 @@ public class AOPTest {
 <img src="img/spring2.PNG">
 
 
+
+<br>
 
 before, after, throwing, returning을 모두 수용 가능한 `Around` Advice로 만들 수도 있다.
 
@@ -357,7 +353,9 @@ public class Common {
 
 
 
-#### ✅ Annotation 기반
+<br>
+
+#### (2) Annotation 기반
 
 위 예제를 어노테이션을 사용하는 방식으로 바꿔보자.
 
@@ -458,7 +456,9 @@ public class Common {
 
 
 
-Around 를 사용할 경우
+<br>
+
+`Around` 를 사용할 경우
 
 ```java
 package common;
@@ -496,5 +496,3 @@ public class Common {
 
 
 
-- XML 기반의 설계는 설정 정보들을 한 파일에서 다 관리할 수 있다는 장점이 있다
-- Annotation 기반의 설계는 XML 파일이 너무 길어지는 것을 막고 

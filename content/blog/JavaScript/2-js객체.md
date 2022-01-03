@@ -1,16 +1,16 @@
 ---
-title: '[JavaScript] 자바스크립트 객체'
+title: '[JavaScript] 객체'
 date: 2021-09-14 01:08:71
-category: 'JavaScript & Vue'
+category: 'JavaScript'
 thumbnail: { thumbnailSrc }
 draft: false
 ---
 
 
 
-## 1) 객체 모델
+## 객체 모델
 
-### (1) 브라우저 객체 모델(BOM, Browswer Object Model)
+### 1) 브라우저 객체 모델(BOM, Browswer Object Model)
 
 : 웹 브라우저와 관련된 모든 객체 (웹브라우저가 제공하는 기능)
 
@@ -32,7 +32,9 @@ draft: false
 
    
 
-### (2) 문서 객체 모델(DOM, Document Object Model)
+<br>
+
+### 2) 문서 객체 모델(DOM, Document Object Model)
 
 - 브라우저 객체 모델(BOM, Browser Object Model)의 일부이다.
 
@@ -64,7 +66,7 @@ draft: false
 
 
 
-### 🌳 DOM Tree
+### DOM Tree
 
 Dom Tree는 4종류의 요소(노드)로 구성된다.
 
@@ -81,25 +83,27 @@ Dom Tree는 4종류의 요소(노드)로 구성된다.
 
 
 
-### 📝 DOM 메서드
+<br>
 
-한 개의 요소 선택
+### DOM 메서드
+
+#### 한 개의 요소 선택
 
 - `document.getElementById(id)` : id 속성값으로 한 개의 노드 선택
 - `document.querySelector(cssSelector)` : 
 
-여러 개의 요소 선택
+#### 여러 개의 요소 선택
 
 - `document.getElementsByClassName(class)` : 해당 클래스에 속한 요소를 모두 선택
 - `document.getElementsByName(name)` : 해당 name 속성을 가진 요소를 모두 선택
 - `document.getElementsByTagName(태그명)` : 해당 태그인 요소를 모두 선택
 
-요소 생성
+#### 요소 생성
 
 - `document.createTextNode(텍스트)` : 해당 텍스트로 text노드 요소 생성
 - `document.write(텍스트)` : 문서에 텍스트 출력
 
-노드 간 관계를 통한 접근
+#### 노드 간 관계를 통한 접근
 
 - `요소.parentNode` : 요소의 부모 노드 반환
 - `요소.childNodes` : 요소의 자식 노드 리스트 반환
@@ -108,11 +112,11 @@ Dom Tree는 4종류의 요소(노드)로 구성된다.
 
 
 
+<br>
 
+## 자바스크립트 객체
 
-## 2) 자바스크립트 객체
-
-#### ✅ JavaScript  표준 내장 객체
+####  JavaScript  표준 내장 객체
 
 - 기초 객체 : Object, Function, Boolean, Symbol ...
 - 오류 객체 : Error, ...
@@ -122,7 +126,11 @@ Dom Tree는 4종류의 요소(노드)로 구성된다.
 - 키 콜렉션 : Map, Set, ...
 - ⭐**JSON** (아래에서 자세히!)
 
-#### ✅ 사용자가 직접 구성해서 생성
+
+
+<br>
+
+#### 사용자가 직접 구성해서 생성
 
 - **객체 리터럴(Object literal)**
 
@@ -150,7 +158,9 @@ console.log(obj.address);  // undefined
 
 
 
-### 💎  JSON (JavaScript Object Notation)
+<br>
+
+## JSON (JavaScript Object Notation)
 
 - 자바스크립트의 객체 표기법으로부터 파생
 - 경량 데이터 교환 형식으로, 서버와 클라이언트간 데이터 전송에 가장 인기있는 데이터 포맷
@@ -176,9 +186,11 @@ console.log(JSON.parse(v3).name); // Uncaught SyntaxError: Unexpected token ' in
 
 
 
+<br>
 
+<br>
 
-
+-------------------------
 
 참고한 사이트
 

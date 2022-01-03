@@ -54,15 +54,15 @@ body.light {
       color: $middle-gray;
     }
     &:hover {
-      text-shadow: 0 0 10px #ece5f1;  
+      text-shadow: 0 0 10px #ece5f1;
     }
   }
 
-  .thumbnail-date{
-    color: #a9a9a9;    
+  .thumbnail-date {
+    color: #a9a9a9;
     font-size: 0.6rem;
     font-style: italic;
-  } 
+  }
 
   .footer {
     color: $light-gray;
@@ -72,14 +72,30 @@ body.light {
   }
 
   // post
+  blockquote {
+    padding: 1.2em;
+    margin-bottom: 1.5em;
+    background-color: $light-category-background-color;
+    border-left: 5px solid $navigator-text-color;
+    // color: $inline-text-color;
+  }
+
   .navigator {
     a {
       background-color: $navigator-background-color;
       color: $navigator-text-color;
     }
   }
-  h2{
+  h1 {
     border-bottom: none;
+    text-align: center;
   }
-  
+  h2 {
+    border-bottom: none;
+    color: $navigator-text-color;
+    font-size: 1.8em;
+  }
+  .home-header {
+    text-align: start;
+  }
 }

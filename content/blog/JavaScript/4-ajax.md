@@ -1,7 +1,7 @@
 ---
 title: '[JavaScript] Ajax'
 date: 2021-09-17 01:08:71
-category: 'JavaScript & Vue'
+category: 'TIL - Playdata'
 thumbnail: { thumbnailSrc }
 draft: false
 ---
@@ -10,13 +10,11 @@ draft: false
 
 
 
-# 1. Ajax?
+## Ajax?
 
 **비동기식 자바스크립트와 XML (Asynchronous JavaScript and XML)**
 
-~~(그러나 현재 데이터 전송은 대부분 xml이 아니라 json을 이용하는건 함정)~~
-
-- 자바스크립트를 통해서 `서버`와 `브라우저`가 `비동기 방식`으로 데이터를 교환할 수 있는 기법
+자바스크립트를 통해서 `서버`와 `브라우저`가 `비동기 방식`으로 데이터를 교환할 수 있는 기법
 
 
 
@@ -36,7 +34,7 @@ draft: false
 
 
 
-## 1) XMLHttpRequest
+## XMLHttpRequest
 
 **자바스크립트의 비동기 통신 API**
 
@@ -70,7 +68,9 @@ draft: false
 
     
 
-### (1) GET 방식 요청
+<br>
+
+### 1) GET 방식 요청
 
 ✅  서버로부터 데이터 받아서 출력하기
 
@@ -118,7 +118,7 @@ draft: false
 </html>
 ```
 
-
+<br>
 
 ✅  서버로 데이터 전송하고, 응답 받아서 출력하기
 
@@ -169,13 +169,15 @@ EL태그 `${param}` (`request.getParameter("key값")`과 동일)을 사용해 re
 
 
 
+<br>
 
-
-### (2) POST 방식 요청
+### 2) POST 방식 요청
 
 - POST 방식으로 데이터를 전송할 때는 반드시 HTTP 헤더를 설정하는 메소드를 써야 한다.
 - `setRequestHeader(헤더명, 헤더의 값)` 형식
 - `application/x-www-form-urlencoded`은 웹브라우저가 폼 태그를 이용해서 입력받은 데이터를 POST 방식으로 전송할 때 사용하는 표준 MIME type이다.
+
+<br>
 
 <ajaxRes.jsp> 
 
@@ -226,7 +228,7 @@ EL태그 `${param}` (`request.getParameter("key값")`과 동일)을 사용해 re
 
 
 
-### 💎 MVC 패턴에서 Ajax 사용 예제
+## MVC 패턴에서 Ajax 사용 예제
 
 : 오라클 DB에 저장된 Dept 테이블에서 모든 부서 정보를 가져와서 브라우저에 출력해보자
 

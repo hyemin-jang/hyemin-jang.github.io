@@ -1,7 +1,7 @@
 ---
-title: '[JavaScript] Web Storage'
+title: '[WEB] Web Storage'
 date: 2021-09-16 01:08:71
-category: 'JavaScript & Vue'
+category: 'TIL - Playdata'
 thumbnail: { thumbnailSrc }
 draft: false
 ---
@@ -14,7 +14,7 @@ draft: false
 
 
 
-## 1) 웹 스토리지 (Web Storage)? 
+## 웹 스토리지 (Web Storage)
 
 - 브라우저 상에 데이터를 저장할 수 있는 기술
 
@@ -24,11 +24,13 @@ draft: false
   - 요청시 Header에 자동으로 전송되지 않음 - 쿠키의 CSRF,  트래픽 문제 해결
   - 문자열 데이터 뿐 아니라 직렬화를 통해 객체 저장 가능 (아래에서 자세히)
 
-  - 이전 포스팅 참조 - [화면이동과 상태유지 기법](https://hyemin-jang.github.io/Servlet%20&%20JSP/2.Servlet-%ED%99%94%EB%A9%B4%EC%9D%B4%EB%8F%99%EA%B3%BC%20%EC%83%81%ED%83%9C%EC%9C%A0%EC%A7%80/)
+    
 
 
 
-### ✅ Local Storage
+<br>
+
+### Local Storage
 
 - 브라우저가 닫혀도(웹페이지의 세션이 끝나도) 데이터가 지워지지 않는다.
 
@@ -46,7 +48,9 @@ draft: false
 
     
 
-### ✅ Session Storage
+<br>
+
+### Session Storage
 
 - 웹페이지의 세션이 끝날 때 저장된 데이터가 지워진다.
 - 같은 웹사이트를 여러 탭에 띄우면 여러 개의 세션스토리지가 만들어져 데이터들이 각각 따로 저장되며, 탭을 닫으면 저장된 데이터가 소멸한다.
@@ -54,7 +58,9 @@ draft: false
 
 
 
-### ⚡ 주의
+<br>
+
+⚡ 주의
 
 웹스토리지에 데이터를 저장할 때는 **문자열**로 저장된다!! 
 

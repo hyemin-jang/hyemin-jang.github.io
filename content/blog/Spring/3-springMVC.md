@@ -1,19 +1,16 @@
----
-title: '[Spring] Spring MVC'
-date: 2021-10-05 20:08:71
-category: 'Spring'
-thumbnail: { thumbnailSrc }
-draft: false
-
----
 
 
+## Spring MVC
 
-
-
-## 1) 구성
-
-
+> 💡 **MVC 패턴?**
+>
+> - Model
+> - View
+> - Controller
+>
+> 세 가지로 분리하여 소프트웨어를 개발하는 디자인 패턴이다.
+>
+> 
 
 
 
